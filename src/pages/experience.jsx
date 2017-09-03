@@ -1,7 +1,7 @@
 import styles from "./styles.module.sass"
 
 import React from "react"
-import {Container, Hero, HeroBody, Title} from "bloomer"
+import { Container, Hero, HeroBody, Title } from "bloomer"
 import Link from "gatsby-link"
 
 const IndexPage = () => (

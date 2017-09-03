@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {navigateTo} from "gatsby-link"
+import { navigateTo } from "gatsby-link"
 
 import {
   Container,
@@ -19,7 +19,7 @@ const propTypes = {
   location: PropTypes.object,
 }
 
-const NavbarItemLink = ({link, location, children}) => (
+const NavbarItemLink = ({ link, location, children }) => (
   <NavbarItem
     href="javascript:void(0)"
     onClick={() => navigateTo(link)}
@@ -30,10 +30,10 @@ const NavbarItemLink = ({link, location, children}) => (
 )
 
 class Navigation extends React.Component {
-  state = {isDropdownOpen: false}
+  state = { isDropdownOpen: false }
 
   onClickDropdown = () => {
-    this.setState(state => ({isDropdownOpen: !state.isDropdownOpen}))
+    this.setState(state => ({ isDropdownOpen: !state.isDropdownOpen }))
   }
 
   render() {

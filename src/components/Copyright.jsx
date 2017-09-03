@@ -1,5 +1,5 @@
 import React from "react"
-import {Footer, Container, Content} from "bloomer"
+import { Footer, Container, Content } from "bloomer"
 
 const Copyright = () => (
   <Footer>

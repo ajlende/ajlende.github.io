@@ -7,7 +7,7 @@ import Helmet from "react-helmet"
 import Navigation from "../components/Navigation"
 import Copyright from "../components/Copyright"
 
-const Layout = ({children, location}) => (
+const Layout = ({ children, location }) => (
   <div>
     <Helmet>
       <meta charSet="utf-8" />

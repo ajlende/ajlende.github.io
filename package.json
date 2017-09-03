@@ -3,6 +3,24 @@
   "description": "Personal site for Alex Lende",
   "version": "2.0.0",
   "author": "Alex Lende <ajlende@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "personal-site",
+    "portfolio",
+    "blog",
+    "developer",
+    "designer",
+    "front-end",
+    "react",
+    "javascript",
+    "bulma",
+    "bloomer",
+    "gatsby"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajlende/ajlende.github.io.git"
+  },
   "dependencies": {
     "bloomer": "^0.6.2",
     "bulma": "^0.5.1",
@@ -13,28 +31,16 @@
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sass": "^1.0.10"
   },
-  "keywords": [
-    "personal-site",
-    "portfolio",
-    "blog",
-    "developer",
-    "designer",
-    "front-end",
-    "react",
-    "javascript",
-    "gatsby"
-  ],
-  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^1.0.0",
+    "prettier": "^1.6.1"
+  },
   "main": "public/index.html",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public --branch master",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format": "prettier --print-width 100 --trailing-comma all --no-semi --write src/**/*.{js,jsx}",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.0.0",
-    "prettier": "^1.6.1"
   }
 }

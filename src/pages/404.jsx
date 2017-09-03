@@ -2,7 +2,7 @@ import styles from "./styles.module.sass"
 
 import React from "react"
 import Link from "gatsby-link"
-import {Container, Hero, HeroBody, Subtitle, Title} from "bloomer"
+import { Container, Hero, HeroBody, Subtitle, Title } from "bloomer"
 
 const NotFoundPage = () => (
   <Hero isColor="danger" isBold isSize="large">
