@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/cyhelp.css" />
+<title>CyHelp</title>
+<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+</head>
+
+<body>
+	<div id="wrapper" style="max-width:600px">
+	<div id="head" style="text-align:center">
+		<img src="images/cyhelp.png" width="200px" height="200px" />
+	</div>
+	<div id="everything_else" style="margin:0 auto; width:163px">
+		<form id="cyhelp_default" method="post">
+			
+			<div class="form_item">
+				<label for="name" class="description">Name</label>
+				<input id="name" name="name" class="" type="text" maxlength="255" value="" /> 
+			</div>
+			
+			<div class="form_item">
+				<label for="location" class="description">Location</label>
+				<input id="location" name="location" class="" type="text" maxlength="255" value="" />
+			</div>
+			
+			<div class="form_item">
+				<label for="class_id" class="description">Class ID</label>
+				<input id="class_id" name="class_id" class="" type="text" maxlength="255" value="" />
+			</div>
+			
+			<div class="form_item">
+				<label for="phone" class="description">Phone Number</label>
+				<div id="phone" class="multifield_container">
+					<div>
+						<input id="phone_0" name="phone_0" class="" size="3" maxlength="3" value="" placeholder="###" type="text" /> - 
+						<input id="phone_1" name="phone_1" class="" size="3" maxlength="3" value="" placeholder="###" type="text" /> - 
+						<input id="phone_2" name="phone_2" class="" size="4" maxlength="4" value="" placeholder="####" type="text" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="form_item">
+				<label for="time" class="description">Time</label>
+				<div id="time" class="multifield_container">
+					<div>
+						<input id="hours" name="hours" class="" size="2" type="text" maxlength="2" placeholder="HH" value="" /> : 
+						<input id="minutes" name="minutes" class="" size="2" type="text" maxlength="2" placeholder="MM" value="" />
+						<select style="width:4em" id="ampm" name="ampm" class="">
+							<option value="AM">AM</option>
+							<option value="PM">PM</option>
+						</select>
+					</div>
+				</div>	
+			</div>
+			
+			<button onclick="submitDataFromForm()">Get help!</button> 
+		</form>
+	</div>
+	<div id="thattablethingy" style="margin:0 auto; width:575px">
+		<table id="helperTable" border>
+			<tr><th>Class</th><th>Name</th><th>Phone</th><th>Location</th><th>Time</th></tr>
+		</table>
+	</div>
+	</div>
+		<script>
+      var myDataRef = new Firebase('https://cyhelp.firebaseIO.com/');
+      $('#ampm').keypress(function (e) {
+        if (e.keyCode == 13) {
+          submitDataFromForm();
+        }
+      });
+      
+      function submitDataFromForm() {
+		  var name = $('#name').val();
+          var phoneFirst = $('#phone_0').val();
+          var phoneSecond = $('#phone_1').val();
+          var phoneThird = $('#phone_2').val();
+          
+          var phone = "(" + phoneFirst + ") " + phoneSecond + "-" + phoneThird;
+          
+          var loc = $('#location').val();
+          var classID = $('#class_id').val();
+          var hour = $('#hours').val();
+          var minute = $('#minutes').val();
+          
+          var e = document.getElementById("ampm");
+          var pmam = e.options[e.selectedIndex].value;
+          
+          myDataRef.push({name: name, phone: phone, loc: loc, classID: classID, hour: hour, minute: minute, pmam: pmam});
+          $('#name').val('');
+          $('#phone_0').val('');
+          $('#phone_1').val('');
+          $('#phone_2').val('');
+          $('#location').val('');
+          $('#class_id').val('');
+          $('#hours').val('');
+          $('#minutes').val('');
+          $('#ampm').val('');
+	  }
+      
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+		displayChatMessage(message.name, message.phone, message.loc, message.classID, message.hour, message.minute, message.pmam);
+      });
+      function displayChatMessage(name, phone, loc, classID, hour, minute, pmam) {
+		$('<tr>')
+			.append($('<td>').append(classID+'</td>'))
+			.append($('<td>').append(name+'</td>'))
+			.append($('<td>').append(phone +'</td>'))
+			.append($('<td>').append(loc +'</td>'))
+			.append($('<td>').append(hour+':'+minute+pmam+'</td>'))
+			.append('</tr>')
+			.appendTo($('#helperTable'));
+        //$('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+</body>
+</html>

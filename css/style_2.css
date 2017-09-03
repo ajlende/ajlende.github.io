@@ -1,0 +1,139 @@
+/*Alex Lende*/
+
+h1 {
+	text-align:center;
+	margin:10px;
+}
+
+a:link {
+	color:#217901;
+	text-decoration:none;
+}
+
+a:visited {
+	color:#0F4003;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#38CC02;
+	text-decoration:none;
+}
+
+a:active {
+	color:#790020;
+	text-decoration:none;
+}
+
+p {
+	margin:20px;
+	text-align: left;
+	text-height: 8px;
+	font-family: Verdana, Geneva, sans-serif;
+	word-wrap:normal;
+	line-height: 1.5;
+	color: #222;
+}
+
+.top {
+	font-size:36px;
+	font-family:Unite, Arial, Helvetica, sans-serif;
+	/*color:#116501;*/
+	color:#0F4003;
+	text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+	background-color:#116501;
+	/* CSS3 */
+	background-image:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+	
+	/* Webkit Browsers */
+	background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.4)), to(rgba(255,255,255,0)));
+	
+	/* Mozilla */
+	background-image:-moz-linear-gradient(top, rgba(255,255,255,.4), rgba(255,255,255,0));
+	
+	/* For < IE8 */
+	/* filter: progid:DXImageTransform.Microsoft.gradient(gradientyype=0, startColorstr='#88ff0000', endColorstr='#3300ff00'); */
+	/* For > IE8 */
+	/* -moz-filter: progid:DXImageTransform.Microsoft.gradient(gradientyype=0, startColorstr='#88ff0000', endColorstr='#3300ff00'); */
+	
+	overflow:auto;
+}
+
+.menu{
+}
+
+.menu ul{
+    list-style: none;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	background-color:#116501;
+}
+
+.menu li{
+    display:inline-block;
+	height:auto;
+	width:23%;
+	text-align:center;
+	padding:10px;
+	margin:auto 0px;
+	
+	font-size:24px;
+	font-family:Unite, Arial, Helvetica, sans-serif;
+	/*color:#116501;*/
+	color:#0F4003;
+	text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+	/* CSS3 */
+	background-image:linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+}
+
+.menu li a {
+	color:#0F4003;
+}
+
+.menu li a:hover {
+	color:#38CC02;
+	text-decoration:none;
+}
+
+.menu li a:active {
+	color:#790020;
+	text-decoration:none;
+}
+
+.block {
+	background: #FFFFFF;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	text-align:left;
+	height:auto;
+	overflow:auto;
+}
+
+.shadow {
+	box-shadow: 0px 4px 8px 0px #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	min-width:200px;
+	max-width:1200px;
+}
+
+#my-picture {
+	float:left;
+	max-width:30%;
+	min-width:160px;
+	margin:20px;
+}
+
+@font-face {
+	font-family: Rez;
+	src:url(../fonts/REZ.ttf);
+}
+
+@font-face {
+	font-family: Unite;
+	src:url(../fonts/unite.otf);
+}

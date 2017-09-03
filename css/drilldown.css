@@ -1,0 +1,172 @@
+body {
+    background-color:#303030;
+    color:#FFFFFF;
+    min-width:980px;
+    min-height:550px;
+}
+#detail0 {
+    top:
+}
+.container {
+    padding-right:4px;
+    z-index:100;
+    background-color: #C41230;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 16px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    max-width:900px;
+    height:150px;
+    display: inline-block;
+    position:relative;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.9);
+    /* CSS3 linear gradient */
+    background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    /* Webkit Browsers linear gradient */
+    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+    /* Mozilla linear gradient */
+    background-image:-moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    /* IE linear Gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#4C000000);
+}
+.sub-container {
+    padding-right:4px;
+    z-index:100;
+    background-color: #C41230;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 16px;
+    border-left: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    border-radius: 0px 0px 10px 10px;
+    position:relative;
+    top:14px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.9);
+}
+.main-item {
+    text-align: center;
+    height:130px;
+    max-width:120px;
+    padding: 10px;
+    margin: auto 0;
+    border-left: 2px solid #000000;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+.main-item:first-child {
+    font-weight: bold;
+    border-left: none;
+}
+.sub-item {
+    text-align: center;
+    height:130px;
+    width:85%;
+    padding: 10px;
+    border-top: 2px solid #000000;
+    display: inline-block;
+    position: relative;
+    /* CSS3 linear gradient */
+    background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    /* Webkit Browsers linear gradient */
+    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+    /* Mozilla linear gradient */
+    background-image:-moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    /* IE linear Gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#4C000000);
+}
+.sub-item:first-child {
+    border-top:none;
+}
+.buttons {
+    position:relative;
+    display:inline-block;
+    z-index:99;
+    margin-bottom:500px;
+}
+.add-right-button {
+    background-color: #C41230;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 16px;
+    text-align: right;
+    border: 3px solid #000000;
+    border-radius: 15px;
+    width: 30px;
+    position: relative;
+    top:65px;
+    left: -24px;
+    padding: 20px 5px 20px 0;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.9);
+}
+.add-bottom-button {
+    display:inline-block;
+    background-color: #C41230;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 16px;
+    text-align: center;
+    border: 3px solid #000000;
+    border-radius: 15px;
+    position: relative;
+    left: -108px;
+    top: 88px;
+    padding: 20px 25px 0px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.9);
+}
+.item-title {
+    margin-bottom:10px;
+}
+.container textarea {
+    width:90%;
+    height:80px;
+    padding:8px;
+    resize: none;
+    position: relative;
+    background-color: #C41230;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 80px rgba(0, 0, 0, 0.3), inset 0px 0px 10px rgba(0, 0, 0, 1);
+}
+.sub-container textarea {
+    width:inherit;
+    height:80px;
+    padding:8px;
+    resize: none;
+    position: relative;
+    background-color: #C41230;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 80px rgba(0, 0, 0, 0.3), inset 0px 0px 10px rgba(0, 0, 0, 1);
+}
+textarea, input {
+    outline:none;
+}
+#first-textarea {
+    height: 80px;
+    position: relative;
+    z-index: 4;
+}
+#info {
+    color:#FFFFFF;
+    padding:20px;
+    border-radius:30px;
+    box-shadow: inset 0px 0px 30px #000000, 1px 1px 2px #999999;
+    margin:auto auto 30px auto;
+    background-color:#222;
+    text-shadow:2px 2px 0px #030303;
+    max-width:618px;
+}
+#scroll {
+    margin 0 auto;
+    text-align:center;
+    margin-bottom:60px;
+}
