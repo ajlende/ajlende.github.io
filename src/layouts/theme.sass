@@ -1,0 +1,52 @@
+@import "../variables.sass"
+
+// Icons
+$fa-font-path: "~font-awesome/fonts"
+@import "~font-awesome/scss/font-awesome.scss"
+
+// Bulma
+@import "~bulma/sass/utilities/initial-variables.sass"
+
+// Colors
+// NMS Theme http://github.com/ajlende/nms-syntax
+$orange:       hsl(35,  97%,  48%)
+$yellow:       hsl(47,  100%, 55%)
+$green:        hsl(108, 39%,  59%)
+$turquoise:    hsl(179, 59%,  67%)
+$blue:         hsl(179, 100%, 29%)
+$purple:       hsl(288, 22%,  54%)
+$red:          hsl(355, 100%, 68%)
+
+$black:        hsl(200, 98%, 4%)
+$black-bis:    hsl(197, 92%, 10%)
+$black-ter:    hsl(194, 82%, 15%)
+
+$grey-darker:  hsl(191, 62%, 21%)
+$grey-dark:    hsl(188, 42%, 29%)
+$grey:         hsl(185, 22%, 48%)
+$grey-light:   hsl(182, 18%, 71%)
+$grey-lighter: hsl(179, 17%, 86%)
+
+$white-ter:    hsl(60, 17%,  96%)
+$white-bis:    hsl(60, 17%,  98%)
+$white-bis:    hsl(60, 17%, 100%)
+
+// Primary colors
+$primary:      $blue
+
+$info:         $turquoise
+$success:      $green
+$warning:      $yellow
+$danger:       $red
+
+$light:        $white-ter
+$dark:         $black-ter
+
+// Typography
+$family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace
+
+@import "~bulma/bulma.sass"
+
+// Overrides
+h1,h2,h3,h4,h5,h6
+  font-family: $family-title

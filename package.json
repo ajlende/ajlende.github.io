@@ -4,9 +4,14 @@
   "version": "2.0.0",
   "author": "Alex Lende <ajlende@gmail.com>",
   "dependencies": {
+    "bloomer": "^0.6.2",
+    "bulma": "^0.5.1",
+    "font-awesome": "^4.7.0",
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
-    "gatsby-plugin-react-helmet": "^1.0.5"
+    "gatsby-plugin-google-analytics": "^1.0.7",
+    "gatsby-plugin-react-helmet": "^1.0.5",
+    "gatsby-plugin-sass": "^1.0.10"
   },
   "keywords": [
     "personal-site",
@@ -24,10 +29,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public --branch master",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gh-pages": "^1.0.0",
     "prettier": "^1.6.1"
   }
 }

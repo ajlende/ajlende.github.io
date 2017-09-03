@@ -1,6 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Alex Lende`,
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    {resolve: `gatsby-plugin-react-helmet`},
+    {resolve: `gatsby-plugin-sass`},
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-105831475-1`,
+      },
+    },
+  ],
 }
