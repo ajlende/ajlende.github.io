@@ -9,7 +9,7 @@ $fa-font-path: "~font-awesome/fonts"
 
 // Colors
 // NMS Theme http://github.com/ajlende/nms-syntax
-$orange:       hsl(35,  97%,  48%)
+$orange:       hsl(25, 85%, 61%)
 $yellow:       hsl(47,  100%, 55%)
 $green:        hsl(108, 39%,  59%)
 $turquoise:    hsl(179, 59%,  67%)
@@ -27,8 +27,8 @@ $grey:         hsl(185, 22%, 48%)
 $grey-light:   hsl(182, 18%, 71%)
 $grey-lighter: hsl(179, 17%, 86%)
 
-$white-ter:    hsl(60, 17%,  96%)
-$white-bis:    hsl(60, 17%,  98%)
+$white-ter:    hsl(60, 17%,  92%)
+$white-bis:    hsl(60, 17%,  96%)
 $white-bis:    hsl(60, 17%, 100%)
 
 // Primary colors
@@ -47,6 +47,15 @@ $family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier
 
 @import "~bulma/bulma.sass"
 
+// Prism syntax theme
+@import "./prism.scss"
+
 // Overrides
 h1,h2,h3,h4,h5,h6
   font-family: $family-title
+
+body ::selection
+  background: $grey-lighter
+
+.navbar
+  z-index: 1

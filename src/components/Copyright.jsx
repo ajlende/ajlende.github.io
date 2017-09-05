@@ -8,7 +8,7 @@ const Copyright = () => (
         <p>© Copyright 2017 Alex Lende</p>
         <p>
           Source code licensed under{" "}
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
         </p>
         <p>Website content all rights reserved.</p>
       </Content>

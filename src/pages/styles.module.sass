@@ -1,6 +1,10 @@
 @import "~bulma/sass/utilities/variables.sass"
 @import "~bulma/sass/utilities/mixins.sass"
 
+=angle($pseudo, $flip: false, $angle: 1.5deg)
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both'
+
 .title
   +desktop
     font-size: 8rem !important
@@ -12,3 +16,10 @@
     font-size: 2rem !important
   +touch
     font-size: 1rem !important
+
+.angled
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)
+  overflow: hidden
+
+.offset
+  margin-top: -3.25rem

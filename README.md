@@ -4,6 +4,7 @@ This repository contains the source code for [ajlende.github.io](http://ajlende.
 
 ## Scripts
 
+- `postinstall`: Hack to fix conflicting `.tag` and `.number` classes in Bulma and Prism by adding `:not(.token)` to each class in the Bulma source (probably only works on macOS)
 - `build`: Builds the source files into a `public` directory
 - `develop`: Serves the site with HMR enabled on `localhost:8000`
 - `deploy`: Deploys the site to GitHub pages
