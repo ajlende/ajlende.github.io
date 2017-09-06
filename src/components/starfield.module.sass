@@ -1,65 +1,77 @@
-// n is number of stars required
-@function multiple-box-shadow ($n)
-  $value: '#{random(2000)}px #{random(2000)}px #FFF'
-  @for $i from 2 through $n
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+@function strip-unit($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return $number / ($number * 0 + 1)
+  @return $number
 
+@function star-box-shadow ($color, $count, $size)
+  $x: strip-unit($size)
+  $value: '#{random(2*$x)-$x}px #{random(2*$x)-$x}px #{$color}'
+  @for $i from 2 through $count
+    $value: '#{$value}, #{random(2*$x)-$x}px #{random(2*$x)-$x}px #{$color}'
   @return unquote($value)
 
-$shadows-small:  multiple-box-shadow(700)
-$shadows-medium: multiple-box-shadow(200)
-$shadows-big:    multiple-box-shadow(100)
+$bp-phone: 50px
+$bp-tablet: 600px
+$bp-desktop: 1200px
+$bp-big-desktop: 1800px
+$bp-retina-desktop: 2400px
+$bp-uhd-desktop: 3400px
+$bp-max-desktop: 5200px
+
+@function calc-star-count($density, $size)
+  @return floor(0.25 * ($density / 100%) * ($size / 1px))
+
+=star-box($color, $density, $size)
+  box-shadow: star-box-shadow($color, calc-star-count($density, $size), $size)
+
+=responsive-star-box($color, $density)
+  @media screen and (orientation: landscape) and (min-width: $bp-phone) and (max-width: $bp-desktop - 1px),
+  screen and (orientation: portrait) and (min-height: $bp-phone) and (max-height: $bp-desktop - 1px)
+    +star-box($color, $density, $bp-desktop)
+
+  @media screen and (orientation: landscape) and (min-width: $bp-desktop) and (max-width: $bp-big-desktop - 1px),
+  screen and (orientation: portrait) and (min-height: $bp-desktop) and (max-height: $bp-big-desktop - 1px)
+    +star-box($color, $density, $bp-big-desktop)
+
+  @media screen and (orientation: landscape) and (min-width: $bp-big-desktop) and (max-width: $bp-retina-desktop - 1px),
+  screen and (orientation: portrait) and (min-height: $bp-big-desktop) and (max-height: $bp-retina-desktop - 1px)
+    +star-box($color, $density, $bp-retina-desktop)
+
+  @media screen and (orientation: landscape) and (min-width: $bp-retina-desktop) and (max-width: $bp-uhd-desktop - 1px),
+  screen and (orientation: portrait) and (min-height: $bp-retina-desktop) and (max-height: $bp-uhd-desktop - 1px)
+    +star-box($color, $density, $bp-uhd-desktop)
+
+  @media screen and (orientation: landscape) and (min-width: $bp-uhd-desktop) and (max-width: $bp-max-desktop - 1px),
+  screen and (orientation: portrait) and (min-height: $bp-uhd-desktop) and (max-height: $bp-max-desktop - 1px)
+    +star-box($color, $density, $bp-max-desktop)
+
+.stars1, .stars2, .stars3
+  transform: translateY(2000)
+  background: transparent
+  position: absolute
+  top: 100%
+  left: 50%
 
 .stars1
   width: 1px
   height: 1px
-  background: transparent
-  box-shadow: $shadows-small
-  animation			: animStar 50s linear infinite
-
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 1px
-    height: 1px
-    background: transparent
-    box-shadow: $shadows-small
+  +responsive-star-box(hsla(0, 100%, 100%, 0.8), 100%)
+  animation: animStar 120s linear infinite
 
 .stars2
   width: 2px
   height: 2px
-  background: transparent
-  box-shadow: $shadows-medium
-  animation			: animStar 100s linear infinite
-
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 2px
-    height: 2px
-    background: transparent
-    box-shadow: $shadows-medium
+  +responsive-star-box(hsla(0, 100%, 100%, 0.8), 50%)
+  animation: animStar 240s linear infinite
 
 .stars3
   width: 3px
   height: 3px
-  background: transparent
-  box-shadow: $shadows-big
-  animation			: animStar 150s linear infinite
-
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 3px
-    height: 3px
-    background: transparent
-    box-shadow: $shadows-big
+  +responsive-star-box(hsla(0, 100%, 100%, 0.8), 25%)
+  animation: animStar 480s linear infinite
 
 @keyframes animStar
   from
-    transform: translateY(0px)
+    transform: rotateZ(0deg)
   to
-    transform: translateY(-2000px)
+    transform: rotateZ(360deg)
