@@ -19,7 +19,7 @@ $bp-uhd-desktop: 3400px
 $bp-max-desktop: 5200px
 
 @function calc-star-count($density, $size)
-  @return floor(0.25 * ($density / 100%) * ($size / 1px))
+  @return floor(0.8 * ($density / 100%) * ($size / 1px))
 
 =star-box($color, $density, $size)
   box-shadow: star-box-shadow($color, calc-star-count($density, $size), $size)
