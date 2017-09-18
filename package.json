@@ -52,7 +52,7 @@
     "postinstall": "find node_modules/bulma -name '*.sass' | xargs sed -Ei '' 's/^(\\.number|\\.tag)(:[^.]+)?$/\\1:not(.token)\\2/g'",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public --branch master",
+    "deploy": "gatsby build && cp src/CNAME public/ && gh-pages -d public --branch master",
     "format": "prettier --print-width 100 --trailing-comma all --no-semi --write src/**/*.{js,jsx}",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
