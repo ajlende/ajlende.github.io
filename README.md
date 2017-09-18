@@ -11,6 +11,6 @@ This repository contains the source code for [ajlende.github.io](http://ajlende.
 
 ## License
 
-Source code licensed under [MIT](http://opensource.org/licenses/mit-license.php).
+Source code is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
 
-Website content all rights reserved.
+Contents of this site are © Copyright 2017 Alex Lende. All rights reserved.

@@ -1,0 +1,142 @@
+/**
+ * Dark theme for Prism
+ */
+
+@import "./colors.sass";
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: $white-ter;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: $family-monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"],
+pre[class*="language-"] > code {
+  background: $black-bis;
+  & ::selection {
+    background: $black-ter;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-color {
+    background: $black-bis;
+  }
+  &::-webkit-scrollbar-corner {
+    background: $black-bis;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    border: 3px solid $black-bis;
+    background: $grey-darker;
+    background-clip: content-box;
+  }
+  &::-webkit-scrollbar-track {
+    background: $black-bis;
+  }
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: $grey-dark;
+}
+
+.token.punctuation {
+  color: $white-ter;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: $red;
+}
+
+.token.boolean,
+.token.number {
+  color: $purple;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.char,
+.token.string {
+  color: $blue;
+}
+
+.token.selector,
+.token.keyword {
+  color: $turquoise;
+}
+
+.token.operator,
+.token.builtin,
+.token.inserted {
+  color: $green;
+}
+
+.token.script,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: $white-ter;
+}
+
+.token.function {
+  color: $yellow;
+}
+
+.token.attr-name,
+.token.regex,
+.token.important {
+  color: $orange;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

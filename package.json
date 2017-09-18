@@ -43,12 +43,13 @@
     "gatsby-transformer-remark": "^1.7.7"
   },
   "devDependencies": {
+    "favicons-webpack-plugin": "0.0.7",
     "gh-pages": "^1.0.0",
     "prettier": "^1.7.0"
   },
   "main": "public/index.html",
   "scripts": {
-    "postinstall": "find node_modules/bulma -name '*.sass' | xargs sed -Ei '' 's/^\\.(tag|number)$/.\\1:not(.token)/g'",
+    "postinstall": "find node_modules/bulma -name '*.sass' | xargs sed -Ei '' 's/^(\\.number|\\.tag)(:[^.]+)?$/\\1:not(.token)\\2/g'",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public --branch master",

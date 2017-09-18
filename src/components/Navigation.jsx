@@ -60,11 +60,11 @@ class Navigation extends React.Component {
               <NavbarItemLink link="/projects" location={this.props.location}>
                 Projects
               </NavbarItemLink>
-              <NavbarItemLink link="/experience" location={this.props.location}>
-                Experience
-              </NavbarItemLink>
               <NavbarItemLink link="/blog" location={this.props.location}>
                 Blog
+              </NavbarItemLink>
+              <NavbarItemLink link="/contact" location={this.props.location}>
+                Contact
               </NavbarItemLink>
             </NavbarStart>
             <NavbarEnd>

@@ -5,12 +5,12 @@ const Copyright = () => (
   <Footer>
     <Container>
       <Content isSize="small">
-        <p>© Copyright 2017 Alex Lende</p>
+        <p>Contents of this site are © Copyright 2017 Alex Lende. All rights reserved.</p>
         <p>
-          Source code licensed under{" "}
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+          <a href="https://github.com/ajlende/ajlende.github.io/tree/develop">Source code</a> is{" "}
+          available under the{" "}
+          <a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.
         </p>
-        <p>Website content all rights reserved.</p>
       </Content>
     </Container>
   </Footer>

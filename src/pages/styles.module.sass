@@ -1,9 +1,16 @@
 @import "~bulma/sass/utilities/variables.sass"
 @import "~bulma/sass/utilities/mixins.sass"
 
-=angle($pseudo, $flip: false, $angle: 1.5deg)
-  // Possible values for $pseudo are: before, after, both
-  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both'
+@import "../styles/colors.sass"
+
+.monogram
+  fill: $light
+  margin-bottom: 1.5rem
+  max-width: 100%
+  +desktop
+    height: 8rem
+  +touch
+    height: 4rem
 
 .title
   +desktop

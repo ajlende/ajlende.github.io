@@ -1,0 +1,16 @@
+// Theme
+@import "~bulma/sass/utilities/initial-variables.sass"
+@import "./colors.sass"
+@import "./fonts.sass"
+@import "~bulma/bulma.sass"
+@import "./prism.scss"
+
+// Overrides
+h1,h2,h3,h4,h5,h6
+  font-family: $family-title
+
+body ::selection
+  background: $grey-lighter
+
+.navbar
+  z-index: 1
