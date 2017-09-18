@@ -1,7 +1,18 @@
-@import "~bulma/sass/utilities/variables.sass"
-@import "~bulma/sass/utilities/mixins.sass"
-
+@import "~bulma/sass/utilities/initial-variables.sass"
 @import "../styles/colors.sass"
+@import "~bulma/bulma.sass"
+
+.link
+  color: $link
+  fill: $link
+  cursor: pointer
+  text-decoration: none
+  strong
+    color: currentColor
+    fill: currentColor
+  &:hover
+    color: $link-hover
+    fill: $link-hover
 
 .monogram
   fill: $light
