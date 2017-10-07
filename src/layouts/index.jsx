@@ -23,6 +23,7 @@ const Layout = ({ children, location }) => (
       <meta name="application-name" content="Alex Lende" />
       <meta name="theme-color" content="#073746" />
       <title>Alex Lende</title>
+      <meta name="p:domain_verify" content="b94c9d9f144c41daa7b4aac64aeef4b6" />
     </Helmet>
     <Navigation location={location} />
     {children()}
