@@ -1,6 +1,10 @@
 import styles from "./styles.module.sass"
 import symbols from "!file-loader!./symbols.svg"
-import myPhoto from "./alex-ragbrai.jpg"
+
+import india from "./alex-india.jpg"
+import ragbrai from "./alex-ragbrai.jpg"
+import bwca from "./alex-bwca.jpg"
+import france from "./alex-france.jpg"
 
 import React from "react"
 import classnames from "classnames"
@@ -13,12 +17,47 @@ import {
   Title,
   Section,
   Image,
+  Icon,
   Columns,
   Column,
 } from "bloomer"
 import Link from "gatsby-link"
+import Slider from "react-slick"
 
 import StarField from "../components/StarField"
+
+const sliderSettings = {
+  fade: true,
+  infinite: true,
+
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+
+  slidesToScroll: 1,
+  slidesToShow: 1,
+
+  dots: true,
+  arrows: true,
+
+  nextArrow: React.createElement(({ onClick }) => (
+    <div onClick={onClick} className={classnames(styles.slickNav, styles.slickNext)}>
+      <Icon isSize="large" className="fa-2x" icon="chevron-right" />
+    </div>
+  )),
+  prevArrow: React.createElement(({ onClick }) => (
+    <div onClick={onClick} className={classnames(styles.slickNav, styles.slickPrev)}>
+      <Icon isSize="large" className="fa-2x" icon="chevron-left" />
+    </div>
+  )),
+}
+
+const Slide = ({ title, img, alt }) => (
+  <div>
+    <Image src={img} alt={alt} />
+    <span className={styles.imgInfo}>{title}</span>
+  </div>
+)
 
 const IndexPage = () => (
   <div>
@@ -44,9 +83,10 @@ const IndexPage = () => (
             <Content>
               <p>
                 As you probably guessed by the large title at the top of this page, my name is Alex
-                Lende (pronounced like lend-y). You can find me most places on the internet as{" "}
-                <a href="https://github.com/ajlende">@ajlende</a>. I create 3D data visualizations
-                with WebGL at <a href="https://www.cerner.com">Cerner</a> in Kansas City.
+                Lende. You can find me most places on the internet as{" "}
+                <a href="https://github.com/ajlende">@ajlende</a>. My primary gig is creating 3D
+                data visualizations with WebGL for <a href="https://www.cerner.com">Cerner</a> in
+                Kansas City.
               </p>
               <p>
                 Most of the time you'll find me writing JavaScript in whatever the current trendy
@@ -59,14 +99,49 @@ const IndexPage = () => (
                 design the occasional website or logo for someone.
               </p>
               <p>
-                Outside of tech, I enjoy The Great Outdoors™. I achieved the rank of Eagle Scout
-                while in the Boy Scouts of America, and still enjoy camping as often as I can. I've
-                been to the Boundary Waters Canoe Area Wilderness (<a href="http://bwca.com/index.cfm?">BWCA</a>)
-                several times, and I did my first Des Moines Register's Annual Great Bike Ride
-                Across Iowa (<a href="https://ragbrai.com/">RAGBRAI</a>) in July 2017.
+                Outside of tech, I enjoy The Great Outdoors™ and all sorts of adventures. I achieved
+                the rank of Eagle Scout while in the Boy Scouts of America, and still enjoy camping
+                as often as I can. My most recent adventures have been{" "}
+                <a href="http://www.iowastatedaily.com/ames247/article_c384cfa8-2be5-11e6-bb4e-87b03dd281f6.html">
+                  performing in France
+                </a>{" "}
+                for D-Day memorial ceremonies, a 10-day canoeing trip in the Boundary Waters Canoe
+                Area Wilderness (<a href="http://bwca.com/index.cfm?">BWCA</a>), my first Des Moines
+                Register's Annual Great Bike Ride Across Iowa (<a href="https://ragbrai.com/">RAGBRAI</a>),
+                and a 10-day Vipassana meditation course in{" "}
+                <a href="http://www.giri.dhamma.org/">Dhamma Giri, India</a>.
               </p>
             </Content>
-            <Image src={myPhoto} />
+            <Slider {...sliderSettings}>
+              <div>
+                <Slide
+                  img={india}
+                  title="September 2017 | Dhamma Giri, India"
+                  alt="Alex standing in front of the golden pagoda at Dhamma Giri"
+                />
+              </div>
+              <div>
+                <Slide
+                  img={ragbrai}
+                  title="July 2017 | Lansing, Iowa"
+                  alt="Alex holding his bike above his head after the completion of RAGBRAI"
+                />
+              </div>
+              <div>
+                <Slide
+                  img={bwca}
+                  title=" July 2016 | Ely, Minnesota"
+                  alt="Alex and friends standing ankle-deep in the water after leaving the Boundary Waters"
+                />
+              </div>
+              <div>
+                <Slide
+                  img={france}
+                  title="June 2016 | Longues-su-Mer, France"
+                  alt="Alex standing next to a World War II battery cannon on the coast of Normandy"
+                />
+              </div>
+            </Slider>
           </Column>
         </Columns>
       </Container>

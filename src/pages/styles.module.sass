@@ -41,3 +41,31 @@
 
 .offset
   margin-top: -3.25rem
+
+.imgInfo
+  position: absolute
+  bottom: 0px
+  color: $light
+  font-weight: bolder
+  background: transparentize($dark, 0.2)
+  padding: 1em
+  width: 100%
+
+.slickNav
+  position: absolute
+  top: 50%
+  z-index: 1
+  color: transparentize($light, 0.2)
+  transition: all 0.1s ease-in-out
+  &:hover
+    color: $light
+
+.slickPrev
+  left: 1em
+  &:hover
+    left: 0.8em
+
+.slickNext
+  right: 1em
+  &:hover
+    right: 0.8em
