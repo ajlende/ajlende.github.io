@@ -1,11 +1,16 @@
 import React from "react"
 import Link from "gatsby-link"
+import Helmet from "react-helmet"
 import { Section, Content, Container, Columns, Column, Tag } from "bloomer"
 
 const BlogPostTemplate = ({ data }) => {
   const tags = data.markdownRemark.frontmatter.tags || []
+  const title = data.markdownRemark.frontmatter.title
   return (
     <Section>
+      <Helmet>
+        <title>{title} – Alex Lende</title>
+      </Helmet>
       <Columns isCentered>
         <Column isSize={6}>
           <Content dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

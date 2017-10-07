@@ -2,6 +2,7 @@ import styles from "./styles.module.sass"
 import symbols from "!file-loader!./symbols.svg"
 
 import React from "react"
+import Helmet from "react-helmet"
 import {
   Container,
   Hero,
@@ -19,6 +20,9 @@ import Link from "gatsby-link"
 
 const IndexPage = () => (
   <div>
+    <Helmet>
+      <title>Contact – Alex Lende</title>
+    </Helmet>
     <Hero isColor="success" isBold className={styles.angled}>
       <HeroBody>
         <Container hasTextAlign="centered">

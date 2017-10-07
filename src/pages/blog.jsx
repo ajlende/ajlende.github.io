@@ -1,6 +1,7 @@
 import styles from "./styles.module.sass"
 
 import React from "react"
+import Helmet from "react-helmet"
 import {
   Section,
   Container,
@@ -51,6 +52,9 @@ const Article = ({ children }) => (
 
 const IndexPage = ({ data }) => (
   <div>
+    <Helmet>
+      <title>Blog – Alex Lende</title>
+    </Helmet>
     <Hero isColor="warning" isBold className={styles.angled}>
       <HeroBody>
         <Container hasTextAlign="centered">
