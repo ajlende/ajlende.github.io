@@ -46,7 +46,7 @@ Articles.defaultProps = {
 
 const Article = ({ children }) => (
   <Tile isParent isSize={6}>
-    <Tile isChild render={() => <Box>{children}</Box>} />
+    <Tile isChild render={() => <Box className={styles.box}>{children}</Box>} />
   </Tile>
 )
 
