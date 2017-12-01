@@ -9,8 +9,12 @@
       "path---2017-09-03-hello-world-a6bfbe7551e52ac42553.js.map"
     ],
     "path---blog": [
-      "path---blog-da89af430a741a23c3fc.js",
-      "path---blog-da89af430a741a23c3fc.js.map"
+      "path---blog-9545c386514a4a41fd4a.js",
+      "path---blog-9545c386514a4a41fd4a.js.map"
+    ],
+    "path---2017-11-30-storytelling": [
+      "path---2017-11-30-storytelling-be7fca88ccf083b1fabc.js",
+      "path---2017-11-30-storytelling-be7fca88ccf083b1fabc.js.map"
     ],
     "component---src-pages-contact-jsx": [
       "component---src-pages-contact-jsx-8cccc746b86dde90cdb7.js",
@@ -55,8 +59,8 @@
       "path---contact-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-blog-jsx": [
-      "component---src-pages-blog-jsx-19a485498049e09cc74e.js",
-      "component---src-pages-blog-jsx-19a485498049e09cc74e.js.map"
+      "component---src-pages-blog-jsx-b428e309859660676622.js",
+      "component---src-pages-blog-jsx-b428e309859660676622.js.map"
     ],
     "component---src-templates-post-jsx": [
       "component---src-templates-post-jsx-933fad8ba5a7a266ddea.js",
@@ -67,9 +71,9 @@
       "component---src-pages-index-jsx-1be20a3b9efbeccf07fb.js.map"
     ],
     "app": [
-      "app-53f89cbe38235e8e0a6c.js",
+      "app-f31d3b6f4e1141dc6024.js",
       "build-js-styles.css",
-      "app-53f89cbe38235e8e0a6c.js.map",
+      "app-f31d3b6f4e1141dc6024.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
