@@ -28,8 +28,7 @@ const Articles = ({ rowSize, children }) => {
 
   const toRows = row => <Tile key={row.reduce((a, e) => a + e.key, "")}>{row}</Tile>
 
-  const rows = React.Children
-    .toArray(children)
+  const rows = React.Children.toArray(children)
     .reduce(groupByRow, [])
     .map(toRows)
 

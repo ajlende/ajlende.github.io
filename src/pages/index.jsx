@@ -107,8 +107,9 @@ const IndexPage = () => (
                 </a>{" "}
                 for D-Day memorial ceremonies, a 10-day canoeing trip in the Boundary Waters Canoe
                 Area Wilderness (<a href="http://bwca.com/index.cfm?">BWCA</a>), my first Des Moines
-                Register's Annual Great Bike Ride Across Iowa (<a href="https://ragbrai.com/">RAGBRAI</a>),
-                and a 10-day Vipassana meditation course in{" "}
+                Register's Annual Great Bike Ride Across Iowa (<a href="https://ragbrai.com/">
+                  RAGBRAI
+                </a>), and a 10-day Vipassana meditation course in{" "}
                 <a href="http://www.giri.dhamma.org/">Dhamma Giri, India</a>.
               </p>
             </Content>
