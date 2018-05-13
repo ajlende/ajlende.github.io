@@ -31,6 +31,7 @@
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-catch-links": "^1.0.22",
     "gatsby-plugin-google-analytics": "^1.0.31",
+    "gatsby-plugin-guess-js": "^1.0.0-alpha.3",
     "gatsby-plugin-postcss-sass": "^1.0.20",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
@@ -41,6 +42,7 @@
     "gatsby-remark-smartypants": "^1.4.12",
     "gatsby-source-filesystem": "^1.5.35",
     "gatsby-transformer-remark": "^1.7.41",
+    "guess-webpack": "^0.1.0",
     "prismjs": "^1.14.0",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.15.4"
