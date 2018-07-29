@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: "Alex Lende",
+    siteUrl: "https://ajlende.com",
   },
   plugins: [
+    { resolve: "gatsby-plugin-sitemap" },
     { resolve: "gatsby-plugin-catch-links" },
     { resolve: "gatsby-plugin-react-helmet" },
     {
