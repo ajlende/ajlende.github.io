@@ -5,7 +5,7 @@ const Copyright = () => (
   <Footer>
     <Container>
       <Content isSize="small">
-        <p>Contents of this site are © Copyright 2017 Alex Lende. All rights reserved.</p>
+        <p>Contents of this site are © Copyright 2017-2018 Alex Lende. All rights reserved.</p>
         <p>
           <a href="https://github.com/ajlende/ajlende.github.io/tree/develop">Source code</a> is{" "}
           available under the{" "}
