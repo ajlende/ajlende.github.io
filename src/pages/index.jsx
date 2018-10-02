@@ -17,45 +17,16 @@ import {
   Title,
   Section,
   Image,
-  Icon,
   Columns,
   Column,
 } from "bloomer"
-import Link from "gatsby-link"
-import Slider from "react-slick"
 
 import StarField from "../components/StarField"
 
-const sliderSettings = {
-  fade: true,
-  infinite: true,
-
-  autoplay: true,
-  autoplaySpeed: 3000,
-  pauseOnHover: true,
-
-  slidesToScroll: 1,
-  slidesToShow: 1,
-
-  dots: true,
-  arrows: true,
-
-  nextArrow: React.createElement(({ onClick }) => (
-    <div onClick={onClick} className={classnames(styles.slickNav, styles.slickNext)}>
-      <Icon isSize="large" className="fa-2x" icon="chevron-right" />
-    </div>
-  )),
-  prevArrow: React.createElement(({ onClick }) => (
-    <div onClick={onClick} className={classnames(styles.slickNav, styles.slickPrev)}>
-      <Icon isSize="large" className="fa-2x" icon="chevron-left" />
-    </div>
-  )),
-}
-
-const Slide = ({ title, img, alt }) => (
-  <div>
+const Slide = ({ date, title, img, alt }) => (
+  <div className={styles.imgGrp}>
     <Image src={img} alt={alt} />
-    <span className={styles.imgInfo}>{title}</span>
+    <div className={styles.imgInfo}>{title}<br />{date}</div>
   </div>
 )
 
@@ -113,36 +84,32 @@ const IndexPage = () => (
                 <a href="http://www.giri.dhamma.org/">Dhamma Giri, India</a>.
               </p>
             </Content>
-            <Slider {...sliderSettings}>
-              <div>
-                <Slide
-                  img={india}
-                  title="September 2017 | Dhamma Giri, India"
-                  alt="Alex standing in front of the golden pagoda at Dhamma Giri"
-                />
-              </div>
-              <div>
-                <Slide
-                  img={ragbrai}
-                  title="July 2017 | Lansing, Iowa"
-                  alt="Alex holding his bike above his head after the completion of RAGBRAI"
-                />
-              </div>
-              <div>
-                <Slide
-                  img={bwca}
-                  title=" July 2016 | Ely, Minnesota"
-                  alt="Alex and friends standing ankle-deep in the water after leaving the Boundary Waters"
-                />
-              </div>
-              <div>
-                <Slide
-                  img={france}
-                  title="June 2016 | Longues-su-Mer, France"
-                  alt="Alex standing next to a World War II battery cannon on the coast of Normandy"
-                />
-              </div>
-            </Slider>
+            <div className={styles.imgGrid}>
+              <Slide
+                img={india}
+                date="September 2017"
+                title="Dhamma Giri, India"
+                alt="Alex standing in front of the golden pagoda at Dhamma Giri"
+              />
+              <Slide
+                img={ragbrai}
+                date="July 2017"
+                title="Lansing, Iowa"
+                alt="Alex holding his bike above his head after the completion of RAGBRAI"
+              />
+              <Slide
+                img={bwca}
+                date="July 2016"
+                title="Ely, Minnesota"
+                alt="Alex in the middle of five friends standing ankle-deep in the water of a Boundary Waters entry point"
+              />
+              <Slide
+                img={france}
+                date="June 2016"
+                title="Longues-su-Mer, France"
+                alt="Alex standing next to a World War II battery cannon on the coast of Normandy"
+              />
+            </div>
           </Column>
         </Columns>
       </Container>

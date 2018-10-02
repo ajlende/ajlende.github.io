@@ -42,33 +42,32 @@
 .offset
   margin-top: -3.25rem
 
+.imgGrid
+  display: grid
+  grid: auto-flow dense / repeat(2, 50%)
+  grid-gap: 1rem
+
+.imgGrp
+  position: relative
+
 .imgInfo
   position: absolute
+  opacity: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
   bottom: 0px
   color: $light
   font-weight: bolder
   background: transparentize($dark, 0.2)
-  padding: 1em
+  padding: 1rem
   width: 100%
+  height: 100%
+  transition: 0.2s
 
-.slickNav
-  position: absolute
-  top: 50%
-  z-index: 1
-  color: transparentize($light, 0.2)
-  transition: all 0.1s ease-in-out
   &:hover
-    color: $light
-
-.slickPrev
-  left: 1em
-  &:hover
-    left: 0.8em
-
-.slickNext
-  right: 1em
-  &:hover
-    right: 0.8em
+    opacity: 1
 
 .box
   width: 100%
