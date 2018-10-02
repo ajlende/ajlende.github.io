@@ -44,13 +44,13 @@ class Navigation extends React.Component {
             <NavbarItemLink link="/" location={this.props.location}>
               <strong>Alex Lende</strong>
             </NavbarItemLink>
-            <NavbarItem href="https://github.com/ajlende" isHidden="desktop">
+            <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="desktop">
               <Icon icon="github" />
             </NavbarItem>
-            <NavbarItem href="https://linkedin.com/in/ajlende" isHidden="desktop">
+            <NavbarItem aria-label="LinkedIn" href="https://linkedin.com/in/ajlende" isHidden="desktop">
               <Icon icon="linkedin" />
             </NavbarItem>
-            <NavbarItem href="https://angel.co/ajlende" isHidden="desktop">
+            <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="desktop">
               <Icon icon="angellist" />
             </NavbarItem>
             <NavbarBurger isActive={this.state.isDropdownOpen} onClick={this.onClickDropdown} />

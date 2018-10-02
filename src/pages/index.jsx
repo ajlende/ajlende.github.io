@@ -25,7 +25,7 @@ import StarField from "../components/StarField"
 
 const Slide = ({ date, title, img, alt }) => (
   <div className={styles.imgGrp}>
-    <Image src={img} alt={alt} />
+    <img src={img} alt={alt} />
     <div className={styles.imgInfo}>{title}<br />{date}</div>
   </div>
 )

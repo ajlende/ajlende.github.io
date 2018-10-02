@@ -10,6 +10,7 @@ import Copyright from "../components/Copyright"
 const Layout = ({ children, location }) => (
   <div>
     <Helmet>
+      <html lang="en" />
       <meta charSet="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +27,7 @@ const Layout = ({ children, location }) => (
       <meta name="p:domain_verify" content="b94c9d9f144c41daa7b4aac64aeef4b6" />
     </Helmet>
     <Navigation location={location} />
-    {children()}
+    <main>{children()}</main>
     <Copyright />
   </div>
 )
