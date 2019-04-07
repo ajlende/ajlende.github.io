@@ -1,5 +1,3 @@
-import styles from "./styles.module.sass"
-
 import React from "react"
 import Helmet from "react-helmet"
 import {
@@ -7,50 +5,22 @@ import {
   Container,
   Hero,
   HeroBody,
-  Subtitle,
   Title,
-  Tile,
   Content,
-  Box,
   Level,
   LevelLeft,
   LevelRight,
 } from "bloomer"
-import Link from "gatsby-link"
-
+import { Link, graphql } from "gatsby"
 import dateFormat from "dateformat"
 
-const Articles = ({ rowSize, children }) => {
-  const groupByRow = (acc, child, index, arr) => {
-    if (index % rowSize) return acc
-    return [...acc, arr.slice(index, index + rowSize)]
-  }
+import Layout from "../components/Layout"
+import { Articles, Article } from "../components/Articles"
 
-  const toRows = row => <Tile key={row.reduce((a, e) => a + e.key, "")}>{row}</Tile>
+import styles from "./styles.module.sass"
 
-  const rows = React.Children.toArray(children)
-    .reduce(groupByRow, [])
-    .map(toRows)
-
-  return (
-    <Tile isAncestor isVertical>
-      {rows}
-    </Tile>
-  )
-}
-
-Articles.defaultProps = {
-  rowSize: 2,
-}
-
-const Article = ({ children }) => (
-  <Tile isParent isSize={6}>
-    <Tile isChild render={() => <Box className={styles.box}>{children}</Box>} />
-  </Tile>
-)
-
-const IndexPage = ({ data }) => (
-  <div>
+const BlogPage = ({ data, location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Blog – Alex Lende</title>
     </Helmet>
@@ -64,32 +34,34 @@ const IndexPage = ({ data }) => (
     <Section>
       <Container>
         <Articles>
-          {data.remark.posts.filter(post => post.path !== "/404/").map(({ post }) => {
-            const { timeToRead, id } = post
-            const { title, description, date, slug } = post.frontmatter
-            return (
-              <Article key={id}>
-                <Title>
-                  <Link to={`${dateFormat(date, "UTC:yyyy/mm/dd")}/${slug}`}>{title}</Link>
-                </Title>
-                <Level style={{ fontSize: "0.9em" }}>
-                  <LevelLeft>{dateFormat(date, "UTC:mmm d, yyyy")}</LevelLeft>
-                  <LevelRight>{timeToRead} min read</LevelRight>
-                </Level>
-                <Content>{description}</Content>
-              </Article>
-            )
-          })}
+          {data.remark.posts
+            .filter(post => post.path !== "/404/")
+            .map(({ post }) => {
+              const { timeToRead, id } = post
+              const { title, description, date, slug } = post.frontmatter
+              return (
+                <Article key={id}>
+                  <Title>
+                    <Link to={`${dateFormat(date, "UTC:yyyy/mm/dd")}/${slug}`}>{title}</Link>
+                  </Title>
+                  <Level style={{ fontSize: "0.9em" }}>
+                    <LevelLeft>{dateFormat(date, "UTC:mmm d, yyyy")}</LevelLeft>
+                    <LevelRight>{timeToRead} min read</LevelRight>
+                  </Level>
+                  <Content>{description}</Content>
+                </Article>
+              )
+            })}
         </Articles>
       </Container>
     </Section>
-  </div>
+  </Layout>
 )
 
-export default IndexPage
+export default BlogPage
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  {
     remark: allMarkdownRemark {
       posts: edges {
         post: node {

@@ -4,11 +4,28 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
-import Navigation from "../components/Navigation"
-import Copyright from "../components/Copyright"
+import Navigation from "./Navigation"
+import Copyright from "./Copyright"
+
+// This ensures that the icon CSS is loaded immediately before attempting to render icons
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config, library } from "@fortawesome/fontawesome-svg-core"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { fac } from "./fa-custom-svg-icons"
+
+// Prevent fontawesome from dynamically adding its css since we did it manually above
+config.autoAddCss = false
+
+// Make the icons available by their string names
+library.add(fas, fab, fac)
+
+console.log(
+  `If you're looking at the console for my site, either something's broken or you're interested in learning how it was built. For the former, log an issue at https://github.com/ajlende/ajlende.github.io/issues. For the later, check out the source code which I've made available at https://github.com/ajlende/ajlende.github.io.`,
+)
 
 const Layout = ({ children, location }) => (
-  <div>
+  <>
     <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
@@ -27,14 +44,14 @@ const Layout = ({ children, location }) => (
       <meta name="p:domain_verify" content="b94c9d9f144c41daa7b4aac64aeef4b6" />
     </Helmet>
     <Navigation location={location} />
-    <main>{children()}</main>
+    <main>{children}</main>
     <Copyright />
-  </div>
+  </>
 )
 
 Layout.propTypes = {
   location: PropTypes.object,
-  children: PropTypes.func,
+  children: PropTypes.node,
 }
 
 export default Layout

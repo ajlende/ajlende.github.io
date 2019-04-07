@@ -1,7 +1,7 @@
 import React from "react"
-import Link from "gatsby-link"
+import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
-import { Section, Content, Container, Columns, Column, Tag } from "bloomer"
+import { Section, Content, Columns, Column, Tag } from "bloomer"
 
 const BlogPostTemplate = ({ data }) => {
   const tags = data.markdownRemark.frontmatter.tags || []
@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostQuery($slug: String!) {
+  query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {

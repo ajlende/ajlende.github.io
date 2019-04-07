@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { navigateTo } from "gatsby-link"
+import { navigate } from "gatsby"
 
 import {
   Container,
@@ -21,8 +21,9 @@ const propTypes = {
 
 const NavbarItemLink = ({ link, location, children }) => (
   <NavbarItem
+    // eslint-disable-next-line no-script-url
     href="javascript:void(0)"
-    onClick={() => navigateTo(link)}
+    onClick={() => navigate(link)}
     isActive={location.pathname === link}
   >
     {children}
@@ -47,7 +48,11 @@ class Navigation extends React.Component {
             <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="desktop">
               <Icon icon="github" />
             </NavbarItem>
-            <NavbarItem aria-label="LinkedIn" href="https://linkedin.com/in/ajlende" isHidden="desktop">
+            <NavbarItem
+              aria-label="LinkedIn"
+              href="https://linkedin.com/in/ajlende"
+              isHidden="desktop"
+            >
               <Icon icon="linkedin" />
             </NavbarItem>
             <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="desktop">

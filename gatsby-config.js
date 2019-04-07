@@ -7,12 +7,7 @@ module.exports = {
     { resolve: "gatsby-plugin-sitemap" },
     { resolve: "gatsby-plugin-catch-links" },
     { resolve: "gatsby-plugin-react-helmet" },
-    {
-      resolve: "gatsby-plugin-postcss-sass",
-      options: {
-        postCssPlugins: [require("autoprefixer")()],
-      },
-    },
+    { resolve: "gatsby-plugin-sass" },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -20,9 +15,33 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+          logo: './src/favicon.svg',
+          dir: 'ltr',
+          lang: 'en-US',
+          background: '#073746',
+          theme_color: '#073746',
+          display: 'browser',
+          orientation: 'any',
+          icons: {
+            android: true,
+            appleIcon: true,
+            appleStartup: false,
+            coast: false,
+            favicons: true,
+            firefox: true,
+            opengraph: false,
+            twitter: false,
+            yandex: false,
+            windows: true,
+          },
+        }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages/posts`,
+        path: "./src/pages/posts",
         name: "posts",
       },
     },

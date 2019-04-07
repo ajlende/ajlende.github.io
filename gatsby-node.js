@@ -1,40 +1,6 @@
 const path = require("path")
 
-const webpack = require("webpack")
-const FaviconsWebpackPlugin = require("favicons-webpack-plugin")
-
 const { createFilePath } = require("gatsby-source-filesystem")
-
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  switch (stage) {
-    case "develop-html":
-    case "build-html":
-      config.plugin("favicons", FaviconsWebpackPlugin, [
-        {
-          logo: "./src/favicon.svg",
-          prefix: "favicons/",
-          title: "Alex Lende",
-          background: "#073746",
-          inject: false,
-          emitStats: true,
-          icons: {
-            android: true,
-            appleIcon: true,
-            appleStartup: false,
-            coast: false,
-            favicons: true,
-            firefox: true,
-            opengraph: false,
-            twitter: false,
-            yandex: false,
-            windows: true,
-          },
-        },
-      ])
-      break
-  }
-  return config
-}
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators

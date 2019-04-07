@@ -1,12 +1,13 @@
-import styles from "./styles.module.sass"
-
 import React from "react"
 import Helmet from "react-helmet"
-import { Container, Hero, HeroBody, Title } from "bloomer"
-import Link from "gatsby-link"
+import { Section, Container, Hero, HeroBody, Title } from "bloomer"
 
-const IndexPage = () => (
-  <div>
+import Layout from "../components/Layout"
+
+import styles from "./styles.module.sass"
+
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Projects – Alex Lende</title>
     </Helmet>
@@ -17,7 +18,12 @@ const IndexPage = () => (
         </Container>
       </HeroBody>
     </Hero>
-  </div>
+    <Section>
+      <Container>
+        Coming Soon. For now, check out my <a href="https://github.com/ajlende">GitHub</a>.
+      </Container>
+    </Section>
+  </Layout>
 )
 
 export default IndexPage
