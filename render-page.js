@@ -393,7 +393,7 @@ exports.wrapRootElement = true;
 /*! exports provided: pages, dataPaths, default */
 /***/ (function(module) {
 
-module.exports = {"pages":[{"componentChunkName":"component---src-pages-index-jsx","jsonName":"index","path":"/"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-03-hello-world-b58","path":"/2017/09/03/hello-world"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-04-nms-theme-2b6","path":"/2017/09/04/nms-theme"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-11-30-storytelling-d27","path":"/2017/11/30/storytelling"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-html-516","path":"/404.html"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-22d","path":"/404/"},{"componentChunkName":"component---src-pages-blog-jsx","jsonName":"blog-f7a","path":"/blog/"},{"componentChunkName":"component---src-pages-contact-jsx","jsonName":"contact-26a","path":"/contact/"},{"componentChunkName":"component---src-pages-projects-jsx","jsonName":"projects-9e9","path":"/projects/"}],"dataPaths":{"2017-09-03-hello-world-b58":"923/path---2017-09-03-hello-world-b-58-08c-JJSVeArwxPYcZqqyDtEinttxsls","2017-09-04-nms-theme-2b6":"285/path---2017-09-04-nms-theme-2-b-6-746-hQqbnIKjEepIEpewt0569pyxryM","2017-11-30-storytelling-d27":"882/path---2017-11-30-storytelling-d-27-cba-1RdGDaOY2YtK2cSRB1Rf2JS14","404-22d":"820/path---404-22-d-bce-0SUcWyAf8ecbYDsMhQkEfPzV8","404-html-516":"285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8","blog-f7a":"618/path---blog-f-7-a-05d-UaT9SMu7TvRo9jHglXwknP1bRI","contact-26a":"279/path---contact-26-a-cd9-0SUcWyAf8ecbYDsMhQkEfPzV8","dev-404-page-5f9":"386/path---dev-404-page-5-f-9-fab-0SUcWyAf8ecbYDsMhQkEfPzV8","index":"140/path---index-6a9-0SUcWyAf8ecbYDsMhQkEfPzV8","monogram-b8e":"147/path---monogram-b-8-e-b1f-0SUcWyAf8ecbYDsMhQkEfPzV8","projects-9e9":"175/path---projects-9-e-9-957-0SUcWyAf8ecbYDsMhQkEfPzV8","symbols-601":"821/path---symbols-601-973-0SUcWyAf8ecbYDsMhQkEfPzV8"}};
+module.exports = {"pages":[{"componentChunkName":"component---src-pages-index-jsx","jsonName":"index","path":"/"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-03-hello-world-b58","path":"/2017/09/03/hello-world"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-04-nms-theme-2b6","path":"/2017/09/04/nms-theme"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-11-30-storytelling-d27","path":"/2017/11/30/storytelling"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-html-516","path":"/404.html"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-22d","path":"/404/"},{"componentChunkName":"component---src-pages-blog-jsx","jsonName":"blog-f7a","path":"/blog/"},{"componentChunkName":"component---src-pages-contact-jsx","jsonName":"contact-26a","path":"/contact/"},{"componentChunkName":"component---src-pages-projects-jsx","jsonName":"projects-9e9","path":"/projects/"}],"dataPaths":{"2017-09-03-hello-world-b58":"923/path---2017-09-03-hello-world-b-58-08c-JJSVeArwxPYcZqqyDtEinttxsls","2017-09-04-nms-theme-2b6":"285/path---2017-09-04-nms-theme-2-b-6-746-hQqbnIKjEepIEpewt0569pyxryM","2017-11-30-storytelling-d27":"882/path---2017-11-30-storytelling-d-27-cba-1RdGDaOY2YtK2cSRB1Rf2JS14","404-22d":"820/path---404-22-d-bce-0SUcWyAf8ecbYDsMhQkEfPzV8","404-html-516":"285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8","blog-f7a":"178/path---blog-f-7-a-05d-JSdNkD92b76IThlSJCZNBEre4U","contact-26a":"279/path---contact-26-a-cd9-0SUcWyAf8ecbYDsMhQkEfPzV8","dev-404-page-5f9":"386/path---dev-404-page-5-f-9-fab-0SUcWyAf8ecbYDsMhQkEfPzV8","index":"957/path---index-6a9-UOmdh0hdKZnfJsiW5UUHZSZDQ9I","monogram-b8e":"147/path---monogram-b-8-e-b1f-0SUcWyAf8ecbYDsMhQkEfPzV8","projects-9e9":"175/path---projects-9-e-9-957-0SUcWyAf8ecbYDsMhQkEfPzV8","symbols-601":"821/path---symbols-601-973-0SUcWyAf8ecbYDsMhQkEfPzV8"}};
 
 /***/ }),
 
@@ -19366,6 +19366,619 @@ module.exports = invariant;
 
 /***/ }),
 
+/***/ "./node_modules/gatsby-image/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/gatsby-image/index.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
+
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/gatsby-image/node_modules/prop-types/index.js"));
+
+// Handle legacy names for image queries.
+var convertProps = function convertProps(props) {
+  var convertedProps = (0, _extends2.default)({}, props);
+
+  if (convertedProps.resolutions) {
+    convertedProps.fixed = convertedProps.resolutions;
+    delete convertedProps.resolutions;
+  }
+
+  if (convertedProps.sizes) {
+    convertedProps.fluid = convertedProps.sizes;
+    delete convertedProps.sizes;
+  }
+
+  return convertedProps;
+}; // Cache if we've seen an image before so we don't bother with
+// lazy-loading & fading in on subsequent mounts.
+
+
+var imageCache = Object.create({});
+
+var inImageCache = function inImageCache(props) {
+  var convertedProps = convertProps(props); // Find src
+
+  var src = convertedProps.fluid ? convertedProps.fluid.src : convertedProps.fixed.src;
+  return imageCache[src] || false;
+};
+
+var activateCacheForImage = function activateCacheForImage(props) {
+  var convertedProps = convertProps(props); // Find src
+
+  var src = convertedProps.fluid ? convertedProps.fluid.src : convertedProps.fixed.src;
+  imageCache[src] = true;
+};
+
+var io;
+var listeners = new WeakMap();
+
+function getIO() {
+  if (typeof io === "undefined" && typeof window !== "undefined" && window.IntersectionObserver) {
+    io = new window.IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (listeners.has(entry.target)) {
+          var cb = listeners.get(entry.target); // Edge doesn't currently support isIntersecting, so also test for an intersectionRatio > 0
+
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            io.unobserve(entry.target);
+            listeners.delete(entry.target);
+            cb();
+          }
+        }
+      });
+    }, {
+      rootMargin: "200px"
+    });
+  }
+
+  return io;
+}
+
+var listenToIntersections = function listenToIntersections(el, cb) {
+  var observer = getIO();
+
+  if (observer) {
+    observer.observe(el);
+    listeners.set(el, cb);
+  }
+
+  return function () {
+    observer.unobserve(el);
+    listeners.delete(el);
+  };
+};
+
+var noscriptImg = function noscriptImg(props) {
+  // Check if prop exists before adding each attribute to the string output below to prevent
+  // HTML validation issues caused by empty values like width="" and height=""
+  var src = props.src ? "src=\"" + props.src + "\" " : "src=\"\" "; // required attribute
+
+  var sizes = props.sizes ? "sizes=\"" + props.sizes + "\" " : "";
+  var srcSetWebp = props.srcSetWebp ? "<source type='image/webp' srcset=\"" + props.srcSetWebp + "\" " + sizes + "/>" : "";
+  var srcSet = props.srcSet ? "srcset=\"" + props.srcSet + "\" " : "";
+  var title = props.title ? "title=\"" + props.title + "\" " : "";
+  var alt = props.alt ? "alt=\"" + props.alt + "\" " : "alt=\"\" "; // required attribute
+
+  var width = props.width ? "width=\"" + props.width + "\" " : "";
+  var height = props.height ? "height=\"" + props.height + "\" " : "";
+  var crossOrigin = props.crossOrigin ? "crossorigin=\"" + props.crossOrigin + "\" " : "";
+  return "<picture>" + srcSetWebp + "<img " + width + height + sizes + srcSet + src + alt + title + crossOrigin + "style=\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\"/></picture>";
+};
+
+var Img = _react.default.forwardRef(function (props, ref) {
+  var sizes = props.sizes,
+      srcSet = props.srcSet,
+      src = props.src,
+      style = props.style,
+      onLoad = props.onLoad,
+      onError = props.onError,
+      otherProps = (0, _objectWithoutPropertiesLoose2.default)(props, ["sizes", "srcSet", "src", "style", "onLoad", "onError"]);
+  return _react.default.createElement("img", (0, _extends2.default)({
+    sizes: sizes,
+    srcSet: srcSet,
+    src: src
+  }, otherProps, {
+    onLoad: onLoad,
+    onError: onError,
+    ref: ref,
+    style: (0, _extends2.default)({
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center"
+    }, style)
+  }));
+});
+
+Img.propTypes = {
+  style: _propTypes.default.object,
+  onError: _propTypes.default.func,
+  onLoad: _propTypes.default.func
+};
+
+var Image =
+/*#__PURE__*/
+function (_React$Component) {
+  (0, _inheritsLoose2.default)(Image, _React$Component);
+
+  function Image(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this; // default settings for browser without Intersection Observer available
+
+    var isVisible = true;
+    var imgLoaded = false;
+    var imgCached = false;
+    var IOSupported = false;
+    var fadeIn = props.fadeIn; // If this image has already been loaded before then we can assume it's
+    // already in the browser cache so it's cheap to just show directly.
+
+    var seenBefore = inImageCache(props); // browser with Intersection Observer available
+
+    if (!seenBefore && typeof window !== "undefined" && window.IntersectionObserver) {
+      isVisible = false;
+      IOSupported = true;
+    } // Never render image during SSR
+
+
+    if (typeof window === "undefined") {
+      isVisible = false;
+    } // Force render for critical images
+
+
+    if (props.critical) {
+      isVisible = true;
+      IOSupported = false;
+    }
+
+    var hasNoScript = !(props.critical && !props.fadeIn);
+    _this.state = {
+      isVisible: isVisible,
+      imgLoaded: imgLoaded,
+      imgCached: imgCached,
+      IOSupported: IOSupported,
+      fadeIn: fadeIn,
+      hasNoScript: hasNoScript,
+      seenBefore: seenBefore
+    };
+    _this.imageRef = _react.default.createRef();
+    _this.handleImageLoaded = _this.handleImageLoaded.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleRef = _this.handleRef.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    return _this;
+  }
+
+  var _proto = Image.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    if (this.state.isVisible && typeof this.props.onStartLoad === "function") {
+      this.props.onStartLoad({
+        wasCached: inImageCache(this.props)
+      });
+    }
+
+    if (this.props.critical) {
+      var img = this.imageRef.current;
+
+      if (img && img.complete) {
+        this.handleImageLoaded();
+      }
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    if (this.cleanUpListeners) {
+      this.cleanUpListeners();
+    }
+  };
+
+  _proto.handleRef = function handleRef(ref) {
+    var _this2 = this;
+
+    if (this.state.IOSupported && ref) {
+      this.cleanUpListeners = listenToIntersections(ref, function () {
+        var imageInCache = inImageCache(_this2.props);
+
+        if (!_this2.state.isVisible && typeof _this2.props.onStartLoad === "function") {
+          _this2.props.onStartLoad({
+            wasCached: imageInCache
+          });
+        } // imgCached and imgLoaded must update after isVisible,
+        // Once isVisible is true, imageRef becomes accessible, which imgCached needs access to.
+        // imgLoaded and imgCached are in a 2nd setState call to be changed together,
+        // avoiding initiating unnecessary animation frames from style changes.
+
+
+        _this2.setState({
+          isVisible: true
+        }, function () {
+          return _this2.setState({
+            imgLoaded: imageInCache,
+            imgCached: _this2.imageRef.current.currentSrc.length > 0
+          });
+        });
+      });
+    }
+  };
+
+  _proto.handleImageLoaded = function handleImageLoaded() {
+    activateCacheForImage(this.props);
+    this.setState({
+      imgLoaded: true
+    });
+
+    if (this.state.seenBefore) {
+      this.setState({
+        fadeIn: false
+      });
+    }
+
+    if (this.props.onLoad) {
+      this.props.onLoad();
+    }
+  };
+
+  _proto.render = function render() {
+    var _convertProps = convertProps(this.props),
+        title = _convertProps.title,
+        alt = _convertProps.alt,
+        className = _convertProps.className,
+        _convertProps$style = _convertProps.style,
+        style = _convertProps$style === void 0 ? {} : _convertProps$style,
+        _convertProps$imgStyl = _convertProps.imgStyle,
+        imgStyle = _convertProps$imgStyl === void 0 ? {} : _convertProps$imgStyl,
+        _convertProps$placeho = _convertProps.placeholderStyle,
+        placeholderStyle = _convertProps$placeho === void 0 ? {} : _convertProps$placeho,
+        placeholderClassName = _convertProps.placeholderClassName,
+        fluid = _convertProps.fluid,
+        fixed = _convertProps.fixed,
+        backgroundColor = _convertProps.backgroundColor,
+        Tag = _convertProps.Tag,
+        itemProp = _convertProps.itemProp;
+
+    var shouldReveal = this.state.imgLoaded || this.state.fadeIn === false;
+    var shouldFadeIn = this.state.fadeIn === true && !this.state.imgCached;
+    var durationFadeIn = "0.5s";
+    var imageStyle = (0, _extends2.default)({
+      opacity: shouldReveal ? 1 : 0,
+      transition: shouldFadeIn ? "opacity " + durationFadeIn : "none"
+    }, imgStyle);
+    var bgColor = typeof backgroundColor === "boolean" ? "lightgray" : backgroundColor;
+    var delayHideStyle = {
+      transitionDelay: durationFadeIn
+    };
+    var imagePlaceholderStyle = (0, _extends2.default)({
+      opacity: this.state.imgLoaded ? 0 : 1
+    }, shouldFadeIn && delayHideStyle, imgStyle, placeholderStyle);
+    var placeholderImageProps = {
+      title: title,
+      alt: !this.state.isVisible ? alt : "",
+      style: imagePlaceholderStyle,
+      className: placeholderClassName
+    };
+
+    if (fluid) {
+      var image = fluid;
+      return _react.default.createElement(Tag, {
+        className: (className ? className : "") + " gatsby-image-wrapper",
+        style: (0, _extends2.default)({
+          position: "relative",
+          overflow: "hidden"
+        }, style),
+        ref: this.handleRef,
+        key: "fluid-" + JSON.stringify(image.srcSet)
+      }, _react.default.createElement(Tag, {
+        style: {
+          width: "100%",
+          paddingBottom: 100 / image.aspectRatio + "%"
+        }
+      }), bgColor && _react.default.createElement(Tag, {
+        title: title,
+        style: (0, _extends2.default)({
+          backgroundColor: bgColor,
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          opacity: !this.state.imgLoaded ? 1 : 0,
+          right: 0,
+          left: 0
+        }, shouldFadeIn && delayHideStyle)
+      }), image.base64 && _react.default.createElement(Img, (0, _extends2.default)({
+        src: image.base64
+      }, placeholderImageProps)), image.tracedSVG && _react.default.createElement(Img, (0, _extends2.default)({
+        src: image.tracedSVG
+      }, placeholderImageProps)), this.state.isVisible && _react.default.createElement("picture", null, image.srcSetWebp && _react.default.createElement("source", {
+        type: "image/webp",
+        srcSet: image.srcSetWebp,
+        sizes: image.sizes
+      }), _react.default.createElement(Img, {
+        alt: alt,
+        title: title,
+        sizes: image.sizes,
+        src: image.src,
+        crossOrigin: this.props.crossOrigin,
+        srcSet: image.srcSet,
+        style: imageStyle,
+        ref: this.imageRef,
+        onLoad: this.handleImageLoaded,
+        onError: this.props.onError,
+        itemProp: itemProp
+      })), this.state.hasNoScript && _react.default.createElement("noscript", {
+        dangerouslySetInnerHTML: {
+          __html: noscriptImg((0, _extends2.default)({
+            alt: alt,
+            title: title
+          }, image))
+        }
+      }));
+    }
+
+    if (fixed) {
+      var _image = fixed;
+      var divStyle = (0, _extends2.default)({
+        position: "relative",
+        overflow: "hidden",
+        display: "inline-block",
+        width: _image.width,
+        height: _image.height
+      }, style);
+
+      if (style.display === "inherit") {
+        delete divStyle.display;
+      }
+
+      return _react.default.createElement(Tag, {
+        className: (className ? className : "") + " gatsby-image-wrapper",
+        style: divStyle,
+        ref: this.handleRef,
+        key: "fixed-" + JSON.stringify(_image.srcSet)
+      }, bgColor && _react.default.createElement(Tag, {
+        title: title,
+        style: (0, _extends2.default)({
+          backgroundColor: bgColor,
+          width: _image.width,
+          opacity: !this.state.imgLoaded ? 1 : 0,
+          height: _image.height
+        }, shouldFadeIn && delayHideStyle)
+      }), _image.base64 && _react.default.createElement(Img, (0, _extends2.default)({
+        src: _image.base64
+      }, placeholderImageProps)), _image.tracedSVG && _react.default.createElement(Img, (0, _extends2.default)({
+        src: _image.tracedSVG
+      }, placeholderImageProps)), this.state.isVisible && _react.default.createElement("picture", null, _image.srcSetWebp && _react.default.createElement("source", {
+        type: "image/webp",
+        srcSet: _image.srcSetWebp,
+        sizes: _image.sizes
+      }), _react.default.createElement(Img, {
+        alt: alt,
+        title: title,
+        width: _image.width,
+        height: _image.height,
+        sizes: _image.sizes,
+        src: _image.src,
+        crossOrigin: this.props.crossOrigin,
+        srcSet: _image.srcSet,
+        style: imageStyle,
+        ref: this.imageRef,
+        onLoad: this.handleImageLoaded,
+        onError: this.props.onError,
+        itemProp: itemProp
+      })), this.state.hasNoScript && _react.default.createElement("noscript", {
+        dangerouslySetInnerHTML: {
+          __html: noscriptImg((0, _extends2.default)({
+            alt: alt,
+            title: title
+          }, _image))
+        }
+      }));
+    }
+
+    return null;
+  };
+
+  return Image;
+}(_react.default.Component);
+
+Image.defaultProps = {
+  critical: false,
+  fadeIn: true,
+  alt: "",
+  Tag: "div"
+};
+
+var fixedObject = _propTypes.default.shape({
+  width: _propTypes.default.number.isRequired,
+  height: _propTypes.default.number.isRequired,
+  src: _propTypes.default.string.isRequired,
+  srcSet: _propTypes.default.string.isRequired,
+  base64: _propTypes.default.string,
+  tracedSVG: _propTypes.default.string,
+  srcWebp: _propTypes.default.string,
+  srcSetWebp: _propTypes.default.string
+});
+
+var fluidObject = _propTypes.default.shape({
+  aspectRatio: _propTypes.default.number.isRequired,
+  src: _propTypes.default.string.isRequired,
+  srcSet: _propTypes.default.string.isRequired,
+  sizes: _propTypes.default.string.isRequired,
+  base64: _propTypes.default.string,
+  tracedSVG: _propTypes.default.string,
+  srcWebp: _propTypes.default.string,
+  srcSetWebp: _propTypes.default.string
+});
+
+Image.propTypes = {
+  resolutions: fixedObject,
+  sizes: fluidObject,
+  fixed: fixedObject,
+  fluid: fluidObject,
+  fadeIn: _propTypes.default.bool,
+  title: _propTypes.default.string,
+  alt: _propTypes.default.string,
+  className: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  // Support Glamor's css prop.
+  critical: _propTypes.default.bool,
+  crossOrigin: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  style: _propTypes.default.object,
+  imgStyle: _propTypes.default.object,
+  placeholderStyle: _propTypes.default.object,
+  placeholderClassName: _propTypes.default.string,
+  backgroundColor: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.bool]),
+  onLoad: _propTypes.default.func,
+  onError: _propTypes.default.func,
+  onStartLoad: _propTypes.default.func,
+  Tag: _propTypes.default.string,
+  itemProp: _propTypes.default.string
+};
+var _default = Image;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-image/node_modules/prop-types/factoryWithThrowingShims.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/gatsby-image/node_modules/prop-types/factoryWithThrowingShims.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/gatsby-image/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
+
+module.exports = function() {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret) {
+      // It is still safe when called from React.
+      return;
+    }
+    var err = new Error(
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+    err.name = 'Invariant Violation';
+    throw err;
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    elementType: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim,
+
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction
+  };
+
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-image/node_modules/prop-types/index.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/gatsby-image/node_modules/prop-types/index.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, ReactIs; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(/*! ./factoryWithThrowingShims */ "./node_modules/gatsby-image/node_modules/prop-types/factoryWithThrowingShims.js")();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-image/node_modules/prop-types/lib/ReactPropTypesSecret.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/gatsby-image/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+
 /***/ "./node_modules/gatsby-link/index.js":
 /*!*******************************************!*\
   !*** ./node_modules/gatsby-link/index.js ***!
@@ -23792,50 +24405,6 @@ var NotFoundPage = function NotFoundPage(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/alex-bwca.jpg":
-/*!*********************************!*\
-  !*** ./src/pages/alex-bwca.jpg ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/alex-bwca-793459bc0a3ebcce59a31606037853a7.jpg";
-
-/***/ }),
-
-/***/ "./src/pages/alex-france.jpg":
-/*!***********************************!*\
-  !*** ./src/pages/alex-france.jpg ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/alex-france-63861037448ee5d9d3bab067b558f022.jpg";
-
-/***/ }),
-
-/***/ "./src/pages/alex-india.jpg":
-/*!**********************************!*\
-  !*** ./src/pages/alex-india.jpg ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/alex-india-de9a489eadd502f0cdf120a512780996.jpg";
-
-/***/ }),
-
-/***/ "./src/pages/alex-ragbrai.jpg":
-/*!************************************!*\
-  !*** ./src/pages/alex-ragbrai.jpg ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/alex-ragbrai-aff8eebd7ab82d68c26fd1d529687a83.jpg";
-
-/***/ }),
-
 /***/ "./src/pages/blog.jsx":
 /*!****************************!*\
   !*** ./src/pages/blog.jsx ***!
@@ -23940,7 +24509,8 @@ var Professional = function Professional() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Title"], null, "Professional"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Level"], {
     isMobile: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["LevelItem"], {
-    href: "mailto:ajlende@gmail.com"
+    href: "mailto:ajlende@gmail.com",
+    title: "Email"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
     faProps: {
       icon: "envelope",
@@ -24046,32 +24616,25 @@ var ContactPage = function ContactPage(_ref5) {
 /*!*****************************!*\
   !*** ./src/pages/index.jsx ***!
   \*****************************/
-/*! exports provided: default */
+/*! exports provided: default, fluidImage, pageQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fluidImage", function() { return fluidImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageQuery", function() { return pageQuery; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bloomer */ "./node_modules/bloomer/esm/index.js");
-/* harmony import */ var _components_StarField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/StarField */ "./src/components/StarField.jsx");
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.jsx");
-/* harmony import */ var _components_Monogram__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Monogram */ "./src/components/Monogram.jsx");
-/* harmony import */ var _styles_module_sass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles.module.sass */ "./src/pages/styles.module.sass");
-/* harmony import */ var _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_module_sass__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _alex_india_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./alex-india.jpg */ "./src/pages/alex-india.jpg");
-/* harmony import */ var _alex_india_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_alex_india_jpg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _alex_ragbrai_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./alex-ragbrai.jpg */ "./src/pages/alex-ragbrai.jpg");
-/* harmony import */ var _alex_ragbrai_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_alex_ragbrai_jpg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _alex_bwca_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./alex-bwca.jpg */ "./src/pages/alex-bwca.jpg");
-/* harmony import */ var _alex_bwca_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_alex_bwca_jpg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _alex_france_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./alex-france.jpg */ "./src/pages/alex-france.jpg");
-/* harmony import */ var _alex_france_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_alex_france_jpg__WEBPACK_IMPORTED_MODULE_10__);
-
-
-
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_StarField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/StarField */ "./src/components/StarField.jsx");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout.jsx");
+/* harmony import */ var _components_Monogram__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Monogram */ "./src/components/Monogram.jsx");
+/* harmony import */ var _styles_module_sass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles.module.sass */ "./src/pages/styles.module.sass");
+/* harmony import */ var _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_module_sass__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -24092,7 +24655,10 @@ var Prose = function Prose() {
     href: "https://facebook.github.io/react/"
   }, "React"), " for now, but", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "http://elm-lang.org/"
-  }, "Elm"), " is looking like a promising candidate for the future (and it's not even JS \uD83D\uDE31). I also spend a good deal of time thinking about design and human-computer interaction including everything from brand design to user interface design to game design to programming language design\u2014I've been known to design the occasional website or logo for someone."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Outside of tech, I enjoy The Great Outdoors\u2122 and all sorts of adventures. I achieved the rank of Eagle Scout while in the Boy Scouts of America, and still enjoy camping as often as I can. My most recent adventures have been", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Elm"), " is looking like a promising candidate for the future (and it's not even JS", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    role: "img",
+    "aria-label": "Face Screaming In Fear"
+  }, "\uD83D\uDE31"), "). I also spend a good deal of time thinking about design and human-computer interaction including everything from brand design to user interface design to game design to programming language design\u2014I've been known to design the occasional website or logo for someone."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Outside of tech, I enjoy The Great Outdoors\u2122 and all sorts of adventures. I achieved the rank of Eagle Scout while in the Boy Scouts of America, and still enjoy camping as often as I can. My most recent adventures have been", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "http://www.iowastatedaily.com/ames247/article_c384cfa8-2be5-11e6-bb4e-87b03dd281f6.html"
   }, "performing in France"), " ", "for D-Day memorial ceremonies, a 10-day canoeing trip in the Boundary Waters Canoe Area Wilderness (", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "http://bwca.com/index.cfm?"
@@ -24109,68 +24675,74 @@ var Slide = function Slide(_ref) {
       img = _ref.img,
       alt = _ref.alt;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.imgGrp
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: img,
+    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.imgGrp
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_image__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    fluid: img,
     alt: alt
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.imgInfo
+    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.imgInfo
   }, title, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), date));
 };
 
-var ImageGrid = function ImageGrid() {
+var ImageGrid = function ImageGrid(_ref2) {
+  var data = _ref2.data;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.imgGrid
+    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.imgGrid
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slide, {
-    img: _alex_india_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    img: data.india.childImageSharp.fluid,
     date: "September 2017",
     title: "Dhamma Giri, India",
     alt: "Alex standing in front of the golden pagoda at Dhamma Giri"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slide, {
-    img: _alex_ragbrai_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
+    img: data.ragbrai.childImageSharp.fluid,
     date: "July 2017",
     title: "Lansing, Iowa",
     alt: "Alex holding his bike above his head after the completion of RAGBRAI"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slide, {
-    img: _alex_bwca_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
+    img: data.bwca.childImageSharp.fluid,
     date: "July 2016",
     title: "Ely, Minnesota",
     alt: "Alex in the middle of five friends standing ankle-deep in the water of a Boundary Waters entry point"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Slide, {
-    img: _alex_france_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
+    img: data.france.childImageSharp.fluid,
     date: "June 2016",
     title: "Longues-su-Mer, France",
     alt: "Alex standing next to a World War II battery cannon on the coast of Normandy"
   }));
 };
 
-var IndexPage = function IndexPage(_ref2) {
-  var location = _ref2.location;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+var IndexPage = function IndexPage(_ref3) {
+  var data = _ref3.data,
+      location = _ref3.location;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     location: location
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Hero"], {
     isColor: "dark",
     isFullHeight: true,
     isBold: true,
-    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(_styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.angled, _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.offset)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_StarField__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["HeroBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(_styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.angled, _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.offset)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_StarField__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["HeroBody"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Container"], {
     hasTextAlign: "centered"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Monogram__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.monogram
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Monogram__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.monogram
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Title"], {
-    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.title,
+    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.title,
     isSpaced: true,
     hasTextAlign: "centered"
   }, "Alex Lende"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Subtitle"], {
-    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_6___default.a.subtitle
+    className: _styles_module_sass__WEBPACK_IMPORTED_MODULE_7___default.a.subtitle
   }, "Software Engineer")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Section"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Columns"], {
     isCentered: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_2__["Column"], {
     isSize: 6
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Prose, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImageGrid, null))))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Prose, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImageGrid, {
+    data: data
+  }))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
+var fluidImage = "2156380807";
+var pageQuery = "1167004128";
 
 /***/ }),
 
