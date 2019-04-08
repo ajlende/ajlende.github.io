@@ -23,40 +23,37 @@ import styles from "./styles.module.sass"
 
 const Prose = () => (
   <>
-    <Title hasTextAlign="centered">Hello!</Title>
+    <Title hasTextAlign="centered">Welcome!</Title>
     <Content>
       <p>
-        As you probably guessed by the large title at the top of this page, my name is Alex Lende.
-        You can find me most places on the internet as{" "}
-        <a href="https://github.com/ajlende">@ajlende</a>. My primary gig is creating 3D data
-        visualizations with WebGL for <a href="https://www.cerner.com">Cerner</a> in Kansas City.
+        I'm a Senior Software Engineer, creating 3D data visualizations with WebGL, composing
+        data-driven soundtracks with the Web Audio API, and exploring the future of health and care
+        by prototyping out smaller projects for <a href="https://www.cerner.com">Cerner</a> in
+        Kansas City. You can find me most places on the internet as @ajlende.
       </p>
       <p>
-        Most of the time you'll find me writing JavaScript in whatever the current trendy framework
-        is (or a new ones that I want to learn about)—this means{" "}
-        <a href="https://facebook.github.io/react/">React</a> for now, but{" "}
-        <a href="http://elm-lang.org/">Elm</a> is looking like a promising candidate for the future
-        (and it's not even JS{" "}
-        <span role="img" aria-label="Face Screaming In Fear">
-          😱
-        </span>
-        ). I also spend a good deal of time thinking about design and human-computer interaction
-        including everything from brand design to user interface design to game design to
-        programming language design—I've been known to design the occasional website or logo for
-        someone.
+        I love learning, and I think that's why the ever-changing landscape of frontend web
+        development has been so appealing to me. But learning isn't any good unless you share your
+        knowledge with others—I've given few talks at local meetups and a local conference to share
+        some of my knowledge.{" "}
+        <a href="https://github.com/ajlende/elm-webgl-presentation">WebGL in Elm</a> and{" "}
+        <a href="https://github.com/ajlende/geospacial-data-talk">Geospacial Data Visualizations</a>{" "}
+        both have the slides and speaker notes available on my{" "}
+        <a href="https://github.com/ajlende">GitHub</a>.
       </p>
       <p>
-        Outside of tech, I enjoy The Great Outdoors™ and all sorts of adventures. I achieved the
-        rank of Eagle Scout while in the Boy Scouts of America, and still enjoy camping as often as
-        I can. My most recent larger adventures have been{" "}
+        Outside of tech, I enjoy The Great Outdoors™, playing ukulele, and exploring the world. I
+        achieved the rank of Eagle Scout while in the Boy Scouts of America, and still enjoy camping
+        as often as I can. My more memorable adventures have been{" "}
         <a href="http://www.iowastatedaily.com/ames247/article_c384cfa8-2be5-11e6-bb4e-87b03dd281f6.html">
           performing in France
         </a>{" "}
-        for D-Day memorial ceremonies, my first Des Moines Register's Annual Great Bike Ride Across
-        Iowa (<a href="https://ragbrai.com/">RAGBRAI</a>), a 10-day canoeing trip in Ontario's{" "}
-        <a href="https://en.wikipedia.org/wiki/Quetico_Provincial_Park">Quetico Provincial Park </a>
-        , and a 10-day Vipassana meditation course in{" "}
-        <a href="http://www.giri.dhamma.org/">Dhamma Giri, India</a>.
+        for D-Day memorial ceremonies, the{" "}
+        <a href="https://ragbrai.com/">Des Moines Register's Annual Great Bike Ride Across Iowa</a>{" "}
+        (RAGBRAI), a 10-day Vipassana meditation course in{" "}
+        <a href="http://www.giri.dhamma.org/">Dhamma Giri, India</a>, and a 10-day canoeing trip in
+        Ontario's beautiful{" "}
+        <a href="https://en.wikipedia.org/wiki/Quetico_Provincial_Park">Quetico Provincial Park</a>.
       </p>
     </Content>
   </>
