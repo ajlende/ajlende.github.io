@@ -65,10 +65,10 @@
       },
       {
         "category": "personal",
-        "icon": ["fab", "google-plus"],
-        "network": "Google+ R.I.P.",
-        "username": "AlexLende",
-        "url": "https://plus.google.com/+AlexLende"
+        "icon": ["fab", "goodreads"],
+        "network": "Goodreads",
+        "username": "ajlende",
+        "url": "https://www.goodreads.com/ajlende"
       },
       {
         "category": "personal",
