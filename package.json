@@ -67,6 +67,7 @@
   },
   "main": "public/index.html",
   "scripts": {
+    "start": "gatsby develop",
     "postinstall": "find node_modules/bulma -name '*.sass' | xargs sed -Ei '' 's/^(\\.number|\\.tag)(:[^.]+)?$/\\1:not(.token)\\2/g'",
     "build": "gatsby build",
     "develop": "gatsby develop",
