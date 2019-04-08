@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import classnames from "classnames"
 import {
   Container,
@@ -11,6 +12,7 @@ import {
   Columns,
   Column,
 } from "bloomer"
+import Img from "gatsby-image"
 
 import StarField from "../components/StarField"
 import Layout from "../components/Layout"
@@ -18,11 +20,6 @@ import Layout from "../components/Layout"
 import Monogram from "../components/Monogram"
 
 import styles from "./styles.module.sass"
-
-import india from "./alex-india.jpg"
-import ragbrai from "./alex-ragbrai.jpg"
-import bwca from "./alex-bwca.jpg"
-import france from "./alex-france.jpg"
 
 const Prose = () => (
   <>
@@ -39,10 +36,14 @@ const Prose = () => (
         is (or a new ones that I want to learn about)—this means{" "}
         <a href="https://facebook.github.io/react/">React</a> for now, but{" "}
         <a href="http://elm-lang.org/">Elm</a> is looking like a promising candidate for the future
-        (and it's not even JS 😱). I also spend a good deal of time thinking about design and
-        human-computer interaction including everything from brand design to user interface design
-        to game design to programming language design—I've been known to design the occasional
-        website or logo for someone.
+        (and it's not even JS{" "}
+        <span role="img" aria-label="Face Screaming In Fear">
+          😱
+        </span>
+        ). I also spend a good deal of time thinking about design and human-computer interaction
+        including everything from brand design to user interface design to game design to
+        programming language design—I've been known to design the occasional website or logo for
+        someone.
       </p>
       <p>
         Outside of tech, I enjoy The Great Outdoors™ and all sorts of adventures. I achieved the
@@ -63,7 +64,7 @@ const Prose = () => (
 
 const Slide = ({ date, title, img, alt }) => (
   <div className={styles.imgGrp}>
-    <img src={img} alt={alt} />
+    <Img fluid={img} alt={alt} />
     <div className={styles.imgInfo}>
       {title}
       <br />
@@ -72,28 +73,28 @@ const Slide = ({ date, title, img, alt }) => (
   </div>
 )
 
-const ImageGrid = () => (
+const ImageGrid = ({ data }) => (
   <div className={styles.imgGrid}>
     <Slide
-      img={india}
+      img={data.india.childImageSharp.fluid}
       date="September 2017"
       title="Dhamma Giri, India"
       alt="Alex standing in front of the golden pagoda at Dhamma Giri"
     />
     <Slide
-      img={ragbrai}
+      img={data.ragbrai.childImageSharp.fluid}
       date="July 2017"
       title="Lansing, Iowa"
       alt="Alex holding his bike above his head after the completion of RAGBRAI"
     />
     <Slide
-      img={bwca}
+      img={data.bwca.childImageSharp.fluid}
       date="July 2016"
       title="Ely, Minnesota"
       alt="Alex in the middle of five friends standing ankle-deep in the water of a Boundary Waters entry point"
     />
     <Slide
-      img={france}
+      img={data.france.childImageSharp.fluid}
       date="June 2016"
       title="Longues-su-Mer, France"
       alt="Alex standing next to a World War II battery cannon on the coast of Normandy"
@@ -101,7 +102,7 @@ const ImageGrid = () => (
   </div>
 )
 
-const IndexPage = ({ location }) => (
+const IndexPage = ({ data, location }) => (
   <Layout location={location}>
     <Hero isColor="dark" isFullHeight isBold className={classnames(styles.angled, styles.offset)}>
       <StarField />
@@ -120,7 +121,7 @@ const IndexPage = ({ location }) => (
         <Columns isCentered>
           <Column isSize={6}>
             <Prose />
-            <ImageGrid />
+            <ImageGrid data={data}/>
           </Column>
         </Columns>
       </Container>
@@ -129,3 +130,30 @@ const IndexPage = ({ location }) => (
 )
 
 export default IndexPage
+
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1024) {
+      ...GatsbyImageSharpFluid_withWebp
+    }
+  }
+}
+`;
+
+export const pageQuery = graphql`
+  {
+    bwca: file(relativePath: { eq: "alex-bwca.jpg" }) {
+      ...fluidImage
+    }
+    france: file(relativePath: { eq: "alex-france.jpg" }) {
+      ...fluidImage
+    }
+    india: file(relativePath: { eq: "alex-india.jpg" }) {
+      ...fluidImage
+    }
+    ragbrai: file(relativePath: { eq: "alex-ragbrai.jpg" }) {
+      ...fluidImage
+    }
+  }
+`

@@ -23,7 +23,7 @@ const Professional = () => (
   <>
     <Title>Professional</Title>
     <Level isMobile>
-      <LevelItem href="mailto:ajlende@gmail.com">
+      <LevelItem href="mailto:ajlende@gmail.com" title="Email">
         <Icon faProps={{ icon: "envelope", size: "3x" }} isSize="large" />
       </LevelItem>
       {resume.basics.profiles

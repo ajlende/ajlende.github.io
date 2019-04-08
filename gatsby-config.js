@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: "https://ajlende.com",
   },
   plugins: [
+    { resolve: "gatsby-plugin-sharp" },
     { resolve: "gatsby-plugin-sitemap" },
     { resolve: "gatsby-plugin-catch-links" },
     { resolve: "gatsby-plugin-react-helmet" },
@@ -45,6 +46,14 @@ module.exports = {
         name: "posts",
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./src/images",
+        name: "images",
+      },
+    },
+    { resolve: "gatsby-transformer-sharp" },
     {
       resolve: "gatsby-transformer-remark",
       options: {
