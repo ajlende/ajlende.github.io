@@ -48,14 +48,14 @@ const Prose = () => (
       <p>
         Outside of tech, I enjoy The Great Outdoors™ and all sorts of adventures. I achieved the
         rank of Eagle Scout while in the Boy Scouts of America, and still enjoy camping as often as
-        I can. My most recent adventures have been{" "}
+        I can. My most recent larger adventures have been{" "}
         <a href="http://www.iowastatedaily.com/ames247/article_c384cfa8-2be5-11e6-bb4e-87b03dd281f6.html">
           performing in France
         </a>{" "}
-        for D-Day memorial ceremonies, a 10-day canoeing trip in the Boundary Waters Canoe Area
-        Wilderness (<a href="http://bwca.com/index.cfm?">BWCA</a>), my first Des Moines Register's
-        Annual Great Bike Ride Across Iowa (<a href="https://ragbrai.com/">RAGBRAI</a>), and a
-        10-day Vipassana meditation course in{" "}
+        for D-Day memorial ceremonies, my first Des Moines Register's Annual Great Bike Ride Across
+        Iowa (<a href="https://ragbrai.com/">RAGBRAI</a>), a 10-day canoeing trip in Ontario's{" "}
+        <a href="https://en.wikipedia.org/wiki/Quetico_Provincial_Park">Quetico Provincial Park </a>
+        , and a 10-day Vipassana meditation course in{" "}
         <a href="http://www.giri.dhamma.org/">Dhamma Giri, India</a>.
       </p>
     </Content>
@@ -76,28 +76,28 @@ const Slide = ({ date, title, img, alt }) => (
 const ImageGrid = ({ data }) => (
   <div className={styles.imgGrid}>
     <Slide
+      img={data.quetico.childImageSharp.fluid}
+      date="September 2018"
+      title="Quetico Provinial Park, Canada"
+      alt="Alex carrying a canoe and Duluth pack through a forrested portage area"
+    />
+    <Slide
       img={data.india.childImageSharp.fluid}
       date="September 2017"
       title="Dhamma Giri, India"
-      alt="Alex standing in front of the golden pagoda at Dhamma Giri"
+      alt="Alex standing in front of the golden pagoda"
     />
     <Slide
       img={data.ragbrai.childImageSharp.fluid}
       date="July 2017"
       title="Lansing, Iowa"
-      alt="Alex holding his bike above his head after the completion of RAGBRAI"
-    />
-    <Slide
-      img={data.bwca.childImageSharp.fluid}
-      date="July 2016"
-      title="Ely, Minnesota"
-      alt="Alex in the middle of five friends standing ankle-deep in the water of a Boundary Waters entry point"
+      alt="Alex holding his bike above his head in front of the river"
     />
     <Slide
       img={data.france.childImageSharp.fluid}
       date="June 2016"
       title="Longues-su-Mer, France"
-      alt="Alex standing next to a World War II battery cannon on the coast of Normandy"
+      alt="Alex standing next to a World War II battery cannon in Normandy"
     />
   </div>
 )
@@ -121,7 +121,7 @@ const IndexPage = ({ data, location }) => (
         <Columns isCentered>
           <Column isSize={6}>
             <Prose />
-            <ImageGrid data={data}/>
+            <ImageGrid data={data} />
           </Column>
         </Columns>
       </Container>
@@ -132,18 +132,18 @@ const IndexPage = ({ data, location }) => (
 export default IndexPage
 
 export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1024) {
-      ...GatsbyImageSharpFluid_withWebp
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1024) {
+        ...GatsbyImageSharpFluid_withWebp
+      }
     }
   }
-}
-`;
+`
 
 export const pageQuery = graphql`
   {
-    bwca: file(relativePath: { eq: "alex-bwca.jpg" }) {
+    quetico: file(relativePath: { eq: "alex-quetico.jpg" }) {
       ...fluidImage
     }
     france: file(relativePath: { eq: "alex-france.jpg" }) {
