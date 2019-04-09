@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/es6.string.link"), require("core-js/modules/web.dom.iterable"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("pify"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/web.dom.iterable"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("pify"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["@reach/router", "core-js/modules/es6.array.iterator", "core-js/modules/es6.array.sort", "core-js/modules/es6.function.name", "core-js/modules/es6.map", "core-js/modules/es6.object.assign", "core-js/modules/es6.object.to-string", "core-js/modules/es6.regexp.constructor", "core-js/modules/es6.regexp.split", "core-js/modules/es6.regexp.to-string", "core-js/modules/es6.string.ends-with", "core-js/modules/es6.string.iterator", "core-js/modules/es6.string.link", "core-js/modules/web.dom.iterable", "fs", "lodash", "minimatch", "path", "pify", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["@reach/router", "core-js/modules/es6.array.iterator", "core-js/modules/es6.array.sort", "core-js/modules/es6.function.name", "core-js/modules/es6.map", "core-js/modules/es6.object.assign", "core-js/modules/es6.object.to-string", "core-js/modules/es6.regexp.constructor", "core-js/modules/es6.regexp.split", "core-js/modules/es6.regexp.to-string", "core-js/modules/es6.string.ends-with", "core-js/modules/es6.string.iterator", "core-js/modules/web.dom.iterable", "fs", "lodash", "minimatch", "path", "pify", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/es6.string.link"), require("core-js/modules/web.dom.iterable"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("pify"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("@reach/router"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.array.sort"), require("core-js/modules/es6.function.name"), require("core-js/modules/es6.map"), require("core-js/modules/es6.object.assign"), require("core-js/modules/es6.object.to-string"), require("core-js/modules/es6.regexp.constructor"), require("core-js/modules/es6.regexp.split"), require("core-js/modules/es6.regexp.to-string"), require("core-js/modules/es6.string.ends-with"), require("core-js/modules/es6.string.iterator"), require("core-js/modules/web.dom.iterable"), require("fs"), require("lodash"), require("minimatch"), require("path"), require("pify"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["@reach/router"], root["core-js/modules/es6.array.iterator"], root["core-js/modules/es6.array.sort"], root["core-js/modules/es6.function.name"], root["core-js/modules/es6.map"], root["core-js/modules/es6.object.assign"], root["core-js/modules/es6.object.to-string"], root["core-js/modules/es6.regexp.constructor"], root["core-js/modules/es6.regexp.split"], root["core-js/modules/es6.regexp.to-string"], root["core-js/modules/es6.string.ends-with"], root["core-js/modules/es6.string.iterator"], root["core-js/modules/es6.string.link"], root["core-js/modules/web.dom.iterable"], root["fs"], root["lodash"], root["minimatch"], root["path"], root["pify"], root["react"], root["react-dom/server"], root["react-helmet"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_sort__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_function_name__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_map__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_assign__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_split__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_ends_with__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_link__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_web_dom_iterable__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash__, __WEBPACK_EXTERNAL_MODULE_minimatch__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_pify__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
+		root["lib"] = factory(root["@reach/router"], root["core-js/modules/es6.array.iterator"], root["core-js/modules/es6.array.sort"], root["core-js/modules/es6.function.name"], root["core-js/modules/es6.map"], root["core-js/modules/es6.object.assign"], root["core-js/modules/es6.object.to-string"], root["core-js/modules/es6.regexp.constructor"], root["core-js/modules/es6.regexp.split"], root["core-js/modules/es6.regexp.to-string"], root["core-js/modules/es6.string.ends-with"], root["core-js/modules/es6.string.iterator"], root["core-js/modules/web.dom.iterable"], root["fs"], root["lodash"], root["minimatch"], root["path"], root["pify"], root["react"], root["react-dom/server"], root["react-helmet"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_array_sort__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_function_name__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_map__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_assign__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_split__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_ends_with__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_iterator__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_web_dom_iterable__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash__, __WEBPACK_EXTERNAL_MODULE_minimatch__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_pify__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -393,7 +393,7 @@ exports.wrapRootElement = true;
 /*! exports provided: pages, dataPaths, default */
 /***/ (function(module) {
 
-module.exports = {"pages":[{"componentChunkName":"component---src-pages-index-jsx","jsonName":"index","path":"/"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-03-hello-world-b58","path":"/2017/09/03/hello-world"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-04-nms-theme-2b6","path":"/2017/09/04/nms-theme"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-11-30-storytelling-d27","path":"/2017/11/30/storytelling"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-html-516","path":"/404.html"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-22d","path":"/404/"},{"componentChunkName":"component---src-pages-blog-jsx","jsonName":"blog-f7a","path":"/blog/"},{"componentChunkName":"component---src-pages-contact-jsx","jsonName":"contact-26a","path":"/contact/"},{"componentChunkName":"component---src-pages-projects-jsx","jsonName":"projects-9e9","path":"/projects/"}],"dataPaths":{"2017-09-03-hello-world-b58":"923/path---2017-09-03-hello-world-b-58-08c-JJSVeArwxPYcZqqyDtEinttxsls","2017-09-04-nms-theme-2b6":"285/path---2017-09-04-nms-theme-2-b-6-746-hQqbnIKjEepIEpewt0569pyxryM","2017-11-30-storytelling-d27":"882/path---2017-11-30-storytelling-d-27-cba-1RdGDaOY2YtK2cSRB1Rf2JS14","404-22d":"820/path---404-22-d-bce-0SUcWyAf8ecbYDsMhQkEfPzV8","404-html-516":"285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8","blog-f7a":"51/path---blog-f-7-a-05d-UXJfOx5K1D25UfPE0agiAfjP1A","contact-26a":"279/path---contact-26-a-cd9-0SUcWyAf8ecbYDsMhQkEfPzV8","dev-404-page-5f9":"386/path---dev-404-page-5-f-9-fab-0SUcWyAf8ecbYDsMhQkEfPzV8","index":"907/path---index-6a9-0hlXLqAfC8bV37zFYGva6wH33Zw","monogram-b8e":"147/path---monogram-b-8-e-b1f-0SUcWyAf8ecbYDsMhQkEfPzV8","projects-9e9":"175/path---projects-9-e-9-957-0SUcWyAf8ecbYDsMhQkEfPzV8","symbols-601":"821/path---symbols-601-973-0SUcWyAf8ecbYDsMhQkEfPzV8"}};
+module.exports = {"pages":[{"componentChunkName":"component---src-pages-index-jsx","jsonName":"index","path":"/"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-03-hello-world-b58","path":"/2017/09/03/hello-world"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-09-04-nms-theme-2b6","path":"/2017/09/04/nms-theme"},{"componentChunkName":"component---src-templates-post-jsx","jsonName":"2017-11-30-storytelling-d27","path":"/2017/11/30/storytelling"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-html-516","path":"/404.html"},{"componentChunkName":"component---src-pages-404-jsx","jsonName":"404-22d","path":"/404/"},{"componentChunkName":"component---src-pages-blog-jsx","jsonName":"blog-f7a","path":"/blog/"},{"componentChunkName":"component---src-pages-contact-jsx","jsonName":"contact-26a","path":"/contact/"},{"componentChunkName":"component---src-pages-projects-jsx","jsonName":"projects-9e9","path":"/projects/"}],"dataPaths":{"2017-09-03-hello-world-b58":"923/path---2017-09-03-hello-world-b-58-08c-JJSVeArwxPYcZqqyDtEinttxsls","2017-09-04-nms-theme-2b6":"285/path---2017-09-04-nms-theme-2-b-6-746-hQqbnIKjEepIEpewt0569pyxryM","2017-11-30-storytelling-d27":"882/path---2017-11-30-storytelling-d-27-cba-1RdGDaOY2YtK2cSRB1Rf2JS14","404-22d":"820/path---404-22-d-bce-0SUcWyAf8ecbYDsMhQkEfPzV8","404-html-516":"285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8","blog-f7a":"618/path---blog-f-7-a-05d-UaT9SMu7TvRo9jHglXwknP1bRI","contact-26a":"279/path---contact-26-a-cd9-0SUcWyAf8ecbYDsMhQkEfPzV8","dev-404-page-5f9":"386/path---dev-404-page-5-f-9-fab-0SUcWyAf8ecbYDsMhQkEfPzV8","index":"907/path---index-6a9-0hlXLqAfC8bV37zFYGva6wH33Zw","monogram-b8e":"147/path---monogram-b-8-e-b1f-0SUcWyAf8ecbYDsMhQkEfPzV8","projects-9e9":"175/path---projects-9-e-9-957-0SUcWyAf8ecbYDsMhQkEfPzV8","symbols-601":"821/path---symbols-601-973-0SUcWyAf8ecbYDsMhQkEfPzV8"}};
 
 /***/ }),
 
@@ -24127,153 +24127,136 @@ var Monogram = function Monogram(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js");
-/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_string_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.string.link */ "core-js/modules/es6.string.link");
-/* harmony import */ var core_js_modules_es6_string_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_string_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bloomer */ "./node_modules/bloomer/esm/index.js");
-/* harmony import */ var _components_Icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Icon */ "./src/components/Icon.jsx");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bloomer */ "./node_modules/bloomer/esm/index.js");
+/* harmony import */ var _components_Icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Icon */ "./src/components/Icon.jsx");
 
 
 
 
 
 var propTypes = {
-  location: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  location: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    pathname: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+  }).isRequired
 };
 
 var NavbarItemLink = function NavbarItemLink(_ref) {
-  var link = _ref.link,
+  var to = _ref.to,
       location = _ref.location,
       children = _ref.children;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"] // eslint-disable-next-line no-script-url
-  , {
-    href: "javascript:void(0)",
-    onClick: function onClick() {
-      return Object(gatsby__WEBPACK_IMPORTED_MODULE_4__["navigate"])(link);
-    },
-    isActive: location.pathname === link
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    tag: gatsby__WEBPACK_IMPORTED_MODULE_2__["Link"],
+    to: to,
+    isActive: location.pathname === to
   }, children);
 };
 
-var Navigation =
-/*#__PURE__*/
-function (_React$Component) {
-  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(Navigation, _React$Component);
+var Navigation = function Navigation(_ref2) {
+  var location = _ref2.location;
 
-  function Navigation() {
-    var _this;
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      isDropdownOpen = _useState[0],
+      setDropdownOpen = _useState[1];
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-    _this.state = {
-      isDropdownOpen: false
-    };
-
-    _this.onClickDropdown = function () {
-      _this.setState(function (state) {
-        return {
-          isDropdownOpen: !state.isDropdownOpen
-        };
-      });
-    };
-
-    return _this;
-  }
-
-  var _proto = Navigation.prototype;
-
-  _proto.render = function render() {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Navbar"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Container"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarBrand"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(NavbarItemLink, {
-      link: "/",
-      location: this.props.location
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("strong", null, "Alex Lende")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
-      "aria-label": "GitHub",
-      href: "https://github.com/ajlende",
-      isHidden: "desktop"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      faProps: {
-        icon: ["fab", "github"],
-        size: "lg"
-      },
-      isSize: "medium"
-    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
-      "aria-label": "LinkedIn",
-      href: "https://linkedin.com/in/ajlende",
-      isHidden: "desktop"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      faProps: {
-        icon: ["fab", "linkedin"],
-        size: "lg"
-      },
-      isSize: "medium"
-    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
-      "aria-label": "AngelList",
-      href: "https://angel.co/ajlende",
-      isHidden: "desktop"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      faProps: {
-        icon: ["fab", "angellist"],
-        size: "lg"
-      },
-      isSize: "medium"
-    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarBurger"], {
-      isActive: this.state.isDropdownOpen,
-      onClick: this.onClickDropdown
-    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarMenu"], {
-      isActive: this.state.isDropdownOpen,
-      onClick: this.onClickDropdown
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarStart"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(NavbarItemLink, {
-      link: "/projects",
-      location: this.props.location
-    }, "Projects"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(NavbarItemLink, {
-      link: "/blog",
-      location: this.props.location
-    }, "Blog"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(NavbarItemLink, {
-      link: "/contact",
-      location: this.props.location
-    }, "Contact")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarEnd"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
-      href: "https://github.com/ajlende",
-      isHidden: "touch"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      faProps: {
-        icon: ["fab", "github"],
-        size: "lg"
-      },
-      isSize: "medium"
-    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
-      href: "https://linkedin.com/in/ajlende",
-      isHidden: "touch"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      faProps: {
-        icon: ["fab", "linkedin"],
-        size: "lg"
-      },
-      isSize: "medium"
-    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
-      href: "https://angel.co/ajlende",
-      isHidden: "touch"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      faProps: {
-        icon: ["fab", "angellist"],
-        size: "lg"
-      },
-      isSize: "medium"
-    }))))));
-  };
-
-  return Navigation;
-}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+  var onClickDropdown = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
+    setDropdownOpen(function (prevState) {
+      return !prevState;
+    });
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
+    "aria-label": "main navigation"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["Container"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarBrand"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarItemLink, {
+    to: "/",
+    location: location
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Alex Lende")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    "aria-label": "GitHub",
+    href: "https://github.com/ajlende",
+    isHidden: "desktop"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    faProps: {
+      icon: ["fab", "github"],
+      size: "lg"
+    },
+    isSize: "medium"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    "aria-label": "LinkedIn",
+    href: "https://linkedin.com/in/ajlende",
+    isHidden: "desktop"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    faProps: {
+      icon: ["fab", "linkedin"],
+      size: "lg"
+    },
+    isSize: "medium"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    "aria-label": "AngelList",
+    href: "https://angel.co/ajlende",
+    isHidden: "desktop"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    faProps: {
+      icon: ["fab", "angellist"],
+      size: "lg"
+    },
+    isSize: "medium"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarBurger"] // Override for accessibility. Unfortunately this requires a script url in href.
+  , {
+    tag: "a",
+    href: "javascript:void(0)" // eslint-disable-line no-script-url
+    ,
+    role: "button",
+    "aria-label": "menu",
+    "aria-expanded": isDropdownOpen,
+    isActive: isDropdownOpen,
+    onClick: onClickDropdown
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarMenu"], {
+    isActive: isDropdownOpen,
+    onClick: onClickDropdown
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarStart"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarItemLink, {
+    to: "/projects",
+    location: location
+  }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarItemLink, {
+    to: "/blog",
+    location: location
+  }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavbarItemLink, {
+    to: "/contact",
+    location: location
+  }, "Contact")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarEnd"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    "aria-label": "GitHub",
+    href: "https://github.com/ajlende",
+    isHidden: "touch"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    faProps: {
+      icon: ["fab", "github"],
+      size: "lg"
+    },
+    isSize: "medium"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    "aria-label": "LinkedIn",
+    href: "https://linkedin.com/in/ajlende",
+    isHidden: "touch"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    faProps: {
+      icon: ["fab", "linkedin"],
+      size: "lg"
+    },
+    isSize: "medium"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_3__["NavbarItem"], {
+    "aria-label": "AngelList",
+    href: "https://angel.co/ajlende",
+    isHidden: "touch"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    faProps: {
+      icon: ["fab", "angellist"],
+      size: "lg"
+    },
+    isSize: "medium"
+  }))))));
+};
 
 Navigation.propTypes = propTypes;
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
@@ -24297,7 +24280,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var StarField = function StarField() {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    "aria-hidden": true
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: _starfield_module_sass__WEBPACK_IMPORTED_MODULE_0___default.a.stars1
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: _starfield_module_sass__WEBPACK_IMPORTED_MODULE_0___default.a.stars2
@@ -25830,17 +25815,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_ends_with_
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_iterator__;
-
-/***/ }),
-
-/***/ "core-js/modules/es6.string.link":
-/*!**************************************************!*\
-  !*** external "core-js/modules/es6.string.link" ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_string_link__;
 
 /***/ }),
 
