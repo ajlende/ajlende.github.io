@@ -1,26 +1,32 @@
 // Colors
 // NMS Theme http://github.com/ajlende/nms-syntax
 $orange:       hsl(25, 85%, 61%)
-$yellow:       hsl(47,  100%, 55%)
-$green:        hsl(108, 39%,  59%)
-$turquoise:    hsl(179, 59%,  67%)
+$yellow:       hsl(47, 100%, 55%)
+$green:        hsl(108, 39%, 59%)
+$turquoise:    hsl(179, 59%, 67%)
 $blue:         hsl(179, 100%, 29%)
-$purple:       hsl(288, 22%,  54%)
+$purple:       hsl(288, 22%, 54%)
 $red:          hsl(355, 100%, 68%)
 
-$black:        hsl(200, 98%, 4%)
-$black-bis:    hsl(197, 92%, 10%)
+$black:        hsl(200, 100%, 8%)
+$black-bis:    hsl(196, 100%, 11%)
 $black-ter:    hsl(194, 82%, 15%)
 
-$grey-darker:  hsl(191, 62%, 21%)
-$grey-dark:    hsl(188, 42%, 29%)
-$grey:         hsl(185, 22%, 48%)
-$grey-light:   hsl(182, 18%, 71%)
-$grey-lighter: hsl(179, 17%, 86%)
+$grey-darker:  hsl(188, 33%, 26%)
+$grey-dark:    hsl(178, 16%, 38%)
+$grey:         hsl(160, 10%, 51%)
+$grey-light:   hsl(136, 8%, 65%)
+$grey-lighter: hsl(96, 9%, 78%)
 
 $white-ter:    hsl(60, 17%,  92%)
-$white-bis:    hsl(60, 17%,  96%)
-$white:        hsl(60, 17%, 100%)
+$white-bis:    hsl(60, 14%,  96%)
+$white:        hsl(60, 0%, 100%)
+
+// Alternative blend from darker to lighter passing through blue
+$blue-darker:  hsl(189, 100%, 19%)
+$blue-dark:    hsl(184, 100%, 24%)
+$blue-light:   hsl(155, 27%, 59%)
+$blue-lighter: hsl(106, 18%, 76%)
 
 // Primary colors
 $primary:      $blue
@@ -32,3 +38,8 @@ $danger:       $red
 
 $light:        $white-ter
 $dark:         $black-ter
+
+// WCAG 2.0 G183 Link Contrast Requirements
+// https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G183.html
+$link:         $blue-dark
+$text:         $black
