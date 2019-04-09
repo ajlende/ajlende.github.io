@@ -5,7 +5,6 @@ import { navigate } from "gatsby"
 
 import {
   Container,
-  Icon,
   Navbar,
   NavbarBrand,
   NavbarBurger,
@@ -14,6 +13,8 @@ import {
   NavbarMenu,
   NavbarStart,
 } from "bloomer"
+
+import Icon from "../components/Icon"
 
 const propTypes = {
   location: PropTypes.object,
@@ -46,17 +47,17 @@ class Navigation extends React.Component {
               <strong>Alex Lende</strong>
             </NavbarItemLink>
             <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="desktop">
-              <Icon icon="github" />
+              <Icon faProps={{ icon: ["fab", "github"], size: "lg" }} isSize="medium" />
             </NavbarItem>
             <NavbarItem
               aria-label="LinkedIn"
               href="https://linkedin.com/in/ajlende"
               isHidden="desktop"
             >
-              <Icon icon="linkedin" />
+              <Icon faProps={{ icon: ["fab", "linkedin"], size: "lg" }} isSize="medium" />
             </NavbarItem>
             <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="desktop">
-              <Icon icon="angellist" />
+              <Icon faProps={{ icon: ["fab", "angellist"], size: "lg" }} isSize="medium" />
             </NavbarItem>
             <NavbarBurger isActive={this.state.isDropdownOpen} onClick={this.onClickDropdown} />
           </NavbarBrand>
@@ -74,13 +75,13 @@ class Navigation extends React.Component {
             </NavbarStart>
             <NavbarEnd>
               <NavbarItem href="https://github.com/ajlende" isHidden="touch">
-                <Icon icon="github" />
+                <Icon faProps={{ icon: ["fab", "github"], size: "lg" }} isSize="medium" />
               </NavbarItem>
               <NavbarItem href="https://linkedin.com/in/ajlende" isHidden="touch">
-                <Icon icon="linkedin" />
+                <Icon faProps={{ icon: ["fab", "linkedin"], size: "lg" }} isSize="medium" />
               </NavbarItem>
               <NavbarItem href="https://angel.co/ajlende" isHidden="touch">
-                <Icon icon="angellist" />
+                <Icon faProps={{ icon: ["fab", "angellist"], size: "lg" }} isSize="medium" />
               </NavbarItem>
             </NavbarEnd>
           </NavbarMenu>

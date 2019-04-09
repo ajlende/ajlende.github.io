@@ -1,17 +1,27 @@
-// Theme
+// Theme + Overrides
 @import "~@fortawesome/fontawesome-svg-core/styles.css"
 @import "~bulma/sass/utilities/initial-variables.sass"
+
 @import "./colors.sass"
 @import "./fonts.sass"
+
+// WCAG 2.0 G183 Link Contrast Requirements
+// https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G183.html
+$link: $grey-dark
+$text: $black
+
+$navbar-background-color: $white-bis
+$navbar-item-hover-color: $grey-darker
+$navbar-item-hover-background-color: rgba(black, 0.05)
+
 @import "~bulma/bulma.sass"
 @import "./prism.scss"
 
-// Overrides
 h1,h2,h3,h4,h5,h6
   font-family: $family-title
 
 body ::selection
   background: $grey-lighter
 
-.navbar
-  z-index: 1
+.navbar-dropdown,.navbar-menu
+  box-shadow: none
