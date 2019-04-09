@@ -24137,6 +24137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bloomer */ "./node_modules/bloomer/esm/index.js");
+/* harmony import */ var _components_Icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Icon */ "./src/components/Icon.jsx");
+
 
 
 
@@ -24199,20 +24201,32 @@ function (_React$Component) {
       "aria-label": "GitHub",
       href: "https://github.com/ajlende",
       isHidden: "desktop"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
-      icon: "github"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      faProps: {
+        icon: ["fab", "github"],
+        size: "lg"
+      },
+      isSize: "medium"
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
       "aria-label": "LinkedIn",
       href: "https://linkedin.com/in/ajlende",
       isHidden: "desktop"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
-      icon: "linkedin"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      faProps: {
+        icon: ["fab", "linkedin"],
+        size: "lg"
+      },
+      isSize: "medium"
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
       "aria-label": "AngelList",
       href: "https://angel.co/ajlende",
       isHidden: "desktop"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
-      icon: "angellist"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      faProps: {
+        icon: ["fab", "angellist"],
+        size: "lg"
+      },
+      isSize: "medium"
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarBurger"], {
       isActive: this.state.isDropdownOpen,
       onClick: this.onClickDropdown
@@ -24231,18 +24245,30 @@ function (_React$Component) {
     }, "Contact")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarEnd"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
       href: "https://github.com/ajlende",
       isHidden: "touch"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
-      icon: "github"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      faProps: {
+        icon: ["fab", "github"],
+        size: "lg"
+      },
+      isSize: "medium"
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
       href: "https://linkedin.com/in/ajlende",
       isHidden: "touch"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
-      icon: "linkedin"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      faProps: {
+        icon: ["fab", "linkedin"],
+        size: "lg"
+      },
+      isSize: "medium"
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["NavbarItem"], {
       href: "https://angel.co/ajlende",
       isHidden: "touch"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(bloomer__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
-      icon: "angellist"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Icon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      faProps: {
+        icon: ["fab", "angellist"],
+        size: "lg"
+      },
+      isSize: "medium"
     }))))));
   };
 
