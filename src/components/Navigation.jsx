@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useCallback } from "react"
 import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
@@ -17,7 +17,9 @@ import {
 import Icon from "../components/Icon"
 
 const propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 const NavbarItemLink = ({ to, location, children }) => (
@@ -26,77 +28,75 @@ const NavbarItemLink = ({ to, location, children }) => (
   </NavbarItem>
 )
 
-class Navigation extends React.Component {
-  state = { isDropdownOpen: false }
+const Navigation = ({ location }) => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false)
 
-  onClickDropdown = () => {
-    this.setState(state => ({ isDropdownOpen: !state.isDropdownOpen }))
-  }
+  const onClickDropdown = useCallback(() => {
+    setDropdownOpen(prevState => !prevState)
+  }, [])
 
-  render() {
-    return (
-      <Navbar aria-label="main navigation">
-        <Container>
-          <NavbarBrand>
-            <NavbarItemLink to="/" location={this.props.location}>
-              <strong>Alex Lende</strong>
+  return (
+    <Navbar aria-label="main navigation">
+      <Container>
+        <NavbarBrand>
+          <NavbarItemLink to="/" location={location}>
+            <strong>Alex Lende</strong>
+          </NavbarItemLink>
+          <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="desktop">
+            <Icon faProps={{ icon: ["fab", "github"], size: "lg" }} isSize="medium" />
+          </NavbarItem>
+          <NavbarItem
+            aria-label="LinkedIn"
+            href="https://linkedin.com/in/ajlende"
+            isHidden="desktop"
+          >
+            <Icon faProps={{ icon: ["fab", "linkedin"], size: "lg" }} isSize="medium" />
+          </NavbarItem>
+          <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="desktop">
+            <Icon faProps={{ icon: ["fab", "angellist"], size: "lg" }} isSize="medium" />
+          </NavbarItem>
+          <NavbarBurger
+            // Override for accessibility. Unfortunately this requires a script url in href.
+            tag="a"
+            href="javascript:void(0)" // eslint-disable-line no-script-url
+            role="button"
+            aria-label="menu"
+            aria-expanded={isDropdownOpen}
+            isActive={isDropdownOpen}
+            onClick={onClickDropdown}
+          />
+        </NavbarBrand>
+        <NavbarMenu isActive={isDropdownOpen} onClick={onClickDropdown}>
+          <NavbarStart>
+            <NavbarItemLink to="/projects" location={location}>
+              Projects
             </NavbarItemLink>
-            <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="desktop">
+            <NavbarItemLink to="/blog" location={location}>
+              Blog
+            </NavbarItemLink>
+            <NavbarItemLink to="/contact" location={location}>
+              Contact
+            </NavbarItemLink>
+          </NavbarStart>
+          <NavbarEnd>
+            <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="touch">
               <Icon faProps={{ icon: ["fab", "github"], size: "lg" }} isSize="medium" />
             </NavbarItem>
             <NavbarItem
               aria-label="LinkedIn"
               href="https://linkedin.com/in/ajlende"
-              isHidden="desktop"
+              isHidden="touch"
             >
               <Icon faProps={{ icon: ["fab", "linkedin"], size: "lg" }} isSize="medium" />
             </NavbarItem>
-            <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="desktop">
+            <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="touch">
               <Icon faProps={{ icon: ["fab", "angellist"], size: "lg" }} isSize="medium" />
             </NavbarItem>
-            <NavbarBurger
-              // Override for accessibility. Unfortunately this requires a script url in href.
-              tag="a"
-              href="javascript:void(0)" // eslint-disable-line no-script-url
-              role="button"
-              aria-label="menu"
-              aria-expanded={this.state.isDropdownOpen}
-              isActive={this.state.isDropdownOpen}
-              onClick={this.onClickDropdown}
-            />
-          </NavbarBrand>
-          <NavbarMenu isActive={this.state.isDropdownOpen} onClick={this.onClickDropdown}>
-            <NavbarStart>
-              <NavbarItemLink to="/projects" location={this.props.location}>
-                Projects
-              </NavbarItemLink>
-              <NavbarItemLink to="/blog" location={this.props.location}>
-                Blog
-              </NavbarItemLink>
-              <NavbarItemLink to="/contact" location={this.props.location}>
-                Contact
-              </NavbarItemLink>
-            </NavbarStart>
-            <NavbarEnd>
-              <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="touch">
-                <Icon faProps={{ icon: ["fab", "github"], size: "lg" }} isSize="medium" />
-              </NavbarItem>
-              <NavbarItem
-                aria-label="LinkedIn"
-                href="https://linkedin.com/in/ajlende"
-                isHidden="touch"
-              >
-                <Icon faProps={{ icon: ["fab", "linkedin"], size: "lg" }} isSize="medium" />
-              </NavbarItem>
-              <NavbarItem aria-label="AngelList" href="https://angel.co/ajlende" isHidden="touch">
-                <Icon faProps={{ icon: ["fab", "angellist"], size: "lg" }} isSize="medium" />
-              </NavbarItem>
-            </NavbarEnd>
-          </NavbarMenu>
-        </Container>
-      </Navbar>
-    )
-  }
+          </NavbarEnd>
+        </NavbarMenu>
+      </Container>
+    </Navbar>
+  )
 }
 
 Navigation.propTypes = propTypes
