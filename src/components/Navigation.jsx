@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { navigate } from "gatsby"
+import { Link } from "gatsby"
 
 import {
   Container,
@@ -20,13 +20,8 @@ const propTypes = {
   location: PropTypes.object,
 }
 
-const NavbarItemLink = ({ link, location, children }) => (
-  <NavbarItem
-    // eslint-disable-next-line no-script-url
-    href="javascript:void(0)"
-    onClick={() => navigate(link)}
-    isActive={location.pathname === link}
-  >
+const NavbarItemLink = ({ to, location, children }) => (
+  <NavbarItem tag={Link} to={to} isActive={location.pathname === to}>
     {children}
   </NavbarItem>
 )
@@ -43,7 +38,7 @@ class Navigation extends React.Component {
       <Navbar aria-label="main navigation">
         <Container>
           <NavbarBrand>
-            <NavbarItemLink link="/" location={this.props.location}>
+            <NavbarItemLink to="/" location={this.props.location}>
               <strong>Alex Lende</strong>
             </NavbarItemLink>
             <NavbarItem aria-label="GitHub" href="https://github.com/ajlende" isHidden="desktop">
@@ -72,13 +67,13 @@ class Navigation extends React.Component {
           </NavbarBrand>
           <NavbarMenu isActive={this.state.isDropdownOpen} onClick={this.onClickDropdown}>
             <NavbarStart>
-              <NavbarItemLink link="/projects" location={this.props.location}>
+              <NavbarItemLink to="/projects" location={this.props.location}>
                 Projects
               </NavbarItemLink>
-              <NavbarItemLink link="/blog" location={this.props.location}>
+              <NavbarItemLink to="/blog" location={this.props.location}>
                 Blog
               </NavbarItemLink>
-              <NavbarItemLink link="/contact" location={this.props.location}>
+              <NavbarItemLink to="/contact" location={this.props.location}>
                 Contact
               </NavbarItemLink>
             </NavbarStart>
