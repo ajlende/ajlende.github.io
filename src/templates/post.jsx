@@ -1,29 +1,25 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import { Section, Content, Columns, Column, Tag } from "bloomer"
 
-const BlogPostTemplate = ({ data }) => {
-  const tags = data.markdownRemark.frontmatter.tags || []
+import Layout from "../components/Layout"
+
+const BlogPostTemplate = ({ data, location }) => {
   const title = data.markdownRemark.frontmatter.title
   return (
-    <Section>
-      <Helmet>
-        <title>{title} – Alex Lende</title>
-      </Helmet>
-      <Columns isCentered>
-        <Column isSize={6}>
-          <Content dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          {tags.map(tag => (
-            <Link to={`/blog?tag=${tag}`}>
-              <Tag isColor="light" isSize="medium">
-                {tag}
-              </Tag>
-            </Link>
-          ))}
-        </Column>
-      </Columns>
-    </Section>
+    <Layout location={location}>
+      <Section>
+        <Helmet>
+          <title>{title} – Alex Lende</title>
+        </Helmet>
+        <Columns isCentered>
+          <Column isSize={6}>
+            <Content dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          </Column>
+        </Columns>
+      </Section>
+    </Layout>
   )
 }
 
@@ -35,7 +31,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        tags
       }
     }
   }
