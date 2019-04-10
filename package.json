@@ -22,12 +22,12 @@
     "url": "https://github.com/ajlende/ajlende.github.io.git"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
     "@fortawesome/free-regular-svg-icons": "^5.8.1",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "ajv": "^6.10.0",
     "autoprefixer": "^9.5.1",
     "bloomer": "^0.6.5",
     "bulma": "^0.7.4",
@@ -55,12 +55,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "typescript": "^3.4.2",
+    "typescript": "^3.4.3",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "favicons-webpack-plugin": "0.0.9",
     "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   },
