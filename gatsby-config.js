@@ -10,12 +10,6 @@ module.exports = {
     { resolve: "gatsby-plugin-react-helmet" },
     { resolve: "gatsby-plugin-sass" },
     {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-105831475-1",
-      },
-    },
-    {
       resolve: 'gatsby-plugin-favicon',
       options: {
           logo: './src/favicon.svg',
