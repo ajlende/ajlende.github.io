@@ -15,7 +15,7 @@ import { Link, graphql } from "gatsby"
 import dateFormat from "dateformat"
 
 import Layout from "../components/Layout"
-import { Articles, Article } from "../components/Articles"
+import { CardGroup, Card } from "../components/CardGroup"
 
 import styles from "./styles.module.sass"
 
@@ -33,26 +33,26 @@ const BlogPage = ({ data, location }) => (
     </Hero>
     <Section>
       <Container>
-        <Articles>
+        <CardGroup>
           {data.remark.posts
             .filter(post => post.path !== "/404/")
             .map(({ post }) => {
               const { timeToRead, id } = post
               const { title, description, date, slug } = post.frontmatter
               return (
-                <Article key={id}>
-                  <Title>
+                <Card key={id}>
+                  <Title tag="h2">
                     <Link to={`${dateFormat(date, "UTC:yyyy/mm/dd")}/${slug}`}>{title}</Link>
                   </Title>
-                  <Level style={{ fontSize: "0.9em" }}>
+                  <Level tag="div" className={styles.level}>
                     <LevelLeft>{dateFormat(date, "UTC:mmm d, yyyy")}</LevelLeft>
                     <LevelRight>{timeToRead} min read</LevelRight>
                   </Level>
                   <Content>{description}</Content>
-                </Article>
+                </Card>
               )
             })}
-        </Articles>
+        </CardGroup>
       </Container>
     </Section>
   </Layout>

@@ -1,9 +1,9 @@
 import React from "react"
 import { Tile, Box } from "bloomer"
 
-import styles from "./articles.module.sass"
+import styles from "./CardGroup.module.sass"
 
-export const Articles = ({ rowSize, children }) => {
+export const CardGroup = ({ rowSize, children }) => {
   const groupByRow = (acc, child, index, arr) => {
     if (index % rowSize) return acc
     return [...acc, arr.slice(index, index + rowSize)]
@@ -22,11 +22,11 @@ export const Articles = ({ rowSize, children }) => {
   )
 }
 
-Articles.defaultProps = {
+CardGroup.defaultProps = {
   rowSize: 2,
 }
 
-export const Article = ({ children }) => (
+export const Card = ({ children }) => (
   <Tile isParent isSize={6}>
     <Tile isChild render={() => <Box className={styles.box}>{children}</Box>} />
   </Tile>
