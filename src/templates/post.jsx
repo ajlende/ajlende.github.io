@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import { Section, Content, Columns, Column, Tag } from "bloomer"
 
 import Layout from "../components/Layout"

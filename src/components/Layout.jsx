@@ -2,7 +2,7 @@ import "../styles/theme.sass"
 
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 import Navigation from "./Navigation"
 import Copyright from "./Copyright"
