@@ -65,7 +65,7 @@ const Success = data => (
       } = {}) => {
         const { color: backgroundColor, name: language } = node.primaryLanguage || {
           color: "#ccc",
-          name: "Other",
+          name: "Unknown",
         }
         return (
           <Card key={id}>
