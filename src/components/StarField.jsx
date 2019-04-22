@@ -1,4 +1,4 @@
-import styles from "./starfield.module.sass"
+import styles from "./StarField.module.sass"
 
 import React from "react"
 
