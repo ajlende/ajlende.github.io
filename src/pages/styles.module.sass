@@ -46,7 +46,7 @@
 
 .imgGrid
   display: grid
-  grid: auto-flow dense / repeat(2, 50%)
+  grid: auto-flow (dense / repeat(2, 50%))
   grid-gap: 1rem
 
 .imgGrp
@@ -67,6 +67,17 @@
   width: 100%
   height: 100%
   transition: 0.2s
-
   &:hover
     opacity: 1
+
+.level
+  fontSize: 0.9em
+  bottom: 0
+  position: relative
+
+.dot
+  display: inline-block
+  width: 1em
+  height: 1em
+  margin-right: 5px
+  border-radius: 50%
