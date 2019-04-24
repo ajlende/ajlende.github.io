@@ -22,7 +22,7 @@ import styles from "./styles.module.sass"
 const Professional = () => (
   <>
     <Title>Professional</Title>
-    <Level isMobile>
+    <Level tag="div" isMobile>
       <LevelItem href="mailto:ajlende@gmail.com" title="Email">
         <Icon faProps={{ icon: "envelope", size: "3x" }} isSize="large" />
       </LevelItem>
@@ -70,27 +70,19 @@ const Prose = () => (
     <Title>Say Hi</Title>
     <Content>
       <p>
-        Here is a nearly exhaustive list of all the places that you can add/
+        This is a nearly exhaustive list of all the places that you can add/
         <wbr />
         follow/
         <wbr />
         friend/
         <wbr />
-        connect with me if you so desire. Social media is exhausting, and I try to focus my time on
-        more productive things, so I don't spend much time on it. That being said, I'll also
-        probably get an email notification if I get a DM on any of these, so still feel free to
-        connect with me on any of them.
+        connect with me if you so desire. I've never been one to spend much time on social media, so
+        there's not much to see. That being said, I'll also probably get an email notification if I
+        get a DM on any of these, so still feel free to connect with me on any of them.
       </p>
       <p>
-        Despite not spending much time on social media, I still check my email regularly if you
-        really want to get in touch with me.{" "}
-        <span role="img" aria-label="Victory Hand">
-          ✌️
-        </span>
-      </p>
-      <p>
-        For anything not linked to here—including various Slack groups I'm a part of—look for
-        @ajlende.
+        For anything not linked to here—including various Slack or Gitter groups I'm a part of—look
+        for @ajlende.
       </p>
     </Content>
   </>

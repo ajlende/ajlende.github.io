@@ -35,6 +35,7 @@
         "username": "ajlende",
         "url": "https://angel.co/ajlende"
       },
+
       {
         "category": "personal",
         "icon": ["fab", "facebook"],
@@ -63,12 +64,42 @@
         "username": "ajlende",
         "url": "https://www.instagram.com/ajlende/"
       },
+
       {
         "category": "personal",
-        "icon": ["fab", "youtube-play"],
+        "icon": ["fab", "youtube"],
         "network": "YouTube",
         "username": "AlexLende",
         "url": "https://www.youtube.com/c/AlexLende"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "twitch"],
+        "network": "Twitch",
+        "username": "AlexLende",
+        "url": "https://www.twitch.tv/ajlende"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "steam"],
+        "network": "Steam",
+        "username": "ajlende",
+        "url": "https://steamcommunity.com/id/ajlende/"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "battle-net"],
+        "network": "Battle.net",
+        "username": "FutureAlex#1930",
+        "url": "https://playoverwatch.com/en-us/career/pc/FutureAlex-1930"
+      },
+
+      {
+        "category": "personal",
+        "icon": ["fab", "reddit"],
+        "network": "Reddit",
+        "username": "ajlende",
+        "url": "https://www.reddit.com/user/ajlende"
       },
       {
         "category": "personal",
@@ -91,19 +122,13 @@
         "username": "ajlende",
         "url": "https://codepen.io/ajlende"
       },
+
       {
         "category": "personal",
         "icon": ["fab", "goodreads"],
         "network": "Goodreads",
         "username": "ajlende",
         "url": "https://www.goodreads.com/ajlende"
-      },
-      {
-        "category": "personal",
-        "icon": ["fab", "meetup"],
-        "network": "Meetup",
-        "username": "ajlende",
-        "url": "https://www.meetup.com/members/218214467/"
       },
       {
         "category": "personal",
@@ -121,6 +146,14 @@
       },
       {
         "category": "personal",
+        "icon": ["fab", "dev"],
+        "network": "dev.to",
+        "username": "ajlende",
+        "url": "https://dev.to/ajlende"
+      },
+
+      {
+        "category": "personal",
         "icon": ["fab", "pinterest"],
         "network": "Pinterest",
         "username": "ajlende",
@@ -128,25 +161,26 @@
       },
       {
         "category": "personal",
-        "icon": ["fab", "reddit"],
-        "network": "Reddit",
+        "icon": ["fab", "meetup"],
+        "network": "Meetup",
         "username": "ajlende",
-        "url": "https://www.reddit.com/user/ajlende"
+        "url": "https://www.meetup.com/members/218214467/"
       },
       {
         "category": "personal",
-        "icon": ["fab", "steam-square"],
-        "network": "Steam",
-        "username": "ajlende",
-        "url": "https://steamcommunity.com/id/ajlende/"
-      },
-      {
-        "category": "personal",
-        "icon": ["fac", "strava"],
+        "icon": ["fab", "strava"],
         "network": "Strava",
         "username": "ajlende",
         "url": "https://www.strava.com/athletes/19753792"
       },
+      {
+        "category": "personal",
+        "icon": ["fac", "venmo"],
+        "network": "Venmo",
+        "username": "Alex-Lende",
+        "url": "https://venmo.com/Alex-Lende"
+      },
+
       {
         "category": "personal",
         "icon": ["fac", "8tracks"],

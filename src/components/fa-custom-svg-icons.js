@@ -22,22 +22,22 @@ export const fa8tracks = {
   ],
 }
 
-export const faStrava = {
+export const faVenmo = {
   prefix: "fac",
-  iconName: "strava",
+  iconName: "venmo",
   icon: [
-    24,
-    24,
+    128,
+    128,
     [],
     "e003",
-    "M15.4 17.94l-2.1-4.1h-3.07L15.4 24l5.14-10.17h-3.07m-7-5.6l2.83 5.6h4.17L10.47 0l-7 13.83h4.16",
+    "M117.258,0c4.653,7.684,6.75,15.6,6.75,25.597c0,31.889-27.222,73.315-49.315,102.403H24.23L3.992,6.981 l44.186-4.195l10.7,86.112c9.998-16.288,22.336-41.885,22.336-59.337c0-9.553-1.636-16.059-4.194-21.416L117.258,0z",
   ],
 }
 
 export const fac = {
   faAjlende,
   fa8tracks,
-  faStrava,
+  faVenmo,
 }
 
 export default fac
