@@ -93,13 +93,6 @@
       },
       {
         "category": "personal",
-        "icon": ["fab", "dev"],
-        "network": "dev.to",
-        "username": "ajlende",
-        "url": "https://dev.to/ajlende"
-      },
-      {
-        "category": "personal",
         "icon": ["fab", "gitlab"],
         "network": "GitLab",
         "username": "ajlende",
@@ -121,6 +114,20 @@
       },
       {
         "category": "personal",
+        "icon": ["fab", "dev"],
+        "network": "dev.to",
+        "username": "ajlende",
+        "url": "https://dev.to/ajlende"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "reddit"],
+        "network": "Reddit",
+        "username": "ajlende",
+        "url": "https://www.reddit.com/user/ajlende"
+      },
+      {
+        "category": "personal",
         "icon": ["fab", "goodreads"],
         "network": "Goodreads",
         "username": "ajlende",
@@ -139,13 +146,6 @@
         "network": "Medium",
         "username": "ajlende",
         "url": "https://medium.com/@ajlende"
-      },
-      {
-        "category": "personal",
-        "icon": ["fab", "reddit"],
-        "network": "Reddit",
-        "username": "ajlende",
-        "url": "https://www.reddit.com/user/ajlende"
       },
       {
         "category": "personal",
