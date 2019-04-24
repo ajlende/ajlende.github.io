@@ -65,6 +65,34 @@
       },
       {
         "category": "personal",
+        "icon": ["fab", "youtube-play"],
+        "network": "YouTube",
+        "username": "AlexLende",
+        "url": "https://www.youtube.com/c/AlexLende"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "gitlab"],
+        "network": "GitLab",
+        "username": "ajlende",
+        "url": "https://gitlab.com/ajlende"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "bitbucket"],
+        "network": "Bitbucket",
+        "username": "ajlende",
+        "url": "https://bitbucket.org/ajlende"
+      },
+      {
+        "category": "personal",
+        "icon": ["fab", "codepen"],
+        "network": "Codepen",
+        "username": "ajlende",
+        "url": "https://codepen.io/ajlende"
+      },
+      {
+        "category": "personal",
         "icon": ["fab", "goodreads"],
         "network": "Goodreads",
         "username": "ajlende",
