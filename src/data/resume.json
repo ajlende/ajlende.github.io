@@ -35,7 +35,6 @@
         "username": "ajlende",
         "url": "https://angel.co/ajlende"
       },
-
       {
         "category": "personal",
         "icon": ["fab", "facebook"],
@@ -64,7 +63,6 @@
         "username": "ajlende",
         "url": "https://www.instagram.com/ajlende/"
       },
-
       {
         "category": "personal",
         "icon": ["fab", "youtube"],
@@ -93,13 +91,12 @@
         "username": "FutureAlex#1930",
         "url": "https://playoverwatch.com/en-us/career/pc/FutureAlex-1930"
       },
-
       {
         "category": "personal",
-        "icon": ["fab", "reddit"],
-        "network": "Reddit",
+        "icon": ["fab", "dev"],
+        "network": "dev.to",
         "username": "ajlende",
-        "url": "https://www.reddit.com/user/ajlende"
+        "url": "https://dev.to/ajlende"
       },
       {
         "category": "personal",
@@ -122,7 +119,6 @@
         "username": "ajlende",
         "url": "https://codepen.io/ajlende"
       },
-
       {
         "category": "personal",
         "icon": ["fab", "goodreads"],
@@ -146,12 +142,11 @@
       },
       {
         "category": "personal",
-        "icon": ["fab", "dev"],
-        "network": "dev.to",
+        "icon": ["fab", "reddit"],
+        "network": "Reddit",
         "username": "ajlende",
-        "url": "https://dev.to/ajlende"
+        "url": "https://www.reddit.com/user/ajlende"
       },
-
       {
         "category": "personal",
         "icon": ["fab", "pinterest"],
@@ -180,7 +175,6 @@
         "username": "Alex-Lende",
         "url": "https://venmo.com/Alex-Lende"
       },
-
       {
         "category": "personal",
         "icon": ["fac", "8tracks"],
