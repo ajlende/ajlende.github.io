@@ -21,7 +21,7 @@ config.autoAddCss = false
 library.add(fas, fab, fac)
 
 console.log(
-  `If you're looking at the console for my site, either something's broken or you're interested in learning how it was built. For the former, log an issue at https://github.com/ajlende/ajlende.github.io/issues. For the later, check out the source code which I've made available at https://github.com/ajlende/ajlende.github.io.`,
+  `If you're looking at the console for my site, either something's broken or you're interested in learning how it was built. For the former, I'd appreciate if you would log an issue at https://github.com/ajlende/ajlende.github.io/issues. For the later, check out the source code which I've made available at https://github.com/ajlende/ajlende.github.io.`,
 )
 
 const Layout = ({ children, location }) => (
