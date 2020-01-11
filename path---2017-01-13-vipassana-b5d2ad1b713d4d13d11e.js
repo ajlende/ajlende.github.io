@@ -1,2 +1,0 @@
-webpackJsonp([0xe57a6b9de993],{360:function(a,h){a.exports={data:{markdownRemark:{html:"<h2>Day 1</h2>\n<h2>Day 2</h2>\n<h2>Day 3</h2>\n<h2>Day 4</h2>\n<h2>Day 5</h2>\n<h2>Day 6</h2>\n<h2>Day 7</h2>\n<h2>Day 8</h2>\n<h2>Day 9</h2>\n<h2>Day 10</h2>",frontmatter:{title:"My Vipassana Journey",tags:["vipassana","meditation"]}}},pathContext:{slug:"vipassana"}}}});
-//# sourceMappingURL=path---2017-01-13-vipassana-b5d2ad1b713d4d13d11e.js.map
