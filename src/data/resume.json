@@ -86,8 +86,8 @@
       },
       {
         "category": "personal",
-        "icon": ["fab", "battle-net"],
-        "network": "Battle.net",
+        "icon": ["fac", "overwatch"],
+        "network": "Overwatch",
         "username": "FutureAlex#1930",
         "url": "https://playoverwatch.com/en-us/career/pc/FutureAlex-1930"
       },
