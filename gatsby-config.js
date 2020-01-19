@@ -10,15 +10,15 @@ module.exports = {
     { resolve: "gatsby-plugin-react-helmet" },
     { resolve: "gatsby-plugin-sass" },
     {
-      resolve: 'gatsby-plugin-favicon',
+      resolve: "gatsby-plugin-favicon",
       options: {
-          logo: './src/favicon.svg',
-          dir: 'ltr',
-          lang: 'en-US',
-          background: '#073746',
-          theme_color: '#073746',
-          display: 'browser',
-          orientation: 'any',
+          logo: "./src/favicon.svg",
+          dir: "ltr",
+          lang: "en-US",
+          background: "#073746",
+          theme_color: "#073746",
+          display: "browser",
+          orientation: "any",
           icons: {
             android: true,
             appleIcon: true,
