@@ -11,3 +11,6 @@ public/
 
 # Dependency directories
 node_modules/
+
+# Environment variables
+.env.local
