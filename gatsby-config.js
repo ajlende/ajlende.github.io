@@ -1,14 +1,14 @@
+require("dotenv").config({
+  path: ".env.local",
+})
+
 module.exports = {
   siteMetadata: {
     title: "Alex Lende",
     siteUrl: "https://ajlende.com",
   },
   plugins: [
-    { resolve: "gatsby-plugin-sharp" },
-    { resolve: "gatsby-plugin-sitemap" },
     { resolve: "gatsby-plugin-catch-links" },
-    { resolve: "gatsby-plugin-react-helmet" },
-    { resolve: "gatsby-plugin-sass" },
     {
       resolve: "gatsby-plugin-favicon",
       options: {
@@ -33,13 +33,17 @@ module.exports = {
           },
         }
     },
+    { resolve: "gatsby-plugin-react-helmet" },
+    { resolve: "gatsby-plugin-sass" },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-plugin-sharp",
       options: {
-        path: "./src/pages/posts",
-        name: "posts",
+        useMozJpeg: true,
+        stripMetadata: true,
+        defaultQuality: 100,
       },
     },
+    { resolve: "gatsby-plugin-sitemap" },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -47,24 +51,21 @@ module.exports = {
         name: "images",
       },
     },
-    { resolve: "gatsby-transformer-sharp" },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-source-wordpress",
       options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false,
-            },
-          },
-          { resolve: "gatsby-remark-responsive-iframe" },
-          { resolve: "gatsby-remark-prismjs" },
-          { resolve: "gatsby-remark-copy-linked-files" },
-          { resolve: "gatsby-remark-smartypants" },
-        ],
-      },
+        baseUrl: process.env.WPCOM_BASE_URL,
+        protocol: process.env.WPCOM_PROTOCOL,
+        hostingWPCOM: true,
+        useACF: false,
+        auth: {
+          wpcom_app_clientId: process.env.WPCOM_CLIENT_ID,
+          wpcom_app_clientSecret: process.env.WPCOM_CLIENT_SECRET,
+          wpcom_user: process.env.WPCOM_USER,
+          wpcom_pass: process.env.WPCOM_PASS,
+        }
+      }
     },
+    { resolve: "gatsby-transformer-sharp" },
   ],
 }

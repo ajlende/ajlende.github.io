@@ -34,24 +34,20 @@ const BlogPage = ({ data, location }) => (
     <Section>
       <Container>
         <CardGroup>
-          {data.remark.posts
+          {data.allWordpressPost.edges
             .filter(post => post.path !== "/404/")
-            .map(({ post }) => {
-              const { timeToRead, id } = post
-              const { title, description, date, slug } = post.frontmatter
-              return (
-                <Card key={id}>
-                  <Title tag="h2">
-                    <Link to={`${dateFormat(date, "UTC:yyyy/mm/dd")}/${slug}`}>{title}</Link>
-                  </Title>
-                  <Level tag="div" className={styles.level}>
-                    <LevelLeft>{dateFormat(date, "UTC:mmm d, yyyy")}</LevelLeft>
-                    <LevelRight>{timeToRead} min read</LevelRight>
-                  </Level>
-                  <Content>{description}</Content>
-                </Card>
-              )
-            })}
+            .map(({ node: { id, slug, date, title, excerpt, categories } }) => (
+              <Card key={id}>
+                <Title tag="h2">
+                  <Link to={`${dateFormat(date, "UTC:yyyy/mm/dd")}/${slug}`}>{title}</Link>
+                </Title>
+                <Level tag="div" className={styles.level}>
+                  <LevelLeft>{dateFormat(date, "UTC:mmm d, yyyy")}</LevelLeft>
+                  <LevelRight>{categories.map(({ name }) => name).join(", ")}</LevelRight>
+                </Level>
+                <Content dangerouslySetInnerHTML={{ __html: excerpt }} />
+              </Card>
+            ))}
         </CardGroup>
       </Container>
     </Section>
@@ -62,17 +58,17 @@ export default BlogPage
 
 export const pageQuery = graphql`
   {
-    remark: allMarkdownRemark {
-      posts: edges {
-        post: node {
+    allWordpressPost(sort: {fields: date, order: DESC}) {
+      edges {
+        node {
           id
-          timeToRead
+          slug
+          title
+          date
           excerpt
-          frontmatter {
-            title
-            description
+          categories {
+            name
             slug
-            date
           }
         }
       }
