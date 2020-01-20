@@ -177,10 +177,10 @@
       },
       {
         "category": "personal",
-        "icon": ["fac", "8tracks"],
-        "network": "8tracks",
+        "icon": ["fac", "playmoss"],
+        "network": "Playmoss",
         "username": "ajlende",
-        "url": "https://8tracks.com/ajlende"
+        "url": "https://playmoss.com/en/ajlende"
       },
       {
         "category": "personal",
