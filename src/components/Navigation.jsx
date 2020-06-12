@@ -68,11 +68,11 @@ const Navigation = ({ location }) => {
         </NavbarBrand>
         <NavbarMenu isActive={isDropdownOpen} onClick={onClickDropdown}>
           <NavbarStart>
+            <NavbarItem href="https://ajlende.blog">
+              Blog
+            </NavbarItem>
             <NavbarItemLink to="/projects" location={location}>
               Projects
-            </NavbarItemLink>
-            <NavbarItemLink to="/blog" location={location}>
-              Blog
             </NavbarItemLink>
             <NavbarItemLink to="/contact" location={location}>
               Contact

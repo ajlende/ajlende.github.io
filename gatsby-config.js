@@ -51,21 +51,7 @@ module.exports = {
         name: "images",
       },
     },
-    {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        baseUrl: process.env.WPCOM_BASE_URL,
-        protocol: process.env.WPCOM_PROTOCOL,
-        hostingWPCOM: true,
-        useACF: false,
-        auth: {
-          wpcom_app_clientId: process.env.WPCOM_CLIENT_ID,
-          wpcom_app_clientSecret: process.env.WPCOM_CLIENT_SECRET,
-          wpcom_user: process.env.WPCOM_USER,
-          wpcom_pass: process.env.WPCOM_PASS,
-        }
-      }
-    },
     { resolve: "gatsby-transformer-sharp" },
+    { resolve: "gatsby-plugin-meta-redirect" },
   ],
 }
