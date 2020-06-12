@@ -431,7 +431,7 @@
       "keywords": [
         "Boundary Waters Canoe Area Wilderness, USA",
         "Dhamma Giri, India",
-        "Longues-su-Mer, France",
+        "Longues-sur-Mer, France",
         "Quetico Provincial Park, Canada",
         "RAGBRAI Iowa, USA",
         "Tokyo, Japan"
@@ -439,11 +439,7 @@
     },
     {
       "name": "Meetups",
-      "keywords": [
-        "Elm Kansas City",
-        "Cerner WebDev",
-        "JavaScript KC"
-      ]
+      "keywords": ["Elm Kansas City", "Cerner WebDev", "JavaScript KC"]
     },
     {
       "name": "Podcasts",
