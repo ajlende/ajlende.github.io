@@ -9,6 +9,15 @@
 	let clientWidth = $state(0);
 	let clientHeight = $state(0);
 
+	function scrollToSection(event: MouseEvent) {
+		event.preventDefault();
+		const target = event.currentTarget as HTMLAnchorElement;
+		const section = document.querySelector(target.getAttribute('href') || '');
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
+
 	// Match Tailwind v4 breakpoints (except for 640px)
 	let width = $derived(Math.ceil(clientWidth / 256) * 256);
 	let height = $derived(Math.ceil(clientHeight / 256) * 256);
@@ -17,29 +26,79 @@
 	let diameter = $derived(radius * 2);
 
 	let viewBox = $derived(`${-radius} ${-radius} ${diameter} ${diameter}`);
-	let smallStars = $derived(starPoints(40, radius));
-	let mediumStars = $derived(starPoints(20, radius));
-	let largeStars = $derived(starPoints(10, radius));
+	let smallStars = $derived(starPoints(80, radius));
+	let mediumStars = $derived(starPoints(40, radius));
+	let largeStars = $derived(starPoints(20, radius));
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<header class="bg-blue-900">
+	<header class="bg-red-50">
 		<div
 			class="flex h-screen flex-col items-center justify-center bg-linear-150 from-blue-950 via-blue-900 via-80% to-blue-800"
 			style="clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);"
 		>
+			<div
+				bind:clientWidth
+				bind:clientHeight
+				class="pointer-events-none absolute h-full w-full overflow-hidden"
+				aria-hidden="true"
+			>
+				<svg
+					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_480s_linear_infinite] fill-white"
+					{viewBox}
+					width={diameter}
+					height={diameter}
+				>
+					{#each largeStars as star}<circle cx={star.x} cy={star.y} r={1.5} />{/each}
+				</svg>
+				<svg
+					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_240s_linear_infinite] fill-white"
+					{viewBox}
+					width={diameter}
+					height={diameter}
+				>
+					{#each mediumStars as star}<circle cx={star.x} cy={star.y} r={1} />{/each}
+				</svg>
+				<svg
+					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_120s_linear_infinite] fill-white"
+					{viewBox}
+					width={diameter}
+					height={diameter}
+				>
+					{#each smallStars as star}<circle cx={star.x} cy={star.y} r={0.5} />{/each}
+				</svg>
+			</div>
 			<nav
 				class="absolute top-0 right-0 left-0 mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
 				<div class="flex items-center space-x-4 md:space-x-6">
-					<a href="/" class="text-lg font-semibold text-blue-50"> Alex Lende </a>
-					<a href="/blog" class="text-sm text-blue-50 transition-colors hover:text-blue-100">
-						Blog
+					<a href="/" class="text-lg font-semibold text-blue-50 hover:text-blue-400">Alex Lende</a>
+					<a
+						href="#services"
+						on:click={scrollToSection}
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
+					>
+						Services
 					</a>
-					<a href="/projects" class="text-sm text-blue-50 transition-colors hover:bg-blue-300">
-						Projects
+					<a
+						href="#skills"
+						on:click={scrollToSection}
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
+					>
+						Skills
 					</a>
-					<a href="/contact" class="text-sm text-blue-50 transition-colors hover:bg-blue-300">
+					<a
+						href="#portfolio"
+						on:click={scrollToSection}
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
+					>
+						Portfolio
+					</a>
+					<a
+						href="#contact"
+						on:click={scrollToSection}
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
+					>
 						Contact
 					</a>
 				</div>
@@ -49,7 +108,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Alex Lende on GitHub"
-						class="text-blue-50 transition-colors hover:bg-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						<Github class="h-6 w-6" />
 					</a>
@@ -58,7 +117,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Alex Lende on LinkedIn"
-						class="text-blue-50 transition-colors hover:bg-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						<Linkedin class="h-6 w-6" />
 					</a>
@@ -67,60 +126,28 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Alex Lende on Wellfound"
-						class="text-blue-50 transition-colors hover:bg-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						<Briefcase class="h-6 w-6" />
 					</a>
 				</div>
 			</nav>
-			<div
-				bind:clientWidth
-				bind:clientHeight
-				class="pointer-events-none absolute h-full w-full overflow-hidden"
-			>
-				<svg
-					class="absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-50%] fill-white"
-					{viewBox}
-					width={diameter}
-					height={diameter}
-				>
-					{#each largeStars as star}<circle cx={star.x} cy={star.y} r={3} />{/each}
-				</svg>
-				<svg
-					class="absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-50%] fill-white"
-					{viewBox}
-					width={diameter}
-					height={diameter}
-				>
-					{#each mediumStars as star}<circle cx={star.x} cy={star.y} r={2} />{/each}
-				</svg>
-				<svg
-					class="absolute top-[100%] left-[50%] translate-x-[-50%] translate-y-[-50%] fill-white"
-					{viewBox}
-					width={diameter}
-					height={diameter}
-				>
-					{#each smallStars as star}<circle cx={star.x} cy={star.y} r={1} />{/each}
-				</svg>
-			</div>
 			<div class="flex flex-col items-center justify-center gap-4 text-center">
 				<Logo />
-				<h1 class="font-serif text-9xl text-blue-50 drop-shadow-lg">Alex Lende</h1>
-				<div class="font-serif text-4xl text-blue-50 drop-shadow">
-					Building the next frontier of web experiences
-				</div>
+				<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
+				<div class="font-serif text-4xl text-blue-50 drop-shadow">Software Engineer</div>
 			</div>
 		</div>
 	</header>
 
 	<main class="flex-1 bg-red-50">
-		<p class="mt-4 max-w-2xl text-lg font-light text-blue-100">
-			Principal software engineer specializing in interactive web applications and 3D experiences. I
-			help startups and companies bring ambitious ideas to life on the web.
-		</p>
-		<section class="bg-red-50 py-24 text-red-900">
+		<section id="services" class="bg-red-50 py-24 text-red-900">
 			<div class="mx-auto max-w-4xl px-4 text-center">
-				<h3 class="mb-6 font-serif text-3xl">Services</h3>
+				<h3 class="mb-6 font-serif text-3xl font-bold">Services</h3>
+				<p class="mb-6 text-lg">
+					Principal software engineer specializing in interactive web applications and 3D
+					experiences. I help startups and companies bring ambitious ideas to life on the web.
+				</p>
 				<ul class="grid gap-6 text-lg md:grid-cols-2">
 					<li class="rounded-xl bg-red-100/60 p-6 shadow-lg">
 						Custom Web Applications (React, TypeScript)
@@ -137,60 +164,60 @@
 			</div>
 		</section>
 
-		<section class="bg-red-100 py-24 text-red-900">
+		<section id="skills" class="bg-red-100 py-24 text-red-900">
 			<div class="mx-auto max-w-4xl px-4 text-center">
-				<h3 class="mb-6 font-serif text-3xl">Skills & Technologies</h3>
-				<div class="flex flex-wrap justify-center gap-4 text-lg">
-					<span class="rounded-full bg-red-200/60 px-5 py-2">React</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">TypeScript</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">three.js</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">WebGL</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">JavaScript</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">HTML/CSS</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">SVG</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">D3</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">Node.js</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">Python</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">UI/UX</span>
-					<span class="rounded-full bg-red-200/60 px-5 py-2">Accessibility</span>
-				</div>
+				<h3 class="mb-6 font-serif text-3xl font-bold">Skills & Technologies</h3>
+				<ul class="flex list-none flex-wrap justify-center gap-4 text-lg">
+					<li class="rounded-full bg-red-200/60 px-5 py-2">React</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">TypeScript</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">three.js</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">WebGL</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">JavaScript</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">HTML/CSS</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">SVG</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">D3</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">Node.js</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">Python</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">UI/UX</li>
+					<li class="rounded-full bg-red-200/60 px-5 py-2">Accessibility</li>
+				</ul>
 			</div>
 		</section>
 
-		<section class="bg-red-800 py-24 text-red-50">
+		<section id="portfolio" class="bg-red-800 py-24 text-red-50">
 			<div class="mx-auto max-w-5xl px-4">
-				<h3 class="mb-10 text-center font-serif text-3xl">Portfolio</h3>
+				<h3 class="mb-10 text-center font-serif text-3xl font-bold">Portfolio</h3>
 				<div class="grid gap-8 md:grid-cols-2">
 					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl">DesignerTies</h4>
+						<h4 class="font-serif text-2xl font-bold">DesignerTies</h4>
 						<p class="text-base">
 							3D dental braces customization tool for orthodontists and patients. (three.js, React)
 						</p>
 					</div>
 					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl">WordPress Media Editor</h4>
+						<h4 class="font-serif text-2xl font-bold">WordPress Media Editor</h4>
 						<p class="text-base">
 							Advanced media editing features for WordPress core, including SVG filters and aspect
 							ratio tools. (SVG, React)
 						</p>
 					</div>
 					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl">Virtual Reality Health Demo</h4>
+						<h4 class="font-serif text-2xl font-bold">Virtual Reality Health Demo</h4>
 						<p class="text-base">
 							Real-time data visualization in VR for healthcare. (WebGL, Python)
 						</p>
 					</div>
 					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl">Procedural Soundtrack Visualization</h4>
+						<h4 class="font-serif text-2xl font-bold">Procedural Soundtrack Visualization</h4>
 						<p class="text-base">Interactive hospital data visualized with music. (D3, React)</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="bg-red-900 py-24 text-red-50">
+		<section id="contact" class="bg-red-900 py-24 text-red-50">
 			<div class="mx-auto max-w-xl px-4 text-center">
-				<h3 class="mb-6 font-serif text-3xl">Contact</h3>
+				<h3 class="mb-6 font-serif text-3xl font-bold">Contact</h3>
 				<form
 					class="flex flex-col gap-4 text-left"
 					name="contact"
