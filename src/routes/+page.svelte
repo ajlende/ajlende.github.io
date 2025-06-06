@@ -71,7 +71,7 @@
 			<nav
 				class="absolute top-0 right-0 left-0 mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
-				<div class="flex items-center space-x-4 md:space-x-6">
+				<div class="flex items-center space-x-6 md:space-x-8">
 					<a href="/" class="text-lg font-semibold text-blue-50 hover:text-blue-400">Alex Lende</a>
 					<a
 						href="#services"
@@ -102,7 +102,7 @@
 						Contact
 					</a>
 				</div>
-				<div class="flex items-center space-x-4">
+				<div class="flex items-center space-x-6">
 					<a
 						href="https://github.com/ajlende"
 						target="_blank"
@@ -141,33 +141,33 @@
 	</header>
 
 	<main class="flex-1 bg-red-50">
-		<section id="services" class="bg-red-50 py-24 text-red-900">
-			<div class="mx-auto max-w-4xl px-4 text-center">
-				<h3 class="mb-6 font-serif text-3xl font-bold">Services</h3>
-				<p class="mb-6 text-lg">
+		<section id="services" class="bg-red-50 py-40 text-red-900">
+			<div class="mx-auto max-w-4xl px-6 text-center md:px-10">
+				<h3 class="mb-12 font-serif text-3xl font-bold">Services</h3>
+				<p class="mb-12 text-lg">
 					Principal software engineer specializing in interactive web applications and 3D
 					experiences. I help startups and companies bring ambitious ideas to life on the web.
 				</p>
-				<ul class="grid gap-6 text-lg md:grid-cols-2">
-					<li class="rounded-xl bg-red-100/60 p-6 shadow-lg">
+				<ul class="grid gap-10 text-lg md:grid-cols-2">
+					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">
 						Custom Web Applications (React, TypeScript)
 					</li>
-					<li class="rounded-xl bg-red-100/60 p-6 shadow-lg">
+					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">
 						Interactive 3D Experiences (three.js, WebGL)
 					</li>
-					<li class="rounded-xl bg-red-100/60 p-6 shadow-lg">Data Visualization & Dashboards</li>
-					<li class="rounded-xl bg-red-100/60 p-6 shadow-lg">
+					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">Data Visualization & Dashboards</li>
+					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">
 						UI Engineering & Performance Optimization
 					</li>
-					<li class="rounded-xl bg-red-100/60 p-6 shadow-lg">Technical Consulting & Prototyping</li>
+					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">Technical Consulting & Prototyping</li>
 				</ul>
 			</div>
 		</section>
 
-		<section id="skills" class="bg-red-100 py-24 text-red-900">
-			<div class="mx-auto max-w-4xl px-4 text-center">
-				<h3 class="mb-6 font-serif text-3xl font-bold">Skills & Technologies</h3>
-				<ul class="flex list-none flex-wrap justify-center gap-4 text-lg">
+		<section id="skills" class="bg-red-100 py-40 text-red-900">
+			<div class="mx-auto max-w-4xl px-8 text-center">
+				<h3 class="mb-12 font-serif text-3xl font-bold">Skills & Technologies</h3>
+				<ul class="flex list-none flex-wrap justify-center gap-8 text-lg">
 					<li class="rounded-full bg-red-200/60 px-5 py-2">React</li>
 					<li class="rounded-full bg-red-200/60 px-5 py-2">TypeScript</li>
 					<li class="rounded-full bg-red-200/60 px-5 py-2">three.js</li>
@@ -184,42 +184,55 @@
 			</div>
 		</section>
 
-		<section id="portfolio" class="bg-red-800 py-24 text-red-50">
-			<div class="mx-auto max-w-5xl px-4">
-				<h3 class="mb-10 text-center font-serif text-3xl font-bold">Portfolio</h3>
-				<div class="grid gap-8 md:grid-cols-2">
-					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl font-bold">DesignerTies</h4>
-						<p class="text-base">
-							3D dental braces customization tool for orthodontists and patients. (three.js, React)
-						</p>
+		<section id="portfolio" class="bg-red-800 py-40 text-red-50">
+			<div class="mx-auto max-w-5xl px-8 md:px-16">
+				<h3 class="mb-16 text-center font-serif text-3xl font-bold">Portfolio</h3>
+				<div class="grid gap-16 md:grid-cols-2">
+					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
+						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
+						<div class="p-10">
+							<h4 class="font-serif text-2xl font-bold">DesignerTies</h4>
+							<p class="text-base">
+								3D dental braces customization tool for orthodontists and patients. (three.js,
+								React)
+							</p>
+						</div>
 					</div>
-					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl font-bold">WordPress Media Editor</h4>
-						<p class="text-base">
-							Advanced media editing features for WordPress core, including SVG filters and aspect
-							ratio tools. (SVG, React)
-						</p>
+					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
+						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
+						<div class="p-10">
+							<h4 class="font-serif text-2xl font-bold">WordPress Media Editor</h4>
+							<p class="text-base">
+								Advanced media editing features for WordPress core, including SVG filters and aspect
+								ratio tools. (SVG, React)
+							</p>
+						</div>
 					</div>
-					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl font-bold">Virtual Reality Health Demo</h4>
-						<p class="text-base">
-							Real-time data visualization in VR for healthcare. (WebGL, Python)
-						</p>
+					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
+						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
+						<div class="p-10">
+							<h4 class="font-serif text-2xl font-bold">Virtual Reality Health Demo</h4>
+							<p class="text-base">
+								Real-time data visualization in VR for healthcare. (WebGL, Python)
+							</p>
+						</div>
 					</div>
-					<div class="flex flex-col gap-2 rounded-xl bg-red-900/80 p-6 shadow-xl">
-						<h4 class="font-serif text-2xl font-bold">Procedural Soundtrack Visualization</h4>
-						<p class="text-base">Interactive hospital data visualized with music. (D3, React)</p>
+					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
+						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
+						<div class="p-10">
+							<h4 class="font-serif text-2xl font-bold">Procedural Soundtrack Visualization</h4>
+							<p class="text-base">Interactive hospital data visualized with music. (D3, React)</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="contact" class="bg-red-900 py-24 text-red-50">
-			<div class="mx-auto max-w-xl px-4 text-center">
-				<h3 class="mb-6 font-serif text-3xl font-bold">Contact</h3>
+		<section id="contact" class="bg-red-900 py-40 text-red-50">
+			<div class="mx-auto max-w-xl px-8 text-center">
+				<h3 class="mb-12 font-serif text-3xl font-bold">Contact</h3>
 				<form
-					class="flex flex-col gap-4 text-left"
+					class="flex flex-col gap-8 text-left"
 					name="contact"
 					method="POST"
 					data-netlify="true"
@@ -253,7 +266,7 @@
 						></textarea>
 					</label>
 					<button
-						class="mt-4 rounded-lg bg-red-700 px-6 py-3 font-semibold text-red-50 shadow transition-colors hover:bg-red-800"
+						class="mt-10 rounded-lg bg-red-700 px-6 py-3 font-semibold text-red-50 shadow transition-colors hover:bg-red-800"
 						type="submit">Send Message</button
 					>
 				</form>
