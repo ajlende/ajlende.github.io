@@ -4,7 +4,7 @@
 	import Briefcase from '@lucide/svelte/icons/briefcase';
 	import Logo from './Logo.svelte';
 
-	import { starPoints } from '$lib/stars';
+	import { randomCircularPointDistribution } from '$lib/random';
 
 	let clientWidth = $state(0);
 	let clientHeight = $state(0);
@@ -26,13 +26,13 @@
 	let diameter = $derived(radius * 2);
 
 	let viewBox = $derived(`${-radius} ${-radius} ${diameter} ${diameter}`);
-	let smallStars = $derived(starPoints(80, radius));
-	let mediumStars = $derived(starPoints(40, radius));
-	let largeStars = $derived(starPoints(20, radius));
+	let smallStars = $derived(randomCircularPointDistribution(80, radius));
+	let mediumStars = $derived(randomCircularPointDistribution(40, radius));
+	let largeStars = $derived(randomCircularPointDistribution(20, radius));
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<header class="bg-red-50">
+	<header class="bg-blue-100">
 		<div
 			class="flex h-screen flex-col items-center justify-center bg-linear-150 from-blue-950 via-blue-900 via-80% to-blue-800"
 			style="clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);"
@@ -75,28 +75,28 @@
 					<a href="/" class="text-lg font-semibold text-blue-50 hover:text-blue-400">Alex Lende</a>
 					<a
 						href="#services"
-						on:click={scrollToSection}
+						onclick={scrollToSection}
 						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Services
 					</a>
 					<a
 						href="#skills"
-						on:click={scrollToSection}
+						onclick={scrollToSection}
 						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Skills
 					</a>
 					<a
 						href="#portfolio"
-						on:click={scrollToSection}
+						onclick={scrollToSection}
 						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Portfolio
 					</a>
 					<a
 						href="#contact"
-						on:click={scrollToSection}
+						onclick={scrollToSection}
 						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Contact
@@ -140,8 +140,8 @@
 		</div>
 	</header>
 
-	<main class="flex-1 bg-red-50">
-		<section id="services" class="bg-red-50 py-40 text-red-900">
+	<main class="flex-1 bg-blue-100">
+		<section id="services" class="bg-blue-700 py-40 text-blue-900">
 			<div class="mx-auto max-w-4xl px-6 text-center md:px-10">
 				<h3 class="mb-12 font-serif text-3xl font-bold">Services</h3>
 				<p class="mb-12 text-lg">
@@ -149,22 +149,24 @@
 					experiences. I help startups and companies bring ambitious ideas to life on the web.
 				</p>
 				<ul class="grid gap-10 text-lg md:grid-cols-2">
-					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">
+					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
 						Custom Web Applications (React, TypeScript)
 					</li>
-					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">
+					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
 						Interactive 3D Experiences (three.js, WebGL)
 					</li>
-					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">Data Visualization & Dashboards</li>
-					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">
+					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">Data Visualization & Dashboards</li>
+					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
 						UI Engineering & Performance Optimization
 					</li>
-					<li class="rounded-xl bg-red-100/60 p-8 shadow-lg">Technical Consulting & Prototyping</li>
+					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
+						Technical Consulting & Prototyping
+					</li>
 				</ul>
 			</div>
 		</section>
 
-		<section id="skills" class="bg-red-100 py-40 text-red-900">
+		<section id="skills" class="bg-blue-800 py-40 text-blue-900">
 			<div class="mx-auto max-w-4xl px-8 text-center">
 				<h3 class="mb-12 font-serif text-3xl font-bold">Skills & Technologies</h3>
 				<ul class="flex list-none flex-wrap justify-center gap-8 text-lg">
@@ -184,7 +186,7 @@
 			</div>
 		</section>
 
-		<section id="portfolio" class="bg-red-800 py-40 text-red-50">
+		<section id="portfolio" class="bg-red-600 py-40 text-red-50">
 			<div class="mx-auto max-w-5xl px-8 md:px-16">
 				<h3 class="mb-16 text-center font-serif text-3xl font-bold">Portfolio</h3>
 				<div class="grid gap-16 md:grid-cols-2">
@@ -228,7 +230,7 @@
 			</div>
 		</section>
 
-		<section id="contact" class="bg-red-900 py-40 text-red-50">
+		<section id="contact" class="bg-red-800 py-40 text-red-50">
 			<div class="mx-auto max-w-xl px-8 text-center">
 				<h3 class="mb-12 font-serif text-3xl font-bold">Contact</h3>
 				<form

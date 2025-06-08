@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 @import 'tailwindcss';
-/* @plugin '@tailwindcss/forms'; */
-/* @plugin '@tailwindcss/typography'; */
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
 @theme {
 	--font-*: initial;

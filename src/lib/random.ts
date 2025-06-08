@@ -19,7 +19,7 @@ interface Point {
 	y: number;
 }
 
-export function starPoints(density: number, radius: number): Point[] {
+export function randomCircularPointDistribution(density: number, radius: number): Point[] {
 	const seed = hashBuffer(new Float64Array([density, radius]).buffer);
 	const prng = seededRandoms(seed);
 
