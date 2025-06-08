@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { mergeAttrs } from 'melt';
 	import { Tooltip } from 'melt/components';
 	import type { PageProps } from './$types';
 
@@ -7,6 +8,7 @@
 	const { colors, shades, colorData } = data;
 
 	let tooltipText = $state('');
+	let tooltipTimeout = $state<NodeJS.Timeout | undefined>(undefined);
 </script>
 
 <svelte:head>
@@ -43,22 +45,20 @@
 													<button
 														aria-label="{color}-{shade}"
 														class="aspect-1/1 w-full rounded-sm outline -outline-offset-1 outline-black/10 sm:rounded-md dark:outline-white/10"
-														{...tooltip.trigger}
-														style="{tooltip.trigger.style}; background-color: {colorData[color]?.[
-															shade
-														]}"
-														onpointerenter={(e) => {
-															tooltipText = '';
-															tooltip.trigger.onpointerenter(e);
-														}}
-														onpointerdown={() => {
-															navigator.clipboard.writeText(colorData[color]?.[shade]);
-															tooltipText = 'Copied OKLCH value!';
-															setTimeout(() => {
+														{...mergeAttrs(tooltip.trigger, {
+															style: `background-color: ${colorData[color]?.[shade]}`,
+															onpointerenter: () => {
 																tooltipText = '';
-															}, 1300);
-															tooltip.trigger.onpointerdown();
-														}}
+																clearTimeout(tooltipTimeout);
+															},
+															onpointerdown: () => {
+																navigator.clipboard.writeText(colorData[color]?.[shade]);
+																tooltipText = 'Copied OKLCH value!';
+																tooltipTimeout = setTimeout(() => {
+																	tooltipText = '';
+																}, 1300);
+															}
+														})}
 													></button>
 													<div {...tooltip.content}>
 														<div {...tooltip.arrow}></div>
