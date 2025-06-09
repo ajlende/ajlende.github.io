@@ -601,7 +601,11 @@
 						class="absolute inset-0 rotate-1 transform rounded-2xl bg-gradient-to-r from-blue-400 to-yellow-400 dark:from-blue-600 dark:to-yellow-600"
 					></div>
 					<div class="relative rounded-2xl bg-white p-8 shadow-xl dark:bg-blue-900">
-						<form class="space-y-6">
+						<form
+							method="post"
+							action="https://forms.un-static.com/forms/9f08c765086e2a71f5c3bb696226ff2546c6382f"
+							class="space-y-6"
+						>
 							<div class="grid gap-6 md:grid-cols-2">
 								<div>
 									<label
@@ -693,6 +697,19 @@
 								Send Message
 							</button>
 						</form>
+
+						<div class="mt-6 text-center">
+							<p class="text-sm text-blue-600 dark:text-blue-400">
+								<small
+									>Powered by <a
+										rel="nofollow"
+										href="https://un-static.com"
+										class="transition-colors hover:text-blue-800 dark:hover:text-blue-300"
+										>Un-static Forms</a
+									></small
+								>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
