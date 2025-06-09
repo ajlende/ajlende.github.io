@@ -136,6 +136,14 @@
 					>
 						Contact
 					</a>
+					<a
+						href="https://ajlende.blog"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
+					>
+						Blog
+					</a>
 				</div>
 				<div class="flex items-center space-x-6">
 					<button
