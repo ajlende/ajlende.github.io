@@ -116,7 +116,7 @@
 						onclick={scrollToSection}
 						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
-						Services
+						Expertise
 					</a>
 					<a
 						href="#portfolio"
@@ -185,7 +185,7 @@
 			<div class="flex flex-col items-center justify-center gap-4 text-center">
 				<Logo class="fill-blue-50" width="10em" height="10em" />
 				<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
-				<div class="font-serif text-4xl text-blue-50 drop-shadow">Software Engineer</div>
+				<div class="font-serif text-4xl text-blue-50 drop-shadow">Principal Software Engineer</div>
 			</div>
 		</div>
 	</header>
@@ -208,21 +208,21 @@
 			</div>
 			<div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
 				<h2 class="mb-8 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
-					Building the Future of Web Applications
+					Building Modern Web Experiences
 				</h2>
 				<p class="mx-auto mb-8 max-w-3xl text-xl leading-relaxed text-blue-700 dark:text-blue-200">
-					I'm a principal software engineer with over 10 years of experience crafting sophisticated
-					web applications, interactive 3D experiences, and scalable technical solutions. I help
-					startups achieve technical excellence and enterprise teams tackle their most complex
-					challenges.
+					I'm a principal software engineer with over 10 years of experience building sophisticated
+					web applications, interactive 3D experiences, and scalable technical solutions. I've
+					contributed to open source projects reaching millions of users and led development teams
+					at major tech companies.
 				</p>
 				<div class="mb-12">
 					<a
-						href="#contact"
+						href="#portfolio"
 						onclick={scrollToSection}
 						class="inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-blue-800 hover:shadow-xl dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700"
 					>
-						Let's Discuss Your Project
+						View My Work
 						<ArrowRight class="ml-2 h-5 w-5" />
 					</a>
 				</div>
@@ -232,11 +232,11 @@
 					>
 						<Zap class="mx-auto mb-4 h-12 w-12 text-yellow-500 dark:text-yellow-400" />
 						<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-							Technical Leadership
+							Open Source Contributor
 						</h3>
 						<p class="text-blue-700 dark:text-blue-200">
-							Architecting scalable solutions and mentoring development teams across global
-							organizations.
+							Contributing to major open source projects like WordPress Gutenberg, with features
+							used by millions of developers worldwide.
 						</p>
 					</div>
 					<div
@@ -244,11 +244,11 @@
 					>
 						<Globe class="mx-auto mb-4 h-12 w-12 text-blue-500 dark:text-blue-400" />
 						<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-							Full-Stack Expertise
+							Full-Stack Development
 						</h3>
 						<p class="text-blue-700 dark:text-blue-200">
-							From React frontends to Node.js backends, delivering complete web application
-							solutions.
+							Expert in modern web technologies from React and TypeScript frontends to Node.js
+							backends and cloud infrastructure.
 						</p>
 					</div>
 					<div
@@ -257,8 +257,8 @@
 						<Eye class="mx-auto mb-4 h-12 w-12 text-red-500 dark:text-red-400" />
 						<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">3D & WebGL</h3>
 						<p class="text-blue-700 dark:text-blue-200">
-							Creating immersive 3D experiences and data visualizations that bring applications to
-							life.
+							Specialized in creating immersive 3D experiences and data visualizations using
+							Three.js, WebGL, and custom shaders.
 						</p>
 					</div>
 				</div>
@@ -270,10 +270,10 @@
 			<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 				<div class="mb-20 text-center">
 					<h2 class="mb-6 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
-						Core Services
+						Technical Expertise
 					</h2>
 					<p class="mx-auto max-w-2xl text-xl text-blue-700 dark:text-blue-200">
-						Specialized solutions for modern web development challenges
+						Core technologies and specializations I work with
 					</p>
 				</div>
 
@@ -287,13 +287,13 @@
 							<div class="mb-6 flex items-center">
 								<Code class="mr-4 h-10 w-10 text-blue-600 dark:text-blue-400" />
 								<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
-									Full-Stack Web Development
+									Modern Web Development
 								</h3>
 							</div>
 							<p class="mb-6 leading-relaxed text-blue-700 dark:text-blue-200">
-								End-to-end web application development using modern frameworks like React, Svelte,
-								and Node.js. From responsive user interfaces to scalable backend architectures, I
-								deliver complete solutions that grow with your business.
+								Extensive experience with modern JavaScript frameworks and full-stack development. I
+								build responsive, accessible web applications with clean architectures that scale
+								from prototype to production.
 							</p>
 							<div class="flex flex-wrap gap-2">
 								<span
@@ -325,13 +325,13 @@
 							<div class="mb-6 flex items-center">
 								<Cpu class="mr-4 h-10 w-10 text-red-600 dark:text-red-400" />
 								<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
-									3D & WebGL Development
+									3D Graphics & Visualization
 								</h3>
 							</div>
 							<p class="mb-6 leading-relaxed text-blue-700 dark:text-blue-200">
-								Interactive 3D experiences, data visualizations, and WebGL applications that engage
-								users and bring complex data to life. Specializing in Three.js, custom shaders, and
-								immersive web experiences.
+								Specialized in creating interactive 3D experiences and data visualizations for the
+								web. From enterprise dashboards to immersive AR/VR prototypes, I bring complex data
+								and ideas to life through compelling visual experiences.
 							</p>
 							<div class="flex flex-wrap gap-2">
 								<span
@@ -363,18 +363,22 @@
 							<div class="mb-6 flex items-center">
 								<Users class="mr-4 h-10 w-10 text-yellow-600 dark:text-yellow-400" />
 								<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
-									Technical Leadership
+									Open Source & Community
 								</h3>
 							</div>
 							<p class="mb-6 leading-relaxed text-blue-700 dark:text-blue-200">
-								Strategic technical guidance for growing teams. Code reviews, architecture
-								decisions, developer mentoring, and establishing engineering best practices that
-								scale.
+								Active contributor to major open source projects, particularly WordPress Gutenberg.
+								I believe in building tools that empower developers and sharing knowledge through
+								code, documentation, and community engagement.
 							</p>
 							<div class="flex flex-wrap gap-2">
 								<span
 									class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
-									>Architecture</span
+									>WordPress</span
+								>
+								<span
+									class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
+									>Open Source</span
 								>
 								<span
 									class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
@@ -383,10 +387,6 @@
 								<span
 									class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
 									>Code Review</span
-								>
-								<span
-									class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
-									>DevOps</span
 								>
 							</div>
 						</div>
@@ -541,10 +541,10 @@
 		<section class="py-24">
 			<div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
 				<h2 class="mb-8 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
-					Who I Work With
+					Professional Experience
 				</h2>
 				<p class="mx-auto mb-16 max-w-2xl text-xl text-blue-700 dark:text-blue-200">
-					I partner with forward-thinking organizations ready to push technical boundaries
+					Building impactful solutions across different scales and industries
 				</p>
 
 				<div class="grid gap-12 md:grid-cols-2">
@@ -554,12 +554,12 @@
 						></div>
 						<div class="relative rounded-2xl bg-white p-8 shadow-lg dark:bg-blue-900">
 							<h3 class="mb-4 text-2xl font-semibold text-blue-900 dark:text-blue-100">
-								Growing Startups
+								Open Source Impact
 							</h3>
 							<p class="leading-relaxed text-blue-700 dark:text-blue-200">
-								Technical leadership for startups scaling their engineering teams. I help establish
-								robust architectures, implement best practices, and mentor developers to build
-								products that can grow from thousands to millions of users.
+								Contributing to WordPress Gutenberg at Automattic, where my work on media editing
+								features and SVG filters reaches millions of users worldwide. I focus on creating
+								tools that empower creators and developers globally.
 							</p>
 						</div>
 					</div>
@@ -570,12 +570,12 @@
 						></div>
 						<div class="relative rounded-2xl bg-white p-8 shadow-lg dark:bg-blue-900">
 							<h3 class="mb-4 text-2xl font-semibold text-blue-900 dark:text-blue-100">
-								Enterprise Teams
+								Enterprise Innovation
 							</h3>
 							<p class="leading-relaxed text-blue-700 dark:text-blue-200">
-								Specialized expertise for large organizations tackling complex technical challenges.
-								From modernizing legacy systems to implementing cutting-edge 3D visualizations, I
-								bring deep technical knowledge to mission-critical projects.
+								Led cutting-edge projects at Cerner, including data visualization installations and
+								pioneering AR/VR healthcare applications. Experienced in building solutions that
+								operate at massive scale with strict reliability requirements.
 							</p>
 						</div>
 					</div>
@@ -588,10 +588,11 @@
 			<div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
 				<div class="mb-12 text-center">
 					<h2 class="mb-6 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
-						Let's Build Something Amazing
+						Let's Connect
 					</h2>
 					<p class="text-xl text-blue-700 dark:text-blue-200">
-						Ready to bring your technical vision to life? Let's discuss your project.
+						Interested in collaborating, discussing technology, or exploring opportunities? I'd love
+						to hear from you.
 					</p>
 				</div>
 
@@ -651,21 +652,21 @@
 
 							<div>
 								<label
-									for="project"
+									for="subject"
 									class="mb-2 block text-sm font-medium text-blue-900 dark:text-blue-100"
-									>Project Type</label
+									>Subject</label
 								>
 								<select
-									id="project"
-									name="project"
+									id="subject"
+									name="subject"
 									class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
 								>
-									<option value="">Select a project type</option>
-									<option value="full-stack">Full-Stack Web Development</option>
-									<option value="3d-webgl">3D/WebGL Development</option>
-									<option value="leadership">Technical Leadership</option>
-									<option value="data-viz">Data Visualization</option>
-									<option value="other">Other/Multiple</option>
+									<option value="">What would you like to discuss?</option>
+									<option value="collaboration">Collaboration Opportunity</option>
+									<option value="open-source">Open Source Project</option>
+									<option value="technical">Technical Discussion</option>
+									<option value="job">Job Opportunity</option>
+									<option value="other">General Inquiry</option>
 								</select>
 							</div>
 
@@ -673,7 +674,7 @@
 								<label
 									for="message"
 									class="mb-2 block text-sm font-medium text-blue-900 dark:text-blue-100"
-									>Project Details</label
+									>Message</label
 								>
 								<textarea
 									id="message"
@@ -681,7 +682,7 @@
 									rows="5"
 									required
 									class="w-full resize-none rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
-									placeholder="Tell me about your project, timeline, and technical requirements..."
+									placeholder="Tell me more about what you'd like to discuss..."
 								></textarea>
 							</div>
 
