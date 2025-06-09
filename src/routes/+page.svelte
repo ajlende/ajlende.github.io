@@ -73,27 +73,7 @@
 			>
 				<div class="flex items-center space-x-6 md:space-x-8">
 					<a href="/" class="text-lg font-semibold text-blue-50 hover:text-blue-400">Alex Lende</a>
-					<a
-						href="#services"
-						onclick={scrollToSection}
-						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
-					>
-						Services
-					</a>
-					<a
-						href="#skills"
-						onclick={scrollToSection}
-						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
-					>
-						Skills
-					</a>
-					<a
-						href="#portfolio"
-						onclick={scrollToSection}
-						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
-					>
-						Portfolio
-					</a>
+					<!-- TODO: Add additional navigation items -->
 					<a
 						href="#contact"
 						onclick={scrollToSection}
@@ -140,23 +120,26 @@
 		</div>
 	</header>
 
-	<main class="flex-1"></main>
+	<!-- TODO: Add main content styling -->
+	<main>
+		<!-- TODO: Add additional sections -->
+		<section id="contact">
+			<!-- TODO: Add contact form -->
+		</section>
+	</main>
 
-	<footer class="mt-auto">
-		<div
-			class="mx-auto flex h-16 items-center justify-between bg-blue-50 px-4 text-blue-950 sm:px-6 lg:px-8"
-		>
-			<div class="text-sm">
-				<p>
-					Contents of this site are © Copyright 2017-{new Date().getFullYear()} Alex Lende. All rights
-					reserved.
-				</p>
-				<p>
-					<a href="https://github.com/ajlende/ajlende.github.io/tree/develop">Source code</a> is
-					available under the
-					<a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.
-				</p>
-			</div>
+	<!-- TODO: Add footer content and styles -->
+	<footer>
+		<div class="text-sm">
+			<p>
+				Contents of this site are © Copyright 2017-{new Date().getFullYear()} Alex Lende. All rights
+				reserved.
+			</p>
+			<p>
+				<a href="https://github.com/ajlende/ajlende.github.io/tree/develop">Source code</a> is
+				available under the
+				<a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.
+			</p>
 		</div>
 	</footer>
 </div>
