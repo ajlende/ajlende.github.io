@@ -391,43 +391,6 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Data Visualization -->
-					<div class="group relative">
-						<div
-							class="absolute inset-0 -rotate-1 transform rounded-3xl bg-gradient-to-r from-yellow-400 to-blue-400 transition-transform duration-300 group-hover:-rotate-2 dark:from-yellow-600 dark:to-blue-600"
-						></div>
-						<div class="relative rounded-3xl bg-white p-8 shadow-lg dark:bg-blue-900">
-							<div class="mb-6 flex items-center">
-								<Database class="mr-4 h-10 w-10 text-blue-600 dark:text-blue-400" />
-								<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
-									Data Visualization
-								</h3>
-							</div>
-							<p class="mb-6 leading-relaxed text-blue-700 dark:text-blue-200">
-								Transform complex datasets into intuitive, interactive visualizations. From
-								healthcare analytics to business dashboards, making data accessible and actionable.
-							</p>
-							<div class="flex flex-wrap gap-2">
-								<span
-									class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-									>D3.js</span
-								>
-								<span
-									class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-									>Charts</span
-								>
-								<span
-									class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-									>Analytics</span
-								>
-								<span
-									class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-									>Dashboards</span
-								>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -447,10 +410,10 @@
 				<div class="grid gap-8 md:grid-cols-2">
 					<!-- Gutenberg Editor -->
 					<div
-						class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 transition-all duration-300 group-hover:from-blue-600 group-hover:to-blue-800 dark:from-blue-600 dark:to-blue-800 dark:group-hover:from-blue-700 dark:group-hover:to-blue-900"
+							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
 						>
 							<div class="text-center text-white">
 								<Palette
@@ -459,12 +422,12 @@
 								<div class="text-lg font-semibold">WordPress Gutenberg</div>
 							</div>
 						</div>
-						<div class="p-6">
+						<div class="flex flex-1 flex-col p-6">
 							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
 								WordPress Block Editor
 							</h3>
-							<p class="mb-4 text-blue-700 dark:text-blue-200">
-								Led development of innovative editing features for WordPress Gutenberg at
+							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
+								Led development of innovative media editing features for WordPress Gutenberg at
 								Automattic, including advanced image tools and SVG filters affecting millions of
 								users worldwide.
 							</p>
@@ -479,7 +442,7 @@
 
 					<!-- Healthcare Data Visualization -->
 					<div
-						class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
 							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
@@ -488,20 +451,19 @@
 								<Database
 									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
 								/>
-								<div class="text-lg font-semibold">Healthcare Analytics</div>
+								<div class="text-lg font-semibold">Artistic Data Visualization</div>
 							</div>
 						</div>
-						<div class="p-6">
+						<div class="flex flex-1 flex-col p-6">
 							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-								Clinical Data Platform
+								Cerner Innovations Media Wall
 							</h3>
-							<p class="mb-4 text-blue-700 dark:text-blue-200">
-								Built an abstract data visualization platform at Cerner connecting 28 unique data
-								stories across 11 live data sources, revolutionizing how healthcare professionals
-								access insights.
+							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
+								Created abstract data visualizations at Cerner's Innovations campus, connecting 28
+								unique data stories across 11 live data sources to inspire and inform.
 							</p>
 							<div
-								class="flex items-center text-red-600 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300"
+								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
 							>
 								<span class="text-sm font-medium">Enterprise Scale</span>
 								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -511,10 +473,10 @@
 
 					<!-- AR/VR Healthcare -->
 					<div
-						class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-yellow-500 to-yellow-700 transition-all duration-300 group-hover:from-yellow-600 group-hover:to-yellow-800 dark:from-yellow-600 dark:to-yellow-800 dark:group-hover:from-yellow-700 dark:group-hover:to-yellow-900"
+							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
 						>
 							<div class="text-center text-white">
 								<Eye
@@ -523,17 +485,17 @@
 								<div class="text-lg font-semibold">AR/VR Innovation</div>
 							</div>
 						</div>
-						<div class="p-6">
+						<div class="flex flex-1 flex-col p-6">
 							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
 								Immersive Healthcare
 							</h3>
-							<p class="mb-4 text-blue-700 dark:text-blue-200">
-								Premiered Cerner's first virtual reality healthcare demo at the 2018 Cerner Health
+							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
+								Premiered Cerner's first virtual reality health care demo at the 2018 Cerner Health
 								Conference, exploring cutting-edge applications of immersive technology in clinical
 								settings.
 							</p>
 							<div
-								class="flex items-center text-yellow-600 transition-colors group-hover:text-yellow-800 dark:text-yellow-400 dark:group-hover:text-yellow-300"
+								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
 							>
 								<span class="text-sm font-medium">Industry First</span>
 								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -543,10 +505,10 @@
 
 					<!-- 3D Dental Customization -->
 					<div
-						class="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-blue-500 to-yellow-500 transition-all duration-300 group-hover:from-blue-600 group-hover:to-yellow-600 dark:from-blue-600 dark:to-yellow-600 dark:group-hover:from-blue-700 dark:group-hover:to-yellow-700"
+							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
 						>
 							<div class="text-center text-white">
 								<Cpu
@@ -555,14 +517,13 @@
 								<div class="text-lg font-semibold">3D Customization</div>
 							</div>
 						</div>
-						<div class="p-6">
+						<div class="flex flex-1 flex-col p-6">
 							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
 								Dental Brace Configurator
 							</h3>
-							<p class="mb-4 text-blue-700 dark:text-blue-200">
-								Developed an interactive 3D visualization system for DesignerTies, enabling
-								real-time customization of dental braces with instant visual feedback and
-								manufacturing integration.
+							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
+								Developed an interactive 3D mobile app, enabling real-time customization of dental
+								braces with instant visual feedback for the perfect smile.
 							</p>
 							<div
 								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
