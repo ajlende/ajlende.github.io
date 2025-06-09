@@ -141,137 +141,380 @@
 	</header>
 
 	<main class="flex-1 bg-blue-100">
-		<section id="services" class="bg-blue-700 py-40 text-blue-900">
-			<div class="mx-auto max-w-4xl px-6 text-center md:px-10">
-				<h3 class="mb-12 font-serif text-3xl font-bold">Services</h3>
-				<p class="mb-12 text-lg">
-					Principal software engineer specializing in interactive web applications and 3D
-					experiences. I help startups and companies bring ambitious ideas to life on the web.
-				</p>
-				<ul class="grid gap-10 text-lg md:grid-cols-2">
-					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
-						Custom Web Applications (React, TypeScript)
-					</li>
-					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
-						Interactive 3D Experiences (three.js, WebGL)
-					</li>
-					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">Data Visualization & Dashboards</li>
-					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
-						UI Engineering & Performance Optimization
-					</li>
-					<li class="rounded-xl bg-blue-200/60 p-8 shadow-lg">
-						Technical Consulting & Prototyping
-					</li>
-				</ul>
+		<!-- Services Section -->
+		<section id="services" class="bg-blue-50 py-20">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h2 class="font-serif text-4xl font-bold text-blue-900 sm:text-5xl">Services</h2>
+					<p class="mx-auto mt-4 max-w-3xl text-xl text-blue-700">
+						I help organizations build exceptional web experiences with cutting-edge technology and
+						thoughtful engineering practices.
+					</p>
+				</div>
+				<div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+					<div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-blue-200">
+						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+							<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+								/>
+							</svg>
+						</div>
+						<h3 class="mt-6 font-serif text-xl font-semibold text-blue-900">
+							Full-Stack Development
+						</h3>
+						<p class="mt-3 text-blue-700">
+							End-to-end web application development using modern frameworks like React, Svelte, and
+							Node.js. From MVPs to enterprise-scale applications.
+						</p>
+					</div>
+					<div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-blue-200">
+						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+							<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011 1v18a1 1 0 01-1 1H8a1 1 0 01-1-1V4z"
+								/>
+							</svg>
+						</div>
+						<h3 class="mt-6 font-serif text-xl font-semibold text-blue-900">WebGL & 3D Graphics</h3>
+						<p class="mt-3 text-blue-700">
+							Interactive 3D experiences and data visualizations using WebGL, Three.js, and custom
+							shaders. Perfect for product configurators and immersive interfaces.
+						</p>
+					</div>
+					<div class="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-blue-200">
+						<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+							<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+								/>
+							</svg>
+						</div>
+						<h3 class="mt-6 font-serif text-xl font-semibold text-blue-900">
+							Technical Leadership
+						</h3>
+						<p class="mt-3 text-blue-700">
+							Strategic guidance for engineering teams, architecture decisions, and mentoring
+							developers. Helping startups scale and enterprises innovate.
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section id="skills" class="bg-blue-800 py-40 text-blue-900">
-			<div class="mx-auto max-w-4xl px-8 text-center">
-				<h3 class="mb-12 font-serif text-3xl font-bold">Skills & Technologies</h3>
-				<ul class="flex list-none flex-wrap justify-center gap-8 text-lg">
-					<li class="rounded-full bg-red-200/60 px-5 py-2">React</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">TypeScript</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">three.js</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">WebGL</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">JavaScript</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">HTML/CSS</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">SVG</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">D3</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">Node.js</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">Python</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">UI/UX</li>
-					<li class="rounded-full bg-red-200/60 px-5 py-2">Accessibility</li>
-				</ul>
-			</div>
-		</section>
-
-		<section id="portfolio" class="bg-red-600 py-40 text-red-50">
-			<div class="mx-auto max-w-5xl px-8 md:px-16">
-				<h3 class="mb-16 text-center font-serif text-3xl font-bold">Portfolio</h3>
-				<div class="grid gap-16 md:grid-cols-2">
-					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
-						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
-						<div class="p-10">
-							<h4 class="font-serif text-2xl font-bold">DesignerTies</h4>
-							<p class="text-base">
-								3D dental braces customization tool for orthodontists and patients. (three.js,
-								React)
-							</p>
+		<!-- Skills Section -->
+		<section id="skills" class="bg-white py-20">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h2 class="font-serif text-4xl font-bold text-blue-900 sm:text-5xl">
+						Technical Expertise
+					</h2>
+					<p class="mx-auto mt-4 max-w-3xl text-xl text-blue-700">
+						A decade of experience with modern web technologies and emerging platforms.
+					</p>
+				</div>
+				<div class="mt-16 grid gap-8 lg:grid-cols-3">
+					<div class="space-y-6">
+						<h3 class="font-serif text-2xl font-semibold text-blue-900">Frontend</h3>
+						<div class="flex flex-wrap gap-3">
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>JavaScript</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>TypeScript</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>React</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Svelte</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>WebGL</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Three.js</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>CSS</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>TailwindCSS</span
+							>
 						</div>
 					</div>
-					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
-						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
-						<div class="p-10">
-							<h4 class="font-serif text-2xl font-bold">WordPress Media Editor</h4>
-							<p class="text-base">
-								Advanced media editing features for WordPress core, including SVG filters and aspect
-								ratio tools. (SVG, React)
-							</p>
+					<div class="space-y-6">
+						<h3 class="font-serif text-2xl font-semibold text-blue-900">Backend & Tools</h3>
+						<div class="flex flex-wrap gap-3">
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Node.js</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Python</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>PHP</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>SQL</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Git</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Docker</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>AWS</span
+							>
+							<span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+								>Webpack</span
+							>
 						</div>
 					</div>
-					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
-						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
-						<div class="p-10">
-							<h4 class="font-serif text-2xl font-bold">Virtual Reality Health Demo</h4>
-							<p class="text-base">
-								Real-time data visualization in VR for healthcare. (WebGL, Python)
-							</p>
-						</div>
-					</div>
-					<div class="flex flex-col gap-8 rounded-xl bg-red-900/80 shadow-xl">
-						<div class="aspect-video w-full rounded-t-xl bg-red-950"></div>
-						<div class="p-10">
-							<h4 class="font-serif text-2xl font-bold">Procedural Soundtrack Visualization</h4>
-							<p class="text-base">Interactive hospital data visualized with music. (D3, React)</p>
+					<div class="space-y-6">
+						<h3 class="font-serif text-2xl font-semibold text-blue-900">Specializations</h3>
+						<div class="flex flex-wrap gap-3">
+							<span class="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-800"
+								>Data Visualization</span
+							>
+							<span class="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-800"
+								>AR/VR</span
+							>
+							<span class="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-800"
+								>Performance</span
+							>
+							<span class="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-800"
+								>Accessibility</span
+							>
+							<span class="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-800"
+								>WordPress</span
+							>
+							<span class="rounded-full bg-yellow-100 px-4 py-2 text-sm font-medium text-yellow-800"
+								>Team Mentoring</span
+							>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="contact" class="bg-red-800 py-40 text-red-50">
-			<div class="mx-auto max-w-xl px-8 text-center">
-				<h3 class="mb-12 font-serif text-3xl font-bold">Contact</h3>
-				<form
-					class="flex flex-col gap-8 text-left"
-					name="contact"
-					method="POST"
-					data-netlify="true"
-				>
-					<input type="hidden" name="form-name" value="contact" />
-					<label class="font-medium"
-						>Name
-						<input
-							class="mt-1 w-full rounded-lg border border-red-300 bg-white/80 px-4 py-2 focus:ring-2 focus:ring-red-400 focus:outline-none"
-							type="text"
-							name="name"
-							required
-						/>
-					</label>
-					<label class="font-medium"
-						>Email
-						<input
-							class="mt-1 w-full rounded-lg border border-red-300 bg-white/80 px-4 py-2 focus:ring-2 focus:ring-red-400 focus:outline-none"
-							type="email"
-							name="email"
-							required
-						/>
-					</label>
-					<label class="font-medium"
-						>Message
-						<textarea
-							class="mt-1 w-full rounded-lg border border-red-300 bg-white/80 px-4 py-2 focus:ring-2 focus:ring-red-400 focus:outline-none"
-							name="message"
-							rows="5"
-							required
-						></textarea>
-					</label>
-					<button
-						class="mt-10 rounded-lg bg-red-700 px-6 py-3 font-semibold text-red-50 shadow transition-colors hover:bg-red-800"
-						type="submit">Send Message</button
-					>
-				</form>
+		<!-- Portfolio Section -->
+		<section id="portfolio" class="bg-blue-50 py-20">
+			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h2 class="font-serif text-4xl font-bold text-blue-900 sm:text-5xl">Featured Work</h2>
+					<p class="mx-auto mt-4 max-w-3xl text-xl text-blue-700">
+						Highlights from building complex web applications and interactive experiences for
+						millions of users.
+					</p>
+				</div>
+				<div class="mt-16 space-y-16">
+					<!-- Automattic/WordPress -->
+					<div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+						<div class="space-y-6">
+							<div class="flex items-center space-x-3">
+								<h3 class="font-serif text-2xl font-semibold text-blue-900">
+									WordPress Block Editor
+								</h3>
+								<span class="rounded-full bg-blue-600 px-3 py-1 text-xs font-medium text-white"
+									>Automattic</span
+								>
+							</div>
+							<p class="text-lg text-blue-700">
+								Led development of advanced editing features for WordPress's Gutenberg editor,
+								including inline image cropping, SVG color filters, and aspect ratio tools. Explored
+								WebGL-powered block plugins for 60fps animations and rich content experiences.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="rounded bg-blue-100 px-2 py-1 text-xs text-blue-800">React</span>
+								<span class="rounded bg-blue-100 px-2 py-1 text-xs text-blue-800">WebGL</span>
+								<span class="rounded bg-blue-100 px-2 py-1 text-xs text-blue-800">WordPress</span>
+								<span class="rounded bg-blue-100 px-2 py-1 text-xs text-blue-800">Performance</span>
+							</div>
+						</div>
+						<div class="rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 p-8 text-center">
+							<div class="text-white">
+								<div class="text-4xl font-bold">43%</div>
+								<div class="text-blue-100">of the web uses WordPress</div>
+								<div class="mt-4 text-sm text-blue-200">Contributing to the most popular CMS</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Cerner Data Visualization -->
+					<div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+						<div
+							class="order-2 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 p-8 text-center lg:order-1"
+						>
+							<div class="text-white">
+								<div class="text-4xl font-bold">28</div>
+								<div class="text-yellow-100">unique data stories</div>
+								<div class="mt-4 text-sm text-yellow-200">
+									Connecting 11 different live data sources
+								</div>
+							</div>
+						</div>
+						<div class="order-1 space-y-6 lg:order-2">
+							<div class="flex items-center space-x-3">
+								<h3 class="font-serif text-2xl font-semibold text-blue-900">
+									Healthcare Data Platform
+								</h3>
+								<span class="rounded-full bg-yellow-600 px-3 py-1 text-xs font-medium text-white"
+									>Cerner</span
+								>
+							</div>
+							<p class="text-lg text-blue-700">
+								Built an abstract data visualization platform connecting 11 different live data
+								sources into 28 unique interactive stories. Also created the first Virtual Reality
+								demo showcasing procedural healthcare soundtracks driven by patient data.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="rounded bg-yellow-100 px-2 py-1 text-xs text-yellow-800">D3.js</span>
+								<span class="rounded bg-yellow-100 px-2 py-1 text-xs text-yellow-800"
+									>Data Visualization</span
+								>
+								<span class="rounded bg-yellow-100 px-2 py-1 text-xs text-yellow-800">VR</span>
+								<span class="rounded bg-yellow-100 px-2 py-1 text-xs text-yellow-800"
+									>Real-time Data</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- DesignerTies 3D -->
+					<div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+						<div class="space-y-6">
+							<div class="flex items-center space-x-3">
+								<h3 class="font-serif text-2xl font-semibold text-blue-900">
+									3D Dental Visualization
+								</h3>
+								<span class="rounded-full bg-red-600 px-3 py-1 text-xs font-medium text-white"
+									>DesignerTies</span
+								>
+							</div>
+							<p class="text-lg text-blue-700">
+								Developed an interactive 3D configurator for customizing dental braces, allowing
+								patients to visualize different options in real-time. Built with WebGL for smooth
+								performance across devices and browsers.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="rounded bg-red-100 px-2 py-1 text-xs text-red-800">Three.js</span>
+								<span class="rounded bg-red-100 px-2 py-1 text-xs text-red-800">WebGL</span>
+								<span class="rounded bg-red-100 px-2 py-1 text-xs text-red-800">3D Modeling</span>
+								<span class="rounded bg-red-100 px-2 py-1 text-xs text-red-800"
+									>Product Configurator</span
+								>
+							</div>
+						</div>
+						<div class="rounded-2xl bg-gradient-to-br from-red-600 to-red-800 p-8 text-center">
+							<div class="text-white">
+								<div class="text-4xl font-bold">3D</div>
+								<div class="text-red-100">interactive configurator</div>
+								<div class="mt-4 text-sm text-red-200">
+									Real-time customization and visualization
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="bg-white py-20">
+			<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h2 class="font-serif text-4xl font-bold text-blue-900 sm:text-5xl">
+						Let's Build Something Amazing
+					</h2>
+					<p class="mx-auto mt-4 max-w-2xl text-xl text-blue-700">
+						Ready to bring your vision to life? Whether you need technical leadership, full-stack
+						development, or cutting-edge 3D experiences, I'd love to help.
+					</p>
+				</div>
+				<div class="mt-12">
+					<form class="space-y-6">
+						<div class="grid gap-6 sm:grid-cols-2">
+							<div>
+								<label for="name" class="block text-sm font-medium text-blue-900">Name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									required
+									class="mt-1 block w-full rounded-lg border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+								/>
+							</div>
+							<div>
+								<label for="email" class="block text-sm font-medium text-blue-900">Email</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									required
+									class="mt-1 block w-full rounded-lg border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+								/>
+							</div>
+						</div>
+						<div>
+							<label for="company" class="block text-sm font-medium text-blue-900">Company</label>
+							<input
+								type="text"
+								id="company"
+								name="company"
+								class="mt-1 block w-full rounded-lg border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+							/>
+						</div>
+						<div>
+							<label for="project-type" class="block text-sm font-medium text-blue-900"
+								>Project Type</label
+							>
+							<select
+								id="project-type"
+								name="project-type"
+								class="mt-1 block w-full rounded-lg border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+							>
+								<option value="">Select a project type</option>
+								<option value="full-stack">Full-Stack Development</option>
+								<option value="3d-webgl">3D/WebGL Development</option>
+								<option value="technical-leadership">Technical Leadership</option>
+								<option value="consulting">Strategic Consulting</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div>
+							<label for="message" class="block text-sm font-medium text-blue-900"
+								>Project Details</label
+							>
+							<textarea
+								id="message"
+								name="message"
+								rows="4"
+								required
+								placeholder="Tell me about your project, timeline, and any specific requirements..."
+								class="mt-1 block w-full rounded-lg border-blue-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+							></textarea>
+						</div>
+						<div class="text-center">
+							<button
+								type="submit"
+								class="inline-flex items-center rounded-lg bg-blue-600 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+							>
+								Send Message
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 	</main>
