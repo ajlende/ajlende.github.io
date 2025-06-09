@@ -1,0 +1,223 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# SvelteKit Conventions Guide
+
+This project follows SvelteKit conventions with some specific patterns for static site generation.
+
+## Svelte Code Style
+
+This project relies on Svelte 5. Any Svelte 4 or earlier code sould be upgraded to the Svelte 5 equivalent.
+
+This includes the following:
+
+- Use runes for declaring reactive state
+  ```diff
+  -let count = 0;
+  +let count = $state(0);
+  ```
+- Use runes for derivations
+  ```diff
+  -$: double = count * 2;
+  +const double = $derived(count * 2);
+  ```
+- Use runes for effects
+  ```diff
+  -$: console.log(double);
+  +$effect(() => console.log(double));
+  ```
+- Use runes for component properties
+  ```diff
+  -export let optional = 'unset';
+  -export let required;
+  +let { optional = 'unset', required } = $props();
+  ```
+- Use properties for events
+  ```diff
+  -<button on:click={() => count++}>
+  +<button onclick={() => count++}>
+	clicks: {count}
+  </button>
+  ```
+- Use callback props instead of event dispatchers
+  ```diff
+   <script lang="ts">
+  -  import { createEventDispatcher } from 'svelte';
+  -  const dispatch = createEventDispatcher();
+  +  let { inflate, deflate } = $props();
+     let power = $state(5);
+   </script>
+  
+  -<button onclick={() => dispatch('inflate', power)}>
+  +<button onclick={() => inflate(power)}>
+     inflate
+   </button>
+   <button onclick={() => dispatch('deflate', power)}>
+   <button onclick={() => deflate(power)}>
+     deflate
+   </button>
+   <button onclick={() => power--}>-</button>
+     Pump power: {power}
+   <button onclick={() => power++}>+</button>
+  ```
+- Use render tags instead of slots
+  ```diff
+   <script>
+  +  let { children } = $props();
+   </script>
+  
+  -<slot />
+  +{@render children()}
+  ```
+- Use named props instead of named slots
+  ```diff
+   <script>
+  +  let { header, main, footer } = $props();
+   </script>
+  
+   <header>
+  -  <slot name="header" />
+  +  {@render header()}
+   </header>
+  
+   <main>
+  -  <slot name="main" />
+  +  {@render main()}
+   </main>
+  
+   <footer>
+  -  <slot name="footer" />
+  +  {@render footer()}
+   </footer>
+  ```
+- Use snippets for passing data back up
+  ```diff
+   // App.svelte
+   <script lang="ts">
+     import List from './List.svelte';
+   </script>
+   
+  -<List items={['one', 'two', 'three']} let:item>
+  +<List items={['one', 'two', 'three']}>
+  +  {#snippet item(text)}
+     	<span>{text}</span>
+  +  {/snippet}
+  -  <span slot="empty">No items yet</span>
+  +  {#snippet empty()}
+     	<span>No items yet</span>
+  +  {/snippet}
+   </List>
+  ```
+  ```diff
+  // List.svelte
+   <script lang="ts">
+  -  let { items } = $props();
+  +  let { items, item, empty } = $props();
+   </script>
+   
+   {#if items.length}
+     <ul>
+     	{#each items as entry}
+     		<li>
+  -  			<slot item={entry} />
+  +  			{@render item(entry)}
+     		</li>
+     	{/each}
+     </ul>
+   {:else}
+  -  <slot name="empty" />
+  +  {@render empty?.()}
+   {/if}
+  ```
+- Use functions for manually instantiated components
+  ```diff
+  +import { mount } from 'svelte';
+   import App from './App.svelte'
+   
+  -const app = new App({ target: document.getElementById("app") });
+  +const app = mount(App, { target: document.getElementById("app") });
+   
+   export default app;
+  ```
+  - Review the @svelte
+
+## File-Based Routing
+
+SvelteKit uses file-based routing in the `src/routes/` directory:
+
+- [src/routes/+layout.svelte](mdc:src/routes/+layout.svelte) - Root layout component
+- [src/routes/+layout.ts](mdc:src/routes/+layout.ts) - Root layout load function
+- [src/routes/+page.svelte](mdc:src/routes/+page.svelte) - Homepage component
+- `src/routes/colors/` - Nested route example
+
+## Layout System
+
+### Root Layout
+- [+layout.svelte](mdc:src/routes/+layout.svelte) provides the base HTML structure
+- [+layout.ts](mdc:src/routes/+layout.ts) handles global data loading
+- Layout wraps all pages in the application
+
+### Component Organization
+- [Logo.svelte](mdc:src/routes/Logo.svelte) - Reusable logo component at route level
+- Components can be co-located with routes when route-specific
+
+## Static Adaptation
+
+The project uses `@sveltejs/adapter-static` for GitHub Pages deployment:
+
+```javascript
+// svelte.config.js
+import adapter from '@sveltejs/adapter-static';
+
+const config = {
+  kit: { adapter: adapter() }
+};
+```
+
+### Static Generation Requirements
+- All routes must be prerenderable
+- No server-side functionality
+- Assets output to `/build` directory
+
+## MDSvex Integration
+
+MDSvex allows mixing Svelte components with markdown:
+
+```javascript
+// svelte.config.js
+import { mdsvex } from 'mdsvex';
+
+const config = {
+  preprocess: [vitePreprocess(), mdsvex()],
+  extensions: ['.svelte', '.svx']
+};
+```
+
+### Usage Patterns
+- `.md` files for pure markdown content
+- `.svx` files for markdown with Svelte components
+- Both extensions are processed by MDSvex
+
+## Shared Libraries
+
+The `src/lib/` directory contains shared utilities:
+
+- [src/lib/index.ts](mdc:src/lib/index.ts) - Main library exports
+- Import using `$lib/` alias in components
+
+## Styling Approach
+
+- Melt UI for accessible components 
+- TailwindCSS theme config and global styles in [src/app.css](mdc:src/app.css)
+- TailwindCSS for utility-first styling
+  - Typography plugin for markdown content styling
+  - Forms plugin for forms styling
+- Component-scoped styles only when needed
+
+## TypeScript Configuration
+
+- Strict TypeScript setup via [tsconfig.json](mdc:tsconfig.json)
+- Type definitions in [src/app.d.ts](mdc:src/app.d.ts)
+- Full type safety throughout the application

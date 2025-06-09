@@ -1,0 +1,69 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Content Management Guide
+
+This project uses a file-based content management system with markdown files and frontmatter for blog posts.
+
+## Blog Post Structure
+
+All blog posts are located in `content/posts/` following the pattern:
+```
+content/posts/YYYY/MM/DD/post-slug.md
+```
+
+### Frontmatter Format
+
+Each blog post uses YAML frontmatter with the following required fields:
+
+```yaml
+---
+title: "Post Title"
+author: "Author Name"
+date: 2023-01-20T01:32:44Z
+categories:
+  - Category1
+  - Category2
+---
+```
+
+### Content Processing
+
+- **Markdown Parser**: MDSvex processes `.md` files
+- **Extensions**: Both `.svelte` and `.svx` files are supported (see [svelte.config.js](mdc:svelte.config.js))
+- **Styling**: TailwindCSS typography plugin handles content styling
+
+## Media Management
+
+Media files are organized by date in `content/media/`:
+```
+content/media/YYYY/MM/filename.ext
+```
+
+### Image Handling
+- Images should be optimized before placement
+- Use descriptive filenames
+- Consider responsive image techniques
+- Alt text should be included for accessibility
+
+## Content Creation Workflow
+
+1. **Create directory structure**: `content/posts/YYYY/MM/DD/`
+2. **Create markdown file**: Use kebab-case for filename
+3. **Add frontmatter**: Include required fields (title, author, date, categories)
+4. **Write content**: Use markdown syntax with optional Svelte components
+5. **Add media**: Place related media in `content/media/YYYY/MM/`
+
+## URL Structure
+
+The date-based file structure creates predictable URLs:
+- File: `content/posts/2023/01/20/my-post.md`
+- URL: `/posts/2023/01/20/my-post`
+
+This enables:
+- SEO-friendly URLs
+- Chronological organization
+- Easy content discovery
+- Archive page generation

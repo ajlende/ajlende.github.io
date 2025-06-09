@@ -1,0 +1,61 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure Guide
+
+This is a SvelteKit-based static blog and portfolio site hosted on GitHub pages.
+
+## Core Architecture
+
+- **Framework**: Svelte 5 using SvelteKit
+- **Language**: TypeScript
+- **Package Manager**: Bun
+- **Content Processing**: MDSvex
+- **Component Library**: Melt UI (@Docs available)
+- **Icon Library**: Lucide Icons
+- **Styling**: TailwindCSS with typography and forms plugins
+- **Build Target**: Static site for GitHub Pages using SvelteKit static adapter
+
+## Key Configuration Files
+
+- [package.json](mdc:package.json) - Dependencies and scripts
+- [svelte.config.js](mdc:svelte.config.js) - SvelteKit and MDSvex configuration  
+- [vite.config.ts](mdc:vite.config.ts) - Vite build configuration
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration
+- [app.css](mdc:src/app.css) - TailwindCSS configuration
+
+## Directory Structure
+
+### `/src` - Application Source Code
+- [src/app.html](mdc:src/app.html) - Main HTML template
+- [src/app.css](mdc:src/app.css) - TailwindCSS theme config and global styles
+- `src/routes/` - SvelteKit file-based routing
+- `src/lib/` - Shared components and utilities
+
+### `/content` - Content Management
+- `content/posts/YYYY/MM/DD/` - Blog posts organized by date
+- `content/media/YYYY/MM/` - Media files organized by date
+- Content files use markdown with frontmatter
+
+### `/static` - Static Assets
+- Files served directly from root
+- Images, fonts, and other static resources
+
+## Content Organization Pattern
+
+Blog posts follow a strict date-based hierarchy:
+```
+content/posts/YYYY/MM/DD/post-title.md
+```
+
+Media files follow a similar pattern:
+```
+content/media/YYYY/MM/filename.ext
+```
+
+This structure enables:
+- Easy content discovery and organization
+- URL pattern matching for routing
+- Chronological content management
