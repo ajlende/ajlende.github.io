@@ -72,7 +72,7 @@
 <div class="flex min-h-screen flex-col bg-white dark:bg-blue-950">
 	<header class="bg-blue-50 dark:bg-blue-800">
 		<div
-			class="flex h-screen flex-col items-center justify-center bg-linear-150 from-blue-950 via-blue-900 via-80% to-blue-800 dark:from-black dark:via-blue-950 dark:via-60% dark:to-blue-900"
+			class="flex h-screen flex-col items-center justify-center bg-linear-150 from-blue-950 via-blue-900 via-80% to-blue-800 dark:from-blue-950 dark:via-blue-950 dark:via-60% dark:to-blue-900"
 			style="clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);"
 		>
 			<div
@@ -82,7 +82,7 @@
 				aria-hidden="true"
 			>
 				<svg
-					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_480s_linear_infinite] fill-white dark:fill-blue-100"
+					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_480s_linear_infinite] fill-white"
 					{viewBox}
 					width={diameter}
 					height={diameter}
@@ -90,7 +90,7 @@
 					{#each largeStars as star}<circle cx={star.x} cy={star.y} r={1.5} />{/each}
 				</svg>
 				<svg
-					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_240s_linear_infinite] fill-white dark:fill-blue-100"
+					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_240s_linear_infinite] fill-white"
 					{viewBox}
 					width={diameter}
 					height={diameter}
@@ -98,7 +98,7 @@
 					{#each mediumStars as star}<circle cx={star.x} cy={star.y} r={1} />{/each}
 				</svg>
 				<svg
-					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_120s_linear_infinite] fill-white dark:fill-blue-100"
+					class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_120s_linear_infinite] fill-white"
 					{viewBox}
 					width={diameter}
 					height={diameter}
@@ -110,29 +110,25 @@
 				class="absolute top-0 right-0 left-0 mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
 				<div class="flex items-center space-x-6 md:space-x-8">
-					<a
-						href="/"
-						class="text-lg font-semibold text-blue-50 hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
-						>Alex Lende</a
-					>
+					<a href="/" class="text-lg font-semibold text-blue-50 hover:text-blue-400">Alex Lende</a>
 					<a
 						href="#services"
 						onclick={scrollToSection}
-						class="text-sm text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Services
 					</a>
 					<a
 						href="#portfolio"
 						onclick={scrollToSection}
-						class="text-sm text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Portfolio
 					</a>
 					<a
 						href="#contact"
 						onclick={scrollToSection}
-						class="text-sm text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-sm text-blue-50 transition-colors hover:text-blue-400"
 					>
 						Contact
 					</a>
@@ -149,7 +145,7 @@
 					<button
 						onclick={toggleDarkMode}
 						aria-label="Toggle dark mode"
-						class="text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						{#if isDarkMode}
 							<Sun class="h-6 w-6" />
@@ -162,7 +158,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Alex Lende on GitHub"
-						class="text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						<Github class="h-6 w-6" />
 					</a>
@@ -171,7 +167,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Alex Lende on LinkedIn"
-						class="text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						<Linkedin class="h-6 w-6" />
 					</a>
@@ -180,20 +176,16 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Alex Lende on Wellfound"
-						class="text-blue-50 transition-colors hover:text-blue-400 dark:text-blue-100 dark:hover:text-blue-300"
+						class="text-blue-50 transition-colors hover:text-blue-400"
 					>
 						<Briefcase class="h-6 w-6" />
 					</a>
 				</div>
 			</nav>
 			<div class="flex flex-col items-center justify-center gap-4 text-center">
-				<Logo class="fill-blue-50 dark:fill-blue-100" width="10em" height="10em" />
-				<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg dark:text-blue-100">
-					Alex Lende
-				</h1>
-				<div class="font-serif text-4xl text-blue-50 drop-shadow dark:text-blue-100">
-					Technical Consultant
-				</div>
+				<Logo class="fill-blue-50" width="10em" height="10em" />
+				<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
+				<div class="font-serif text-4xl text-blue-50 drop-shadow">Technical Consultant</div>
 			</div>
 		</div>
 	</header>
