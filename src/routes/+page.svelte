@@ -185,7 +185,7 @@
 			<div class="flex flex-col items-center justify-center gap-4 text-center">
 				<Logo class="fill-blue-50" width="10em" height="10em" />
 				<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
-				<div class="font-serif text-4xl text-blue-50 drop-shadow">Technical Consultant</div>
+				<div class="font-serif text-4xl text-blue-50 drop-shadow">Software Engineer</div>
 			</div>
 		</div>
 	</header>
