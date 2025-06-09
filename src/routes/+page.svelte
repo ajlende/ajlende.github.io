@@ -3,11 +3,9 @@
 	import Linkedin from '@lucide/svelte/icons/linkedin';
 	import Briefcase from '@lucide/svelte/icons/briefcase';
 	import Code from '@lucide/svelte/icons/code';
-	import Palette from '@lucide/svelte/icons/palette';
 	import Users from '@lucide/svelte/icons/users';
 	import Zap from '@lucide/svelte/icons/zap';
 	import Globe from '@lucide/svelte/icons/globe';
-	import Database from '@lucide/svelte/icons/database';
 	import Cpu from '@lucide/svelte/icons/cpu';
 	import Eye from '@lucide/svelte/icons/eye';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
@@ -17,6 +15,7 @@
 
 	import { browser } from '$app/environment';
 	import { randomCircularPointDistribution } from '$lib/random';
+	import { getAllProjects } from '$lib/projects';
 
 	let clientWidth = $state(0);
 	let clientHeight = $state(0);
@@ -24,6 +23,9 @@
 
 	let isDarkMode = $state(browser ? document.documentElement.classList.contains('dark') : false);
 	let isScrolled = $derived(scrollY > 50);
+
+	// Get projects data
+	const projects = getAllProjects();
 
 	$effect(() => {
 		if (browser) {
@@ -437,131 +439,40 @@
 				</div>
 
 				<div class="grid gap-8 md:grid-cols-2">
-					<!-- Gutenberg Editor -->
-					<div
-						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
-					>
-						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
+					{#each projects as project}
+						{@const ProjectIcon = project.icon}
+						<a
+							href="/projects/{project.slug}"
+							class="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl bg-white text-left shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+							style="view-transition-name: project-card-{project.slug}"
 						>
-							<div class="text-center text-white">
-								<Palette
-									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
-								/>
-								<div class="text-lg font-semibold">WordPress Gutenberg</div>
-							</div>
-						</div>
-						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-								WordPress Block Editor
-							</h3>
-							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
-								Led development of innovative media editing features for WordPress Gutenberg at
-								Automattic, including advanced image tools and SVG filters affecting millions of
-								users worldwide.
-							</p>
 							<div
-								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
+								class="flex h-48 items-center justify-center bg-gradient-to-br {project.gradient} transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
+								style="view-transition-name: project-header-{project.slug}"
 							>
-								<span class="text-sm font-medium">Open Source Impact</span>
-								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+								<div class="text-center text-white">
+									<ProjectIcon
+										class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+									/>
+									<div class="text-lg font-semibold">{project.subtitle}</div>
+								</div>
 							</div>
-						</div>
-					</div>
-
-					<!-- Healthcare Data Visualization -->
-					<div
-						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
-					>
-						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
-						>
-							<div class="text-center text-white">
-								<Database
-									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
-								/>
-								<div class="text-lg font-semibold">Artistic Data Visualization</div>
+							<div class="flex flex-1 flex-col p-6">
+								<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+									{project.title}
+								</h3>
+								<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
+									{project.description}
+								</p>
+								<div
+									class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
+								>
+									<span class="text-sm font-medium">{project.category}</span>
+									<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+								</div>
 							</div>
-						</div>
-						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-								Cerner Innovations Media Wall
-							</h3>
-							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
-								Created abstract data visualizations at Cerner's Innovations campus, connecting 28
-								unique data stories across 11 live data sources to inspire and inform.
-							</p>
-							<div
-								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
-							>
-								<span class="text-sm font-medium">Enterprise Scale</span>
-								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-							</div>
-						</div>
-					</div>
-
-					<!-- AR/VR Healthcare -->
-					<div
-						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
-					>
-						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
-						>
-							<div class="text-center text-white">
-								<Eye
-									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
-								/>
-								<div class="text-lg font-semibold">AR/VR Innovation</div>
-							</div>
-						</div>
-						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-								Immersive Healthcare
-							</h3>
-							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
-								Premiered Cerner's first virtual reality health care demo at the 2018 Cerner Health
-								Conference, exploring cutting-edge applications of immersive technology in clinical
-								settings.
-							</p>
-							<div
-								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
-							>
-								<span class="text-sm font-medium">Industry First</span>
-								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-							</div>
-						</div>
-					</div>
-
-					<!-- 3D Dental Customization -->
-					<div
-						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
-					>
-						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
-						>
-							<div class="text-center text-white">
-								<Cpu
-									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
-								/>
-								<div class="text-lg font-semibold">3D Customization</div>
-							</div>
-						</div>
-						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-								Dental Brace Configurator
-							</h3>
-							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
-								Developed an interactive 3D mobile app, enabling real-time customization of dental
-								braces with instant visual feedback for the perfect smile.
-							</p>
-							<div
-								class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
-							>
-								<span class="text-sm font-medium">3D Innovation</span>
-								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-							</div>
-						</div>
-					</div>
+						</a>
+					{/each}
 				</div>
 			</div>
 		</section>
@@ -811,3 +722,72 @@
 		</div>
 	</footer>
 </div>
+
+<style>
+	/* View transition animations for portfolio cards */
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-out {
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes scale-in {
+		from {
+			transform: scale(0.8);
+		}
+	}
+
+	@keyframes scale-out {
+		to {
+			transform: scale(1.1);
+		}
+	}
+
+	/* Card to project page transitions */
+	:root::view-transition-old(project-card-gutenberg),
+	:root::view-transition-old(project-card-healthcare-data-visualization),
+	:root::view-transition-old(project-card-immersive-healthcare),
+	:root::view-transition-old(project-card-dental-configurator) {
+		animation:
+			300ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+			400ms cubic-bezier(0.4, 0, 0.2, 1) both scale-out;
+	}
+
+	:root::view-transition-new(project-card-gutenberg),
+	:root::view-transition-new(project-card-healthcare-data-visualization),
+	:root::view-transition-new(project-card-immersive-healthcare),
+	:root::view-transition-new(project-card-dental-configurator) {
+		animation:
+			400ms cubic-bezier(0, 0, 0.2, 1) 100ms both fade-in,
+			500ms cubic-bezier(0.4, 0, 0.2, 1) both scale-in;
+	}
+
+	/* Header transitions maintain their position and scale */
+	:root::view-transition-old(project-header-gutenberg),
+	:root::view-transition-old(project-header-healthcare-data-visualization),
+	:root::view-transition-old(project-header-immersive-healthcare),
+	:root::view-transition-old(project-header-dental-configurator) {
+		animation: 300ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
+	}
+
+	:root::view-transition-new(project-header-gutenberg),
+	:root::view-transition-new(project-header-healthcare-data-visualization),
+	:root::view-transition-new(project-header-immersive-healthcare),
+	:root::view-transition-new(project-header-dental-configurator) {
+		animation: 400ms cubic-bezier(0, 0, 0.2, 1) 100ms both fade-in;
+	}
+
+	/* Respect reduced motion preferences */
+	@media (prefers-reduced-motion) {
+		:root::view-transition-old(*),
+		:root::view-transition-new(*) {
+			animation: none !important;
+		}
+	}
+</style>
