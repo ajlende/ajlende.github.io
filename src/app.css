@@ -62,39 +62,27 @@
 	--color-ansi-cyan: #009491;
 	--color-ansi-magenta: #9970a4;
 
-	--gradient-blue:
+	--gradient-all-blue:
 		var(--color-blue-950), var(--color-blue-900), var(--color-blue-800), var(--color-blue-700),
 		var(--color-blue-600), var(--color-blue-500), var(--color-blue-400), var(--color-blue-300),
 		var(--color-blue-200), var(--color-blue-100), var(--color-blue-50);
-	--gradient-dark-blue:
-		var(--color-blue-950), var(--color-blue-900), var(--color-blue-800), var(--color-blue-700),
-		var(--color-blue-600), var(--color-blue-500);
-	--gradient-light-blue:
-		var(--color-blue-50), var(--color-blue-100), var(--color-blue-200), var(--color-blue-300),
-		var(--color-blue-400), var(--color-blue-500);
+	--gradient-dark-blue: var(--color-blue-800), var(--color-blue-900), var(--color-blue-950);
+	--gradient-light-blue: var(--color-blue-50), var(--color-blue-100), var(--color-blue-200);
 
-	--gradient-red:
+	--gradient-all-red:
 		var(--color-red-950), var(--color-red-900), var(--color-red-800), var(--color-red-700),
 		var(--color-red-600), var(--color-red-500), var(--color-red-400), var(--color-red-300),
 		var(--color-red-200), var(--color-red-100), var(--color-red-50);
-	--gradient-dark-red:
-		var(--color-red-950), var(--color-red-900), var(--color-red-800), var(--color-red-700),
-		var(--color-red-600), var(--color-red-500);
-	--gradient-light-red:
-		var(--color-red-50), var(--color-red-100), var(--color-red-200), var(--color-red-300),
-		var(--color-red-400), var(--color-red-500);
+	--gradient-dark-red: var(--color-red-800), var(--color-red-900), var(--color-red-950);
+	--gradient-light-red: var(--color-red-50), var(--color-red-100), var(--color-red-200);
 
-	--gradient-yellow:
+	--gradient-all-yellow:
 		var(--color-yellow-950), var(--color-yellow-900), var(--color-yellow-800),
 		var(--color-yellow-700), var(--color-yellow-600), var(--color-yellow-500),
 		var(--color-yellow-400), var(--color-yellow-300), var(--color-yellow-200),
 		var(--color-yellow-100), var(--color-yellow-50);
-	--gradient-dark-yellow:
-		var(--color-yellow-950), var(--color-yellow-900), var(--color-yellow-800),
-		var(--color-yellow-700), var(--color-yellow-600), var(--color-yellow-500);
-	--gradient-light-yellow:
-		var(--color-yellow-50), var(--color-yellow-100), var(--color-yellow-200),
-		var(--color-yellow-300), var(--color-yellow-400), var(--color-yellow-500);
+	--gradient-dark-yellow: var(--color-yellow-800), var(--color-yellow-900), var(--color-yellow-950);
+	--gradient-light-yellow: var(--color-yellow-50), var(--color-yellow-100), var(--color-yellow-200);
 }
 
 @theme inline {
