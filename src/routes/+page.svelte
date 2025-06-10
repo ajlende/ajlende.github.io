@@ -13,10 +13,10 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import Moon from '@lucide/svelte/icons/moon';
 	import Sun from '@lucide/svelte/icons/sun';
-	import Logo from './Logo.svelte';
 
 	import { browser } from '$app/environment';
-	import { randomCircularPointDistribution } from '$lib/random';
+	import Logo from '$lib/components/Logo.svelte';
+	import { randomCircularPointDistribution } from '$lib/utils/random';
 
 	let clientWidth = $state(0);
 	let clientHeight = $state(0);
@@ -178,7 +178,7 @@
 	<header class="bg-blue-50 dark:bg-blue-800">
 		<div
 			class="flex h-screen flex-col items-center justify-center bg-linear-150 from-blue-950 via-blue-900 via-80% to-blue-800 dark:from-blue-950 dark:via-blue-950 dark:via-60% dark:to-blue-900"
-			style="clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);"
+			style="clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%)"
 		>
 			<div
 				bind:clientWidth
@@ -438,21 +438,29 @@
 
 				<div class="grid gap-8 md:grid-cols-2">
 					<!-- Gutenberg Editor -->
-					<div
+					<a
+						href="/portfolio/gutenberg/"
 						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
+							class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+							style="view-transition-name: gutenberg-card"
 						>
 							<div class="text-center text-white">
 								<Palette
 									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+									style="view-transition-name: gutenberg-icon"
 								/>
-								<div class="text-lg font-semibold">WordPress Gutenberg</div>
+								<div class="text-lg font-semibold" style="view-transition-name: gutenberg-subtitle">
+									WordPress Gutenberg
+								</div>
 							</div>
 						</div>
 						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+							<h3
+								class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
+								style="view-transition-name: gutenberg-title"
+							>
 								WordPress Block Editor
 							</h3>
 							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
@@ -467,24 +475,35 @@
 								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
 							</div>
 						</div>
-					</div>
+					</a>
 
 					<!-- Healthcare Data Visualization -->
-					<div
+					<a
+						href="/portfolio/cerner-media-wall/"
 						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
+							class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+							style="view-transition-name: media-wall-card"
 						>
 							<div class="text-center text-white">
 								<Database
 									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+									style="view-transition-name: media-wall-icon"
 								/>
-								<div class="text-lg font-semibold">Artistic Data Visualization</div>
+								<div
+									class="text-lg font-semibold"
+									style="view-transition-name: media-wall-subtitle"
+								>
+									Artistic Data Visualization
+								</div>
 							</div>
 						</div>
 						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+							<h3
+								class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
+								style="view-transition-name: media-wall-title"
+							>
 								Cerner Innovations Media Wall
 							</h3>
 							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
@@ -498,24 +517,32 @@
 								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
 							</div>
 						</div>
-					</div>
+					</a>
 
 					<!-- AR/VR Healthcare -->
-					<div
+					<a
+						href="/portfolio/ar-vr-healthcare/"
 						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
+							class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+							style="view-transition-name: ar-vr-card"
 						>
 							<div class="text-center text-white">
 								<Eye
 									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+									style="view-transition-name: ar-vr-icon"
 								/>
-								<div class="text-lg font-semibold">AR/VR Innovation</div>
+								<div class="text-lg font-semibold" style="view-transition-name: ar-vr-subtitle">
+									AR/VR Innovation
+								</div>
 							</div>
 						</div>
 						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+							<h3
+								class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
+								style="view-transition-name: ar-vr-title"
+							>
 								Immersive Healthcare
 							</h3>
 							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
@@ -530,24 +557,32 @@
 								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
 							</div>
 						</div>
-					</div>
+					</a>
 
 					<!-- 3D Dental Customization -->
-					<div
+					<a
+						href="/portfolio/dental-configurator/"
 						class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
 					>
 						<div
-							class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-800 dark:from-red-600 dark:to-red-800 dark:group-hover:from-red-700 dark:group-hover:to-red-900"
+							class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+							style="view-transition-name: dental-card"
 						>
 							<div class="text-center text-white">
 								<Cpu
 									class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+									style="view-transition-name: dental-icon"
 								/>
-								<div class="text-lg font-semibold">3D Customization</div>
+								<div class="text-lg font-semibold" style="view-transition-name: dental-subtitle">
+									3D Customization
+								</div>
 							</div>
 						</div>
 						<div class="flex flex-1 flex-col p-6">
-							<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+							<h3
+								class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
+								style="view-transition-name: dental-title"
+							>
 								Dental Brace Configurator
 							</h3>
 							<p class="mb-4 flex-1 text-blue-700 dark:text-blue-200">
@@ -561,7 +596,7 @@
 								<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</section>
