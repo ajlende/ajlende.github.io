@@ -1,5 +1,5 @@
 ---
-description: 
+description: Workflows, build processes, development scripts, and dependency management
 globs: 
 alwaysApply: false
 ---
@@ -9,7 +9,7 @@ This project uses Bun as the package manager with specific scripts and tools for
 
 ## Package Management
 
-- **Package Manager**: Bun (faster than npm/yarn)
+- **Package Manager**: Bun
 - **Lock File**: [bun.lock](mdc:bun.lock) - commit this file
 - **Installation**: `bun install`
 
@@ -19,21 +19,21 @@ Available scripts from [package.json](mdc:package.json):
 
 ```zsh
 # Development server with hot reload
-bun run dev
+bun --bun run dev
 
 # Production build for deployment
-bun run build
+bun --bun run build
 
 # Preview production build locally
-bun run preview
+bun --bun run preview
 
 # Type checking and validation
-bun run check
-bun run check:watch  # Watch mode
+bun --bun run check
+bun --bun run check:watch  # Watch mode
 
 # Code formatting and linting
-bun run format       # Format with Prettier
-bun run lint        # Check formatting and run ESLint
+bun --bun run format       # Format with Prettier
+bun --bun run lint        # Check formatting and run ESLint
 ```
 
 ## Code Quality Tools

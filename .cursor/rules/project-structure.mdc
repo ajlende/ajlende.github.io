@@ -1,5 +1,5 @@
 ---
-description: 
+description: Describes the core dependencies, configuration files, and directory structure
 globs: 
 alwaysApply: false
 ---
@@ -7,7 +7,7 @@ alwaysApply: false
 
 This is a SvelteKit-based static blog and portfolio site hosted on GitHub pages.
 
-## Core Architecture
+## Core Dependencies
 
 - **Framework**: Svelte 5 using SvelteKit
 - **Language**: TypeScript
@@ -15,7 +15,7 @@ This is a SvelteKit-based static blog and portfolio site hosted on GitHub pages.
 - **Content Processing**: MDSvex
 - **Component Library**: Melt UI (@Docs available)
 - **Icon Library**: Lucide Icons
-- **Styling**: TailwindCSS with typography and forms plugins
+- **Styling**: Tailwind 4 with typography and forms plugins
 - **Build Target**: Static site for GitHub Pages using SvelteKit static adapter
 
 ## Key Configuration Files
@@ -24,7 +24,8 @@ This is a SvelteKit-based static blog and portfolio site hosted on GitHub pages.
 - [svelte.config.js](mdc:svelte.config.js) - SvelteKit and MDSvex configuration  
 - [vite.config.ts](mdc:vite.config.ts) - Vite build configuration
 - [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration
-- [app.css](mdc:src/app.css) - TailwindCSS configuration
+- [app.css](mdc:src/app.css) - Tailwind 4 theme configuration
+- [deploy.yml](mdc:.github/workflows/deploy.yml) - GitHub Pages deployment configuration
 
 ## Directory Structure
 

@@ -1,0 +1,75 @@
+---
+description: Brand and theme guidelines to use when styling or composing components
+globs: 
+alwaysApply: false
+---
+# Brand & Theme Guide: "The Vibrant Frontier"
+
+![A vibrant, stylized sci-fi landscape with a bold, saturated color palette dominated by intense magenta and red ground vegetation contrasting sharply against a bright teal sky. The terrain features exotic, spiky flora in yellows and oranges, creating an unmistakably alien environment that feels both beautiful and otherworldly. A lone space-suited explorer serves as the human element, emphasizing the vast scale and isolation of this frontier world. Their small figure against the expansive landscape captures the essence of discovery and solitude that defines space exploration. Sleek spacecraft - both landed and in flight - establish this as an active, inhabited universe where technology enables traversal between worlds. The overall mood blends wonder with subtle tension. The painterly, stylized art approach uses confident brushstrokes rather than photorealism, creating a dreamlike quality that suggests endless possibilities. This world feels simultaneously inviting and mysterious - a place where vibrant alien beauty coexists with the unknown dangers of deep space exploration.](content/media/2019/10/nms.jpg)
+
+**Core Concept:** The brand identity is "The Vibrant Frontier." It embodies **optimistic exploration, intellectual curiosity, and the wonder of discovery**. The aesthetic merges a clean, retro-futuristic sensibility with the vibrant, organic beauty of an unknown world. The brand should feel forward-thinking, methodical, and deeply engaged with the process of building and discovering what's next.
+
+## Pillars of the Brand
+
+1. Exploration & Wonder: A sense of immense scale, serene space, and the thrill of the unknown. This is captured by the starry background, the vastness of the concept art, and the logo's upward, directional shape.
+2. Vibrant Solitude: The focus is on a single entity—the user, an idea, a project—set against a vast, beautiful backdrop. It communicates independence, focus, and serenity, not loneliness.
+3. Systematic Futurism: The technology and design are clean, functional, and organized. This is not chaotic sci-fi; it is ordered and intentional.
+4. Organic & Geometric Contrast: The core visual tension of the brand. The hard, clean lines of the logo, typography, and UI components contrast with the soft, flowing gradients of the background and the vibrant, saturated colors drawn from the concept art's alien flora.
+
+---
+
+## Practical Design System
+
+#### 1. Color System: Immersive, Thematic, and Functional
+
+The brand's color system is the key to making the design feel like an immersive experience within the vibrant and colorful world of the concept art.
+
+In order to better support the viewing preferences of visitors, it incorporates both a light and a dark theme.
+
+![The palette is built using the OKLCH color space, ensuring perceptually uniform lightness across shades for a visually consistent and accessible UI in both light and dark modes. The blue, red, yellow, and slate color scales have 11 stops: 50, 100, 200, ..., 900, 950](content/media/2025/06/theme_colors.png)
+
+The system is composed of three thematic color scales and one functional neutral scale.
+
+* Blue/Teal Scale (`--blue-`): The Primary Brand Color
+  * Thematic Role: Represents the vast sky, deep space, and the cool tones of advanced technology. It is the foundational color that creates the atmosphere of optimistic exploration.
+  * Usage:
+    * Backgrounds: The darkest shades (`900-950`) for dark mode and the lightest shades (`50-100`) for light mode form the primary canvas of the site.
+    * Text: The lightest shades are used for text in dark mode, and the darkest shades for text in light mode, ensuring a thematic and readable combination.
+
+* Red/Coral Scale (`--red-`): The Primary Action Color
+  * Thematic Role: Represents the vibrant, energetic life of the alien landscape, raw energy, and discovery. It is designed to draw the eye and signify importance.
+  * Usage: Reserved for primary calls-to-action (e.g., "Submit," "Contact Me" buttons), active navigation states, and critical links. Its high saturation provides an effective, attention-grabbing contrast against the cool Blue/Teal background.
+
+* Yellow/Gold Scale (`--yellow-`): The Secondary Accent Color
+  * Thematic Role: Represents the alien flora, sunlight on distant objects, and moments of insight or discovery. It is a warm, energetic accent.
+  * Usage: Use for secondary points of interest that require highlighting but are less critical than primary actions. Examples include tags, metadata, specific icons, or data visualizations.
+
+* Slate Scale (`--slate-`): The Functional Neutral Color
+  * Thematic Role: Represents the cool shadows on rock formations, the unpainted metal of machinery, and the grounding elements of the world. It is the pragmatic, structural counterpart to the vibrant, thematic colors.
+  * Usage: This scale must be used sparingly. Its purpose is to support the main colors, not compete with them. It provides structure and visual rest, preventing the vibrant palette from becoming overwhelming.
+    * UI Components: Ideal for non-interactive UI elements like borders, dividers, and subtle card backgrounds.
+    * Component States: Useful for input fields, disabled states, and secondary or tertiary text that needs to be less prominent.
+    * Example: In dark mode, `slate-800` could be a card background, while in light mode, `slate-200` could serve the same purpose.
+
+#### 2. Typography
+
+The typography choices in the hero section are definitive. The system should be built around a clear hierarchy.
+
+* Headings (`--font-display`): Raleway, a geometric sans-serif font. It should be used for H1/H2 tags to convey a clean, technical, and futuristic feel.
+* Subheadings & Titles (`--font-display`): Raleway, but in a lighter weight or smaller size to establish clear hierarchy.
+* Body & UI Text (`--font-body`): Roboto, a highly readable, neutral sans-serif. The priority is clarity and function.
+* Monospace (`--font-code`): Consolas, for practical use anywhere monospace could be stylistically appropriate.
+
+#### 3. Logo & Iconography
+
+* Logo: The logo is a cornerstone of the brand's identity. It is a geometric monogram of the initials "A" and "L." Its triangular, arrow-like shape evokes mountains, rockets, and compasses, directly tying into the "Exploration" pillar. It should be used prominently, as in the hero section.
+* Iconography: The icon style is established by the hero navigation: minimalist, clean, monolinear, and geometric. Lucide icons fit this style well.
+
+#### 4. Layout & Composition
+
+The hero section sets the standard for the site's layout principles.
+
+* Embrace Negative Space: Layouts should feel open and uncluttered, using the background to create a sense of vastness and focus attention on the content.
+* Strong Focal Points: Each page should have a clear, central purpose. The centered hero layout on the homepage is a prime example. Other supporting pages shouldn't outshine the homepage, but should still define a strong focal point.
+* Cinematic Backgrounds: The dark, starry gradient in the hero section creates an immersive, full-bleed section that establishes mood. The subtle angle at the bottom of the hero section is a great touch, suggesting a view out of a retro-futurist spaceship cockpit and reinforcing the organic/geometric contrast.
+* Parallax & Animation: Subtle animations will enhance the theme. For example, the starfield in the hero has a slight parallax effect to create depth. Page transitions should be clean and smooth, using a swift slide, to maintain the polished, futuristic feel. Small mouse movement or hover effects make the page feel like a living environment that you're actively exploring. WebGL shaders can be developed for animations that can't be done any other way.

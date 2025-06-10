@@ -1,15 +1,27 @@
 ---
 description: 
-globs: 
+globs: src/**/*.svelte,src/**/*.ts,src/**/*.css,src/app.html
 alwaysApply: false
 ---
-# SvelteKit Conventions Guide
+# Code Conventions Guide
+
+## Official @Docs
+
+When writing code, follow the best practices outlined in their official documentation.
+
+- [Svelte 5](mdc:https:/svelte.dev/docs)
+- [Tailwind 4](mdc:https:/tailwindcss.com/docs)
+- [Melt UI](mdc:https:/next.melt-ui.com)
+- [Lucide Svelte](mdc:https:/lucide.dev/guide/packages/lucide-svelte)
+- [Lucide Lab Icons](mdc:https:/github.com/lucide-icons/lucide-lab/tree/main/icons)
+
+## Svelte
 
 This project follows SvelteKit conventions with some specific patterns for static site generation.
 
-## Svelte Code Style
+### Svelte Version
 
-This project relies on Svelte 5. Any Svelte 4 or earlier code sould be upgraded to the Svelte 5 equivalent.
+Any Svelte 4 or earlier code sould be upgraded to the Svelte 5 equivalent. You cannot mix and match Svelte 4 code with Svelte 5 code in the same file.
 
 This includes the following:
 
@@ -141,83 +153,41 @@ This includes the following:
    
    export default app;
   ```
-  - Review the @svelte
 
-## File-Based Routing
+### Static Adapter Requirements
 
-SvelteKit uses file-based routing in the `src/routes/` directory:
+The project uses `@sveltejs/adapter-static` for GitHub Pages deployment.
 
-- [src/routes/+layout.svelte](mdc:src/routes/+layout.svelte) - Root layout component
-- [src/routes/+layout.ts](mdc:src/routes/+layout.ts) - Root layout load function
-- [src/routes/+page.svelte](mdc:src/routes/+page.svelte) - Homepage component
-- `src/routes/colors/` - Nested route example
-
-## Layout System
-
-### Root Layout
-- [+layout.svelte](mdc:src/routes/+layout.svelte) provides the base HTML structure
-- [+layout.ts](mdc:src/routes/+layout.ts) handles global data loading
-- Layout wraps all pages in the application
-
-### Component Organization
-- [Logo.svelte](mdc:src/routes/Logo.svelte) - Reusable logo component at route level
-- Components can be co-located with routes when route-specific
-
-## Static Adaptation
-
-The project uses `@sveltejs/adapter-static` for GitHub Pages deployment:
-
-```javascript
-// svelte.config.js
-import adapter from '@sveltejs/adapter-static';
-
-const config = {
-  kit: { adapter: adapter() }
-};
-```
-
-### Static Generation Requirements
 - All routes must be prerenderable
 - No server-side functionality
-- Assets output to `/build` directory
-
-## MDSvex Integration
-
-MDSvex allows mixing Svelte components with markdown:
-
-```javascript
-// svelte.config.js
-import { mdsvex } from 'mdsvex';
-
-const config = {
-  preprocess: [vitePreprocess(), mdsvex()],
-  extensions: ['.svelte', '.svx']
-};
-```
-
-### Usage Patterns
-- `.md` files for pure markdown content
-- `.svx` files for markdown with Svelte components
-- Both extensions are processed by MDSvex
-
-## Shared Libraries
-
-The `src/lib/` directory contains shared utilities:
-
-- [src/lib/index.ts](mdc:src/lib/index.ts) - Main library exports
-- Import using `$lib/` alias in components
 
 ## Styling Approach
 
-- Melt UI for accessible components 
-- TailwindCSS theme config and global styles in [src/app.css](mdc:src/app.css)
-- TailwindCSS for utility-first styling
+Follow the [brand-guidelines.mdc](mdc:.cursor/rules/brand-guidelines.mdc) when making layout and style changes.
+
+The Tailwind theme in [app.css](mdc:src/app.css) already has all the colors/typography that you need. Do not add new colors or fonts.
+
+### Icons
+
+Icons from [Lucide Svelte](mdc:https:/lucide.dev/guide/packages/lucide-svelte) are available along with [Lucide Lab Icons](mdc:https:/github.com/lucide-icons/lucide-lab/tree/main/icons) for more niche graphics.
+
+Although you could provide accessible labels to your elements via the `aria-label` attribute, you should generally avoiding this and instead use Tailwind's "visually hidden" utility whenever possible.
+
+```svelte
+<div>
+  <Phone aria-hidden="true" />
+  <span class="sr-only">Phone number</span>
+</div>
+```
+
+### Components
+
+The project uses [Melt UI](mdc:https:/next.melt-ui.com) for building accessible components that can be styled with [Tailwind](mdc:https:/tailwindcss.com/docs).
+
+### Theming
+
+- Tailwind theme config and global styles in [app.css](mdc:src/app.css)
+- Tailwind for utility-first styling
   - Typography plugin for markdown content styling
   - Forms plugin for forms styling
-- Component-scoped styles only when needed
 
-## TypeScript Configuration
-
-- Strict TypeScript setup via [tsconfig.json](mdc:tsconfig.json)
-- Type definitions in [src/app.d.ts](mdc:src/app.d.ts)
-- Full type safety throughout the application
