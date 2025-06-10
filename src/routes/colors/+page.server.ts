@@ -42,18 +42,37 @@ function extractColorsFromCSS(cssContent: string): ColorRecord {
 	return colors;
 }
 
+function extractAnsiColorsFromCSS(cssContent: string): Record<string, string> {
+	const ansiColors: Record<string, string> = {};
+
+	// Regex to match --color-ansi-[name]: #hex;
+	const ansiRegex = /--color-ansi-([a-z]+):\s*(#[0-9a-fA-F]{6});/g;
+	let match;
+	while ((match = ansiRegex.exec(cssContent)) !== null) {
+		const [, name, hex] = match;
+		ansiColors[name] = hex;
+	}
+	return ansiColors;
+}
+
 export const load: PageServerLoad = async () => {
 	const cssPath = join(process.cwd(), 'src', 'app.css');
 	const cssContent = readFileSync(cssPath, 'utf-8');
 
 	const extractedColors = extractColorsFromCSS(cssContent);
+	const extractedAnsiColors = extractAnsiColorsFromCSS(cssContent);
 
 	const colors = Object.keys(extractedColors);
 	const shades = Object.keys(extractedColors[colors[0]]);
 
+	const ansiColors = Object.keys(extractedAnsiColors);
+	const ansiColorData = extractedAnsiColors;
+
 	return {
 		colors,
 		shades,
-		colorData: extractedColors
+		colorData: extractedColors,
+		ansiColors,
+		ansiColorData
 	};
 };

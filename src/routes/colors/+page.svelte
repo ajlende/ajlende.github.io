@@ -5,7 +5,7 @@
 
 	let { data }: PageProps = $props();
 
-	const { colors, shades, colorData } = data;
+	const { colors, shades, colorData, ansiColors, ansiColorData } = data;
 
 	let tooltipText = $state('');
 	let tooltipTimeout = $state<NodeJS.Timeout | undefined>(undefined);
@@ -16,8 +16,12 @@
 	<meta name="description" content="Custom Tailwind color palette" />
 </svelte:head>
 
+<div class="bg-white p-10 font-medium text-blue-950 dark:bg-blue-950 dark:text-white">
+	<h2 class="mb-6 text-xl font-semibold">Color Shades</h2>
+</div>
+
 <div
-	class="grid grid-cols-[auto_minmax(0,_1fr)] items-center gap-4 bg-white p-10 font-medium text-blue-950 dark:bg-blue-950 dark:text-white"
+	class="grid grid-cols-[auto_minmax(0,_1fr)] items-center gap-4 bg-white px-10 pb-10 font-medium text-blue-950 dark:bg-blue-950 dark:text-white"
 >
 	<div class="z-9 bg-white dark:bg-blue-950">&nbsp;</div>
 	<div
@@ -68,5 +72,50 @@
 		class="pt-2 text-center text-blue-500 italic max-sm:hidden sm:col-span-2 md:col-span-1 md:col-start-2 dark:text-blue-400"
 	>
 		Click to copy the OKLCH value.
+	</div>
+</div>
+
+<!-- ANSI Colors Section -->
+<div class="bg-white p-10 font-medium text-blue-950 dark:bg-blue-950 dark:text-white">
+	<h2 class="mb-6 text-xl font-semibold">ANSI Colors</h2>
+	<div class="flex flex-wrap justify-center gap-1.5 sm:gap-4">
+		{#each ansiColors as ansiColor}
+			<div class="flex flex-col items-center gap-2">
+				<Tooltip openDelay={0} closeOnPointerDown={false}>
+					{#snippet children(tooltip)}
+						<button
+							aria-label={ansiColor}
+							class="aspect-1/1 w-12 rounded-sm outline -outline-offset-1 outline-black/10 sm:w-16 sm:rounded-md dark:outline-white/10"
+							{...mergeAttrs(tooltip.trigger, {
+								style: `background-color: ${ansiColorData[ansiColor]}`,
+								onpointerenter: () => {
+									tooltipText = '';
+									clearTimeout(tooltipTimeout);
+								},
+								onpointerdown: () => {
+									navigator.clipboard.writeText(ansiColorData[ansiColor]);
+									tooltipText = 'Copied hex value!';
+									tooltipTimeout = setTimeout(() => {
+										tooltipText = '';
+									}, 1300);
+								}
+							})}
+						></button>
+						<div
+							class="rounded-full border border-blue-950 bg-blue-950/90 px-2 py-1 text-center font-mono text-xs/6 font-medium whitespace-nowrap text-white opacity-100 inset-ring inset-ring-white/10"
+							{...tooltip.content}
+						>
+							<p>{tooltipText || ansiColorData[ansiColor]}</p>
+						</div>
+					{/snippet}
+				</Tooltip>
+				<p class="text-xs font-medium capitalize">{ansiColor}</p>
+			</div>
+		{/each}
+	</div>
+	<div
+		class="pt-2 text-center text-blue-500 italic max-sm:hidden sm:col-span-2 md:col-span-1 md:col-start-2 dark:text-blue-400"
+	>
+		Click to copy the hex value.
 	</div>
 </div>
