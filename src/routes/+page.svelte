@@ -79,99 +79,122 @@
 		? 'bg-blue-50/95 shadow-lg backdrop-blur-md dark:bg-blue-900/95'
 		: 'bg-transparent'}"
 >
-	<div class="flex items-center space-x-6 md:space-x-8">
-		<a
-			href="/"
-			class="text-lg font-semibold text-blue-50 hover:text-blue-400 {isScrolled
-				? 'text-blue-900 dark:text-blue-50'
-				: ''}">Alex Lende</a
-		>
-		<a
-			href="#services"
-			onclick={scrollToSection}
-			class="text-sm transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			Expertise
-		</a>
-		<a
-			href="#portfolio"
-			onclick={scrollToSection}
-			class="text-sm transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			Portfolio
-		</a>
-		<a
-			href="#contact"
-			onclick={scrollToSection}
-			class="text-sm transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			Contact
-		</a>
-		<a
-			href="https://ajlende.blog"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="text-sm transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			Blog
-		</a>
-	</div>
-	<div class="flex items-center space-x-6">
-		<button
-			onclick={toggleDarkMode}
-			aria-label="Toggle dark mode"
-			class="transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			{#if isDarkMode}
-				<Sun class="h-6 w-6" />
-			{:else}
-				<Moon class="h-6 w-6" />
-			{/if}
-		</button>
-		<a
-			href="https://github.com/ajlende"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="Alex Lende on GitHub"
-			class="transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			<Github class="h-6 w-6" />
-		</a>
-		<a
-			href="https://linkedin.com/in/ajlende"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="Alex Lende on LinkedIn"
-			class="transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			<Linkedin class="h-6 w-6" />
-		</a>
-		<a
-			href="https://wellfound.com/u/ajlende"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="Alex Lende on Wellfound"
-			class="transition-colors {isScrolled
-				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-				: 'text-blue-50 hover:text-blue-400'}"
-		>
-			<Briefcase class="h-6 w-6" />
-		</a>
-	</div>
+	<!-- Primary site links -->
+	<ul class="flex items-center space-x-6 md:space-x-8">
+		<li>
+			<a
+				href="/"
+				class="text-lg font-semibold text-blue-50 hover:text-blue-400 {isScrolled
+					? 'text-blue-900 dark:text-blue-50'
+					: ''}"
+			>
+				Alex Lende
+			</a>
+		</li>
+		<li>
+			<a
+				href="#services"
+				onclick={scrollToSection}
+				class="text-sm transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				Expertise
+			</a>
+		</li>
+		<li>
+			<a
+				href="#portfolio"
+				onclick={scrollToSection}
+				class="text-sm transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				Portfolio
+			</a>
+		</li>
+		<li>
+			<a
+				href="#contact"
+				onclick={scrollToSection}
+				class="text-sm transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				Contact
+			</a>
+		</li>
+		<li>
+			<a
+				href="https://ajlende.blog"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="text-sm transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				Blog
+			</a>
+		</li>
+	</ul>
+
+	<!-- Utility controls and social links -->
+	<ul class="flex items-center space-x-6">
+		<li>
+			<button
+				onclick={toggleDarkMode}
+				class="transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				{#if isDarkMode}
+					<Sun class="h-6 w-6" />
+				{:else}
+					<Moon class="h-6 w-6" />
+				{/if}
+				<span class="sr-only">Toggle dark mode</span>
+			</button>
+		</li>
+		<li>
+			<a
+				href="https://github.com/ajlende"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				<Github class="h-6 w-6" />
+				<span class="sr-only">GitHub</span>
+			</a>
+		</li>
+		<li>
+			<a
+				href="https://linkedin.com/in/ajlende"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				<Linkedin class="h-6 w-6" />
+				<span class="sr-only">LinkedIn</span>
+			</a>
+		</li>
+		<li>
+			<a
+				href="https://wellfound.com/u/ajlende"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="transition-colors {isScrolled
+					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+					: 'text-blue-50 hover:text-blue-400'}"
+			>
+				<Briefcase class="h-6 w-6" />
+				<span class="sr-only">Wellfound</span>
+			</a>
+		</li>
+	</ul>
 </nav>
 
 <header class="bg-blue-50 dark:bg-blue-800">
@@ -212,8 +235,8 @@
 		</div>
 		<div class="flex flex-col items-center justify-center gap-4 text-center">
 			<Logo class="fill-blue-50" width="10em" height="10em" />
-			<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
-			<div class="font-serif text-4xl text-blue-50 drop-shadow">Principal Software Engineer</div>
+			<h1 class="font-display text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
+			<div class="font-display text-4xl text-blue-50 drop-shadow">Principal Software Engineer</div>
 		</div>
 	</div>
 </header>
@@ -223,19 +246,8 @@
 >
 	<!-- About Section -->
 	<section class="relative overflow-hidden py-24">
-		<div class="absolute inset-0 opacity-20 dark:opacity-10">
-			<div
-				class="absolute top-20 left-20 h-32 w-32 animate-pulse rounded-full bg-blue-400 dark:bg-blue-600"
-			></div>
-			<div
-				class="absolute right-32 bottom-40 h-24 w-24 animate-pulse rounded-full bg-yellow-400 delay-500 dark:bg-yellow-600"
-			></div>
-			<div
-				class="absolute top-1/2 left-1/3 h-16 w-16 animate-pulse rounded-full bg-red-400 delay-1000 dark:bg-red-600"
-			></div>
-		</div>
 		<div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-			<h2 class="mb-8 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
+			<h2 class="font-display mb-8 text-5xl font-bold text-blue-900 dark:text-blue-100">
 				Building Modern Web Experiences
 			</h2>
 			<p class="mx-auto mb-8 max-w-3xl text-xl leading-relaxed text-blue-700 dark:text-blue-200">
@@ -297,7 +309,7 @@
 	<section id="services" class="py-24">
 		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-20 text-center">
-				<h2 class="mb-6 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
+				<h2 class="font-display mb-6 text-5xl font-bold text-blue-900 dark:text-blue-100">
 					Technical Expertise
 				</h2>
 				<p class="mx-auto max-w-2xl text-xl text-blue-700 dark:text-blue-200">
@@ -323,24 +335,28 @@
 							build responsive, accessible web applications with clean architectures that scale from
 							prototype to production.
 						</p>
-						<div class="flex flex-wrap gap-2">
-							<span
+						<ul class="flex list-none flex-wrap gap-2">
+							<li
 								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-								>React</span
 							>
-							<span
+								React
+							</li>
+							<li
 								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-								>TypeScript</span
 							>
-							<span
+								TypeScript
+							</li>
+							<li
 								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-								>Node.js</span
 							>
-							<span
+								Node.js
+							</li>
+							<li
 								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
-								>PostgreSQL</span
 							>
-						</div>
+								PostgreSQL
+							</li>
+						</ul>
 					</div>
 				</div>
 
@@ -361,24 +377,28 @@
 							web. From enterprise dashboards to immersive AR/VR prototypes, I bring complex data
 							and ideas to life through compelling visual experiences.
 						</p>
-						<div class="flex flex-wrap gap-2">
-							<span
+						<ul class="flex list-none flex-wrap gap-2">
+							<li
 								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
-								>Three.js</span
 							>
-							<span
+								Three.js
+							</li>
+							<li
 								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
-								>WebGL</span
 							>
-							<span
+								WebGL
+							</li>
+							<li
 								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
-								>GLSL</span
 							>
-							<span
+								GLSL
+							</li>
+							<li
 								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
-								>AR/VR</span
 							>
-						</div>
+								AR/VR
+							</li>
+						</ul>
 					</div>
 				</div>
 
@@ -399,24 +419,28 @@
 							believe in building tools that empower developers and sharing knowledge through code,
 							documentation, and community engagement.
 						</p>
-						<div class="flex flex-wrap gap-2">
-							<span
+						<ul class="flex list-none flex-wrap gap-2">
+							<li
 								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
-								>WordPress</span
 							>
-							<span
+								WordPress
+							</li>
+							<li
 								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
-								>Open Source</span
 							>
-							<span
+								Open Source
+							</li>
+							<li
 								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
-								>Mentoring</span
 							>
-							<span
+								Mentoring
+							</li>
+							<li
 								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
-								>Code Review</span
 							>
-						</div>
+								Code Review
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -427,7 +451,7 @@
 	<section id="portfolio" class="py-24">
 		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-20 text-center">
-				<h2 class="mb-6 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
+				<h2 class="font-display mb-6 text-5xl font-bold text-blue-900 dark:text-blue-100">
 					Portfolio Highlights
 				</h2>
 				<p class="mx-auto max-w-2xl text-xl text-blue-700 dark:text-blue-200">
@@ -600,7 +624,7 @@
 	<!-- Who I Work With -->
 	<section class="py-24">
 		<div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-			<h2 class="mb-8 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
+			<h2 class="font-display mb-8 text-5xl font-bold text-blue-900 dark:text-blue-100">
 				Professional Experience
 			</h2>
 			<p class="mx-auto mb-16 max-w-2xl text-xl text-blue-700 dark:text-blue-200">
@@ -647,7 +671,7 @@
 	<section id="contact" class="py-24">
 		<div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-12 text-center">
-				<h2 class="mb-6 font-serif text-5xl font-bold text-blue-900 dark:text-blue-100">
+				<h2 class="font-display mb-6 text-5xl font-bold text-blue-900 dark:text-blue-100">
 					Let's Connect
 				</h2>
 				<p class="text-xl text-blue-700 dark:text-blue-200">
@@ -677,6 +701,7 @@
 									type="text"
 									id="name"
 									name="name"
+									autocomplete="name"
 									required
 									class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
 									placeholder="Your name"
@@ -693,6 +718,7 @@
 									id="email"
 									name="email"
 									required
+									autocomplete="email"
 									class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
 									placeholder="your@email.com"
 								/>
@@ -709,6 +735,7 @@
 								type="text"
 								id="company"
 								name="company"
+								autocomplete="organization"
 								class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
 								placeholder="Your company (optional)"
 							/>
@@ -794,28 +821,28 @@
 					href="https://github.com/ajlende"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Alex Lende on GitHub"
 					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
 				>
 					<Github class="h-6 w-6" />
+					<span class="sr-only">GitHub</span>
 				</a>
 				<a
 					href="https://linkedin.com/in/ajlende"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Alex Lende on LinkedIn"
 					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
 				>
 					<Linkedin class="h-6 w-6" />
+					<span class="sr-only">LinkedIn</span>
 				</a>
 				<a
 					href="https://wellfound.com/u/ajlende"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Alex Lende on Wellfound"
 					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
 				>
 					<Briefcase class="h-6 w-6" />
+					<span class="sr-only">Wellfound</span>
 				</a>
 			</div>
 		</div>
