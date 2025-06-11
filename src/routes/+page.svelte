@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Navbar from '$lib/components/Navbar.svelte';
-	import Hero from '$lib/components/Hero.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-
+	import Github from '@lucide/svelte/icons/github';
+	import Linkedin from '@lucide/svelte/icons/linkedin';
+	import Briefcase from '@lucide/svelte/icons/briefcase';
 	import Code from '@lucide/svelte/icons/code';
 	import Palette from '@lucide/svelte/icons/palette';
 	import Users from '@lucide/svelte/icons/users';
@@ -12,18 +11,212 @@
 	import Cpu from '@lucide/svelte/icons/cpu';
 	import Eye from '@lucide/svelte/icons/eye';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Moon from '@lucide/svelte/icons/moon';
+	import Sun from '@lucide/svelte/icons/sun';
+
+	import { browser } from '$app/environment';
+	import Logo from '$lib/components/Logo.svelte';
+	import { randomCircularPointDistribution } from '$lib/utils/random';
+
+	let clientWidth = $state(0);
+	let clientHeight = $state(0);
+	let scrollY = $state(0);
+
+	let isDarkMode = $state(browser ? document.documentElement.classList.contains('dark') : false);
+	let isScrolled = $derived(scrollY > 50);
+
+	$effect(() => {
+		if (browser) {
+			isDarkMode = document.documentElement.classList.contains('dark');
+		}
+	});
+
+	// Update dark mode class on document
+	function updateDarkMode() {
+		if (browser) {
+			if (isDarkMode) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+			localStorage.setItem('darkMode', isDarkMode.toString());
+		}
+	}
+
+	// Toggle dark mode
+	function toggleDarkMode() {
+		isDarkMode = !isDarkMode;
+		updateDarkMode();
+	}
 
 	function scrollToSection(event: MouseEvent) {
 		event.preventDefault();
 		const target = event.currentTarget as HTMLAnchorElement;
 		const section = document.querySelector(target.getAttribute('href') || '');
-		if (section) section.scrollIntoView({ behavior: 'smooth' });
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
 	}
+
+	// Match Tailwind v4 breakpoints (except for 640px)
+	let width = $derived(Math.ceil(clientWidth / 256) * 256);
+	let height = $derived(Math.ceil(clientHeight / 256) * 256);
+
+	let radius = $derived(Math.ceil(Math.sqrt((width / 2) * (width / 2) + height * height)));
+	let diameter = $derived(radius * 2);
+
+	let viewBox = $derived(`${-radius} ${-radius} ${diameter} ${diameter}`);
+	let smallStars = $derived(randomCircularPointDistribution(80, radius));
+	let mediumStars = $derived(randomCircularPointDistribution(40, radius));
+	let largeStars = $derived(randomCircularPointDistribution(20, radius));
 </script>
 
-<Navbar />
+<svelte:window bind:scrollY />
 
-<Hero />
+<!-- Sticky Navigation -->
+<nav
+	class="fixed top-0 right-0 left-0 z-50 mx-auto flex h-16 items-center justify-between px-4 transition-all duration-300 sm:px-6 lg:px-8 {isScrolled
+		? 'bg-blue-50/95 shadow-lg backdrop-blur-md dark:bg-blue-900/95'
+		: 'bg-transparent'}"
+>
+	<div class="flex items-center space-x-6 md:space-x-8">
+		<a
+			href="/"
+			class="text-lg font-semibold text-blue-50 hover:text-blue-400 {isScrolled
+				? 'text-blue-900 dark:text-blue-50'
+				: ''}">Alex Lende</a
+		>
+		<a
+			href="#services"
+			onclick={scrollToSection}
+			class="text-sm transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			Expertise
+		</a>
+		<a
+			href="#portfolio"
+			onclick={scrollToSection}
+			class="text-sm transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			Portfolio
+		</a>
+		<a
+			href="#contact"
+			onclick={scrollToSection}
+			class="text-sm transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			Contact
+		</a>
+		<a
+			href="https://ajlende.blog"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="text-sm transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			Blog
+		</a>
+	</div>
+	<div class="flex items-center space-x-6">
+		<button
+			onclick={toggleDarkMode}
+			aria-label="Toggle dark mode"
+			class="transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			{#if isDarkMode}
+				<Sun class="h-6 w-6" />
+			{:else}
+				<Moon class="h-6 w-6" />
+			{/if}
+		</button>
+		<a
+			href="https://github.com/ajlende"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Alex Lende on GitHub"
+			class="transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			<Github class="h-6 w-6" />
+		</a>
+		<a
+			href="https://linkedin.com/in/ajlende"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Alex Lende on LinkedIn"
+			class="transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			<Linkedin class="h-6 w-6" />
+		</a>
+		<a
+			href="https://wellfound.com/u/ajlende"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Alex Lende on Wellfound"
+			class="transition-colors {isScrolled
+				? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
+				: 'text-blue-50 hover:text-blue-400'}"
+		>
+			<Briefcase class="h-6 w-6" />
+		</a>
+	</div>
+</nav>
+
+<header>
+	<div
+		class="flex h-screen flex-col items-center justify-center bg-linear-150 from-blue-950 via-blue-900 via-80% to-blue-800 dark:from-blue-950 dark:via-blue-950 dark:via-60% dark:to-blue-900"
+		style="clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%)"
+	>
+		<div
+			bind:clientWidth
+			bind:clientHeight
+			class="pointer-events-none absolute h-full w-full overflow-hidden"
+			aria-hidden="true"
+		>
+			<svg
+				class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_480s_linear_infinite] fill-white"
+				{viewBox}
+				width={diameter}
+				height={diameter}
+			>
+				{#each largeStars as star}<circle cx={star.x} cy={star.y} r={1.5} />{/each}
+			</svg>
+			<svg
+				class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_240s_linear_infinite] fill-white"
+				{viewBox}
+				width={diameter}
+				height={diameter}
+			>
+				{#each mediumStars as star}<circle cx={star.x} cy={star.y} r={1} />{/each}
+			</svg>
+			<svg
+				class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_120s_linear_infinite] fill-white"
+				{viewBox}
+				width={diameter}
+				height={diameter}
+			>
+				{#each smallStars as star}<circle cx={star.x} cy={star.y} r={0.5} />{/each}
+			</svg>
+		</div>
+		<div class="flex flex-col items-center justify-center gap-4 text-center">
+			<Logo class="fill-blue-50" width="10em" height="10em" />
+			<h1 class="font-serif text-9xl font-bold text-blue-50 drop-shadow-lg">Alex Lende</h1>
+			<div class="font-serif text-4xl text-blue-50 drop-shadow">Principal Software Engineer</div>
+		</div>
+	</div>
+</header>
 
 <main>
 	<section id="about">
@@ -307,4 +500,68 @@
 	</section>
 </main>
 
-<Footer />
+<footer class="bg-blue-950 py-16 text-blue-50 dark:bg-blue-950 dark:text-blue-100">
+	<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+		<div class="flex flex-col items-center justify-between md:flex-row">
+			<div class="mb-8 text-center md:mb-0 md:text-left">
+				<div class="mb-4 flex items-center justify-center md:justify-start">
+					<Logo class="mr-3 fill-blue-50 dark:fill-blue-100" width="2em" height="2em" />
+					<span class="text-xl font-semibold">Alex Lende</span>
+				</div>
+				<p class="text-blue-300 dark:text-blue-200">
+					Principal Software Engineer & Technical Consultant
+				</p>
+			</div>
+
+			<div class="flex items-center space-x-6">
+				<a
+					href="https://github.com/ajlende"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Alex Lende on GitHub"
+					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
+				>
+					<Github class="h-6 w-6" />
+				</a>
+				<a
+					href="https://linkedin.com/in/ajlende"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Alex Lende on LinkedIn"
+					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
+				>
+					<Linkedin class="h-6 w-6" />
+				</a>
+				<a
+					href="https://wellfound.com/u/ajlende"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Alex Lende on Wellfound"
+					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
+				>
+					<Briefcase class="h-6 w-6" />
+				</a>
+			</div>
+		</div>
+
+		<div
+			class="mt-12 border-t border-blue-800 pt-8 text-center text-sm text-blue-300 dark:border-blue-700 dark:text-blue-200"
+		>
+			<p class="mb-2">
+				Contents of this site are © Copyright 2017-{new Date().getFullYear()} Alex Lende. All rights
+				reserved.
+			</p>
+			<p>
+				<a
+					href="https://github.com/ajlende/ajlende.github.io/tree/develop"
+					class="transition-colors hover:text-blue-50 dark:hover:text-blue-100">Source code</a
+				>
+				is available under the
+				<a
+					href="http://opensource.org/licenses/mit-license.php"
+					class="transition-colors hover:text-blue-50 dark:hover:text-blue-100">MIT license</a
+				>.
+			</p>
+		</div>
+	</div>
+</footer>
