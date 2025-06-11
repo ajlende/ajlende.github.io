@@ -7,13 +7,9 @@ alwaysApply: false
 
 **Core Concept:** The brand identity is "The Vibrant Frontier." It embodies **optimistic exploration, intellectual curiosity, and the wonder of discovery**. The aesthetic merges a clean, retro-futuristic sensibility with the vibrant, organic beauty of an unknown world. The brand should feel forward-thinking, methodical, and deeply engaged with the process of building and discovering what's next.
 
-The concept art shows a vibrant, colorful, stylized retro-futuristic sci-fi landscape with a bold, saturated color palette dominated by intense red ground vegetation contrasting sharply against a bright blue sky with several crecent moons barely visible shining through the atmosphere. The terrain features exotic, spiky flora in shades of yellows, creating an unmistakably alien environment that feels both beautiful and otherworldly. A lone space-suited explorer serves as the human element, emphasizing the vast scale and isolation of this frontier world. Their small figure against the expansive landscape captures the essence of discovery and solitude that defines space exploration. A few streamlined angular spacecraft weathered in shades of slate are posititioned in the peripheral to establish this as an active, inhabited universe where technology enables traversal between worlds. The stylized art approach uses confident and clean lines and smooth gradients rather than photorealism to build the clean retro-futuristic scene.
+The concept art ([nms.jpg](mdc:.exclude/nms.jpg)) shows a vibrant, colorful, stylized retro-futuristic sci-fi landscape with a bold, saturated color palette dominated by intense red ground vegetation contrasting sharply against a bright blue sky with several crecent moons barely visible shining through the atmosphere. The terrain features exotic, spiky flora in shades of yellows, creating an unmistakably alien environment that feels both beautiful and otherworldly. A lone space-suited explorer serves as the human element, emphasizing the vast scale and isolation of this frontier world. Their small figure against the expansive landscape captures the essence of discovery and solitude that defines space exploration. A few streamlined angular spacecraft weathered in shades of slate are posititioned in the peripheral to establish this as an active, inhabited universe where technology enables traversal between worlds. The stylized art approach uses confident and clean lines and smooth gradients rather than photorealism to build the clean retro-futuristic scene.
 
----
-
-## Immersive & Thematic Design System
-
-### 1. Color System
+## 1. Color System
 
 The brand's color system is the key to making the design feel like an immersive experience within the vibrant and colorful world of the concept art.
 
@@ -35,28 +31,32 @@ The palette is built with Tailwind for a visually consistent and accessible UI i
 
 * Slate Scale (`--slate-`): The Tertiary Supporting Color
   * Thematic Role: Represents the unpainted metal of spaceships, and the explorers visiting this alien world. It stands in the context of the vibrant and colorful environment.
-  * Usage: Slate should be used sparingly. It can be useful for desaturating disabled elements.
+  * Usage: Slate should be used sparingly. It can be useful for desaturating disabled elements or on its own as a tertiary color.
 
-### 2. Typography
+**Gradients** in these color scales can add thematic depth and intrigue to things like backgrounds, buttons, prominent headings, graphics, or illustrations.
 
-The typography choices in the hero section are definitive. The system should be built around a clear hierarchy.
+## 2. Typography
+
+The typography is simple to let the other design elements shine.
 
 * Headings (`--font-display`): Raleway, a geometric sans-serif font. It should be used for H1/H2 tags to convey a clean, technical, and futuristic feel.
 * Subheadings & Titles (`--font-display`): Raleway, but in a lighter weight or smaller size to establish clear hierarchy.
 * Body & UI Text (`--font-body`): System font, a neutral sans-serif. The priority is clarity and function.
 * Monospace (`--font-code`): System monospace, for practical use in code or anywhere monospace could be stylistically appropriate.
 
-### 3. Graphics
+## 3. Graphics
 
-* Logo: The logo is a cornerstone of the brand's identity. It is a geometric monogram of the initials "A" and "L." Its triangular, arrow-like shape evokes a rocket taking off into space. It should be used prominently, as in the hero section.
+Graphics are effective ways to quickly convey a lot of information. Use them libarally.
+
+* Logo: The logo is a cornerstone of the brand's identity. It is a geometric monogram of the initials "A" and "L." Its triangular shape evokes a rocket taking off into space. It should be used prominently, as in the hero section.
 * Iconography: The icon style is minimalist, clean, monolinear, and geometric. Lucide icons fit this style well.
 * Illustration: Similar to the iconography, it is minimalist, clean, and grometric. Lucide labs provide some graphics that can be used or placeholders with a description can be provided for the illustration team.
 
-### 4. Layout & Composition
+## 4. Layout & Composition
 
-The hero section sets the standard for the site's layout principles.
+Think back to the concept art. A visitor to this site should feel awestruck as they are exploring the vast alien landscape.
 
 * Embrace Negative Space: Layouts should feel open and uncluttered, using the background to create a sense of vastness and focus attention on the content.
 * Strong Focal Points: Each page/section should have a clear, central purpose. Media, graphics and illustrations draw the attention of the explorers visiting the site and quickly communicate the purpose of a page/section.
 * Cinematic Backgrounds: Immersive, full-bleed sections set the mood of vastness and exploration. Straight lines separating sections frame the organic shapes within the sections as if the world is being viewed through the cockpit of a spacecraft or spacesuit.
-* Parallax & Animation: Subtle animations will enhance the theme, making the page feel as alive as an alien landscape. Hover effects will feel like brushing past alien flora as you navigate the page.
+* Parallax & Animation: Subtle animations will enhance the theme, making the page feel like a living ecosystem. Hover effects feel like brushing past alien flora as you navigate the page.
