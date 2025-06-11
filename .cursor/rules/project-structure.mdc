@@ -34,6 +34,8 @@ This is a SvelteKit-based static blog and portfolio site hosted on GitHub pages.
 - [src/app.css](mdc:src/app.css) - TailwindCSS theme config and global styles
 - `src/routes/` - SvelteKit file-based routing
 - `src/lib/` - Shared components and utilities
+- `src/lib/utils` - Shared or generic utilities
+- `src/lib/components` - Shared Svelte components
 
 ### `/content` - Content Management
 - `content/posts/YYYY/MM/DD/` - Blog posts organized by date
