@@ -21,6 +21,8 @@
 	let clientWidth = $state(0);
 	let clientHeight = $state(0);
 	let scrollY = $state(0);
+	let mouseX = $state(0);
+	let mouseY = $state(0);
 
 	let isDarkMode = $state(browser ? document.documentElement.classList.contains('dark') : false);
 	let isScrolled = $derived(scrollY > 50);
@@ -58,6 +60,11 @@
 		}
 	}
 
+	function handleMouseMove(event: MouseEvent) {
+		mouseX = event.clientX;
+		mouseY = event.clientY;
+	}
+
 	// Match Tailwind v4 breakpoints (except for 640px)
 	let width = $derived(Math.ceil(clientWidth / 256) * 256);
 	let height = $derived(Math.ceil(clientHeight / 256) * 256);
@@ -71,7 +78,7 @@
 	let largeStars = $derived(randomCircularPointDistribution(20, radius));
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY on:mousemove={handleMouseMove} />
 
 <!-- Sticky Navigation -->
 <nav
@@ -84,7 +91,7 @@
 		<li>
 			<a
 				href="/"
-				class="text-lg font-semibold text-blue-50 hover:text-blue-400 {isScrolled
+				class="text-lg font-semibold text-blue-50 transition-all duration-300 hover:scale-105 hover:text-yellow-400 {isScrolled
 					? 'text-blue-900 dark:text-blue-50'
 					: ''}"
 			>
@@ -95,9 +102,9 @@
 			<a
 				href="#services"
 				onclick={scrollToSection}
-				class="text-sm transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="text-sm transition-all duration-300 hover:scale-105 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				Expertise
 			</a>
@@ -106,9 +113,9 @@
 			<a
 				href="#portfolio"
 				onclick={scrollToSection}
-				class="text-sm transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="text-sm transition-all duration-300 hover:scale-105 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				Portfolio
 			</a>
@@ -117,9 +124,9 @@
 			<a
 				href="#contact"
 				onclick={scrollToSection}
-				class="text-sm transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="text-sm transition-all duration-300 hover:scale-105 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				Contact
 			</a>
@@ -129,9 +136,9 @@
 				href="https://ajlende.blog"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="text-sm transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="text-sm transition-all duration-300 hover:scale-105 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				Blog
 			</a>
@@ -143,9 +150,9 @@
 		<li>
 			<button
 				onclick={toggleDarkMode}
-				class="transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="transition-all duration-300 hover:scale-110 hover:rotate-180 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				{#if isDarkMode}
 					<Sun class="h-6 w-6" />
@@ -160,9 +167,9 @@
 				href="https://github.com/ajlende"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="transition-all duration-300 hover:scale-110 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				<Github class="h-6 w-6" />
 				<span class="sr-only">GitHub</span>
@@ -173,9 +180,9 @@
 				href="https://linkedin.com/in/ajlende"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="transition-all duration-300 hover:scale-110 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				<Linkedin class="h-6 w-6" />
 				<span class="sr-only">LinkedIn</span>
@@ -186,9 +193,9 @@
 				href="https://wellfound.com/u/ajlende"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="transition-colors {isScrolled
-					? 'text-blue-700 hover:text-blue-900 dark:text-blue-200 dark:hover:text-blue-50'
-					: 'text-blue-50 hover:text-blue-400'}"
+				class="transition-all duration-300 hover:scale-110 hover:text-yellow-400 {isScrolled
+					? 'text-blue-700 hover:text-yellow-600 dark:text-blue-200 dark:hover:text-yellow-400'
+					: 'text-blue-50 hover:text-yellow-400'}"
 			>
 				<Briefcase class="h-6 w-6" />
 				<span class="sr-only">Wellfound</span>
@@ -210,27 +217,30 @@
 		>
 			<svg
 				class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_480s_linear_infinite] fill-white"
+				style="transform: rotate({scrollY * 0.05}deg)"
 				{viewBox}
 				width={diameter}
 				height={diameter}
 			>
-				{#each largeStars as star}<circle cx={star.x} cy={star.y} r={1.5} />{/each}
+				{#each largeStars as star}<circle cx={star.x} cy={star.y} r={1.5} opacity="0.8" />{/each}
 			</svg>
 			<svg
 				class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_240s_linear_infinite] fill-white"
+				style="transform: rotate({scrollY * 0.1}deg)"
 				{viewBox}
 				width={diameter}
 				height={diameter}
 			>
-				{#each mediumStars as star}<circle cx={star.x} cy={star.y} r={1} />{/each}
+				{#each mediumStars as star}<circle cx={star.x} cy={star.y} r={1} opacity="0.6" />{/each}
 			</svg>
 			<svg
 				class="absolute top-[100%] left-[50%] translate-[-50%] animate-[spin_120s_linear_infinite] fill-white"
+				style="transform: rotate({scrollY * 0.15}deg)"
 				{viewBox}
 				width={diameter}
 				height={diameter}
 			>
-				{#each smallStars as star}<circle cx={star.x} cy={star.y} r={0.5} />{/each}
+				{#each smallStars as star}<circle cx={star.x} cy={star.y} r={0.5} opacity="0.4" />{/each}
 			</svg>
 		</div>
 		<div class="flex flex-col items-center justify-center gap-4 text-center">
@@ -242,12 +252,14 @@
 </header>
 
 <main
-	class="relative bg-[linear-gradient(var(--gradient-light-blue))] dark:bg-[linear-gradient(var(--gradient-dark-blue))]"
+	class="relative bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 dark:from-blue-800 dark:via-blue-900 dark:to-blue-950"
 >
-	<!-- About Section -->
+	<!-- About Section with dramatic separator -->
 	<section class="relative overflow-hidden py-24">
 		<div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-			<h2 class="font-display mb-8 text-5xl font-bold text-blue-900 dark:text-blue-100">
+			<h2
+				class="font-display mb-8 bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-5xl font-bold text-transparent dark:from-blue-100 dark:to-blue-300"
+			>
 				Building Modern Web Experiences
 			</h2>
 			<p class="mx-auto mb-8 max-w-3xl text-xl leading-relaxed text-blue-700 dark:text-blue-200">
@@ -260,58 +272,91 @@
 				<a
 					href="#portfolio"
 					onclick={scrollToSection}
-					class="inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-blue-800 hover:shadow-xl dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700"
+					class="inline-flex items-center rounded-full bg-gradient-to-r from-red-500 to-red-600 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-110 hover:from-red-600 hover:to-red-700 hover:shadow-2xl hover:shadow-red-500/25 dark:from-red-600 dark:to-red-700 dark:hover:from-red-700 dark:hover:to-red-800"
 				>
 					View My Work
-					<ArrowRight class="ml-2 h-5 w-5" />
+					<ArrowRight class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
 				</a>
 			</div>
 			<div class="mt-16 grid gap-8 md:grid-cols-3">
 				<div
-					class="rounded-2xl border border-blue-200 bg-white/80 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl dark:border-blue-700 dark:bg-blue-900/80"
+					class="group rounded-2xl border-2 border-transparent bg-gradient-to-br from-blue-100 to-blue-200 p-[2px] shadow-lg transition-all duration-500 hover:scale-105 hover:border-yellow-400 hover:shadow-2xl hover:shadow-yellow-500/20 dark:from-blue-800 dark:to-blue-900"
 				>
-					<Zap class="mx-auto mb-4 h-12 w-12 text-yellow-500 dark:text-yellow-400" />
-					<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-						Open Source Contributor
-					</h3>
-					<p class="text-blue-700 dark:text-blue-200">
-						Contributing to major open source projects like WordPress Gutenberg, with features used
-						by millions of developers worldwide.
-					</p>
+					<div class="h-full rounded-2xl bg-white/90 p-8 backdrop-blur-sm dark:bg-blue-900/90">
+						<Zap
+							class="mx-auto mb-4 h-12 w-12 text-yellow-500 transition-all duration-300 group-hover:scale-110 group-hover:animate-pulse dark:text-yellow-400"
+						/>
+						<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+							Open Source Contributor
+						</h3>
+						<p class="text-blue-700 dark:text-blue-200">
+							Contributing to major open source projects like WordPress Gutenberg, with features
+							used by millions of developers worldwide.
+						</p>
+					</div>
 				</div>
 				<div
-					class="rounded-2xl border border-yellow-200 bg-white/80 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl dark:border-yellow-700 dark:bg-blue-900/80"
+					class="group rounded-2xl border-2 border-transparent bg-gradient-to-br from-yellow-100 to-yellow-200 p-[2px] shadow-lg transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 dark:from-yellow-800 dark:to-yellow-900"
 				>
-					<Globe class="mx-auto mb-4 h-12 w-12 text-blue-500 dark:text-blue-400" />
-					<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
-						Full-Stack Development
-					</h3>
-					<p class="text-blue-700 dark:text-blue-200">
-						Expert in modern web technologies from React and TypeScript frontends to Node.js
-						backends and cloud infrastructure.
-					</p>
+					<div class="h-full rounded-2xl bg-white/90 p-8 backdrop-blur-sm dark:bg-blue-900/90">
+						<Globe
+							class="mx-auto mb-4 h-12 w-12 text-blue-500 transition-all duration-300 group-hover:scale-110 group-hover:animate-pulse dark:text-blue-400"
+						/>
+						<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">
+							Full-Stack Development
+						</h3>
+						<p class="text-blue-700 dark:text-blue-200">
+							Expert in modern web technologies from React and TypeScript frontends to Node.js
+							backends and cloud infrastructure.
+						</p>
+					</div>
 				</div>
 				<div
-					class="rounded-2xl border border-red-200 bg-white/80 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl dark:border-red-700 dark:bg-blue-900/80"
+					class="group rounded-2xl border-2 border-transparent bg-gradient-to-br from-red-100 to-red-200 p-[2px] shadow-lg transition-all duration-500 hover:scale-105 hover:border-red-400 hover:shadow-2xl hover:shadow-red-500/20 dark:from-red-800 dark:to-red-900"
 				>
-					<Eye class="mx-auto mb-4 h-12 w-12 text-red-500 dark:text-red-400" />
-					<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">3D & WebGL</h3>
-					<p class="text-blue-700 dark:text-blue-200">
-						Specialized in creating immersive 3D experiences and data visualizations using Three.js,
-						WebGL, and custom shaders.
-					</p>
+					<div class="h-full rounded-2xl bg-white/90 p-8 backdrop-blur-sm dark:bg-blue-900/90">
+						<Eye
+							class="mx-auto mb-4 h-12 w-12 text-red-500 transition-all duration-300 group-hover:scale-110 group-hover:animate-pulse dark:text-red-400"
+						/>
+						<h3 class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100">3D & WebGL</h3>
+						<p class="text-blue-700 dark:text-blue-200">
+							Specialized in creating immersive 3D experiences and data visualizations using
+							Three.js, WebGL, and custom shaders.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Services Section -->
-	<section id="services" class="py-24">
-		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+	<!-- Services Section with alien landscape separator -->
+	<section id="services" class="relative py-24">
+		<!-- Cinematic separator - alien terrain -->
+		<div class="absolute top-0 right-0 left-0 h-32 overflow-hidden">
+			<div
+				class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-100 dark:to-blue-950"
+			></div>
+			<svg class="absolute bottom-0 h-24 w-full" viewBox="0 0 1200 100" preserveAspectRatio="none">
+				<path
+					d="M0,40 C200,20 400,60 600,30 C800,0 1000,50 1200,20 L1200,100 L0,100 Z"
+					class="fill-red-500 opacity-20"
+				/>
+				<path
+					d="M0,60 C300,40 500,80 700,50 C900,20 1100,70 1200,40 L1200,100 L0,100 Z"
+					class="fill-yellow-500 opacity-20"
+				/>
+			</svg>
+		</div>
+
+		<div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-20 text-center">
-				<h2 class="font-display mb-6 text-5xl font-bold text-blue-900 dark:text-blue-100">
-					Technical Expertise
-				</h2>
+				<div class="mb-6 flex items-center justify-center">
+					<h2
+						class="font-display bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-5xl font-bold text-transparent dark:from-blue-100 dark:to-blue-300"
+					>
+						Technical Expertise
+					</h2>
+				</div>
 				<p class="mx-auto max-w-2xl text-xl text-blue-700 dark:text-blue-200">
 					Core technologies and specializations I work with
 				</p>
@@ -321,11 +366,15 @@
 				<!-- Full-Stack Development -->
 				<div class="group relative">
 					<div
-						class="absolute inset-0 rotate-1 transform rounded-3xl bg-gradient-to-r from-blue-400 to-blue-600 transition-transform duration-300 group-hover:rotate-2 dark:from-blue-600 dark:to-blue-800"
+						class="absolute inset-0 rotate-1 transform rounded-3xl bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transition-all duration-500 group-hover:scale-105 group-hover:rotate-3 dark:from-blue-600 dark:via-blue-700 dark:to-blue-800"
 					></div>
-					<div class="relative rounded-3xl bg-white p-8 shadow-lg dark:bg-blue-900">
+					<div
+						class="relative rounded-3xl bg-white p-8 shadow-lg transition-all duration-300 group-hover:shadow-2xl dark:bg-blue-900"
+					>
 						<div class="mb-6 flex items-center">
-							<Code class="mr-4 h-10 w-10 text-blue-600 dark:text-blue-400" />
+							<Code
+								class="mr-4 h-10 w-10 text-blue-600 transition-transform duration-300 group-hover:rotate-12 dark:text-blue-400"
+							/>
 							<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
 								Modern Web Development
 							</h3>
@@ -337,22 +386,22 @@
 						</p>
 						<ul class="flex list-none flex-wrap gap-2">
 							<li
-								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+								class="rounded-full bg-gradient-to-r from-blue-100 to-blue-200 px-3 py-1 text-sm text-blue-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-blue-700 dark:to-blue-800 dark:text-blue-200"
 							>
 								React
 							</li>
 							<li
-								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+								class="rounded-full bg-gradient-to-r from-blue-100 to-blue-200 px-3 py-1 text-sm text-blue-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-blue-700 dark:to-blue-800 dark:text-blue-200"
 							>
 								TypeScript
 							</li>
 							<li
-								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+								class="rounded-full bg-gradient-to-r from-blue-100 to-blue-200 px-3 py-1 text-sm text-blue-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-blue-700 dark:to-blue-800 dark:text-blue-200"
 							>
 								Node.js
 							</li>
 							<li
-								class="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+								class="rounded-full bg-gradient-to-r from-blue-100 to-blue-200 px-3 py-1 text-sm text-blue-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-blue-700 dark:to-blue-800 dark:text-blue-200"
 							>
 								PostgreSQL
 							</li>
@@ -363,11 +412,15 @@
 				<!-- 3D & WebGL -->
 				<div class="group relative">
 					<div
-						class="absolute inset-0 -rotate-1 transform rounded-3xl bg-gradient-to-r from-yellow-400 to-red-400 transition-transform duration-300 group-hover:-rotate-2 dark:from-yellow-600 dark:to-red-600"
+						class="absolute inset-0 -rotate-1 transform rounded-3xl bg-gradient-to-br from-yellow-400 via-red-400 to-red-500 transition-all duration-500 group-hover:scale-105 group-hover:-rotate-3 dark:from-yellow-600 dark:via-red-600 dark:to-red-700"
 					></div>
-					<div class="relative rounded-3xl bg-white p-8 shadow-lg dark:bg-blue-900">
+					<div
+						class="relative rounded-3xl bg-white p-8 shadow-lg transition-all duration-300 group-hover:shadow-2xl dark:bg-blue-900"
+					>
 						<div class="mb-6 flex items-center">
-							<Cpu class="mr-4 h-10 w-10 text-red-600 dark:text-red-400" />
+							<Cpu
+								class="mr-4 h-10 w-10 text-red-600 transition-transform duration-300 group-hover:rotate-12 dark:text-red-400"
+							/>
 							<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
 								3D Graphics & Visualization
 							</h3>
@@ -379,22 +432,22 @@
 						</p>
 						<ul class="flex list-none flex-wrap gap-2">
 							<li
-								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
+								class="rounded-full bg-gradient-to-r from-red-100 to-red-200 px-3 py-1 text-sm text-red-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-red-700 dark:to-red-800 dark:text-red-200"
 							>
 								Three.js
 							</li>
 							<li
-								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
+								class="rounded-full bg-gradient-to-r from-red-100 to-red-200 px-3 py-1 text-sm text-red-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-red-700 dark:to-red-800 dark:text-red-200"
 							>
 								WebGL
 							</li>
 							<li
-								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
+								class="rounded-full bg-gradient-to-r from-red-100 to-red-200 px-3 py-1 text-sm text-red-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-red-700 dark:to-red-800 dark:text-red-200"
 							>
 								GLSL
 							</li>
 							<li
-								class="rounded-full bg-red-100 px-3 py-1 text-sm text-red-800 dark:bg-red-800 dark:text-red-200"
+								class="rounded-full bg-gradient-to-r from-red-100 to-red-200 px-3 py-1 text-sm text-red-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-red-700 dark:to-red-800 dark:text-red-200"
 							>
 								AR/VR
 							</li>
@@ -403,13 +456,17 @@
 				</div>
 
 				<!-- Technical Leadership -->
-				<div class="group relative">
+				<div class="group relative lg:col-span-2 lg:mx-auto lg:max-w-2xl">
 					<div
-						class="absolute inset-0 rotate-1 transform rounded-3xl bg-gradient-to-r from-red-400 to-yellow-400 transition-transform duration-300 group-hover:rotate-2 dark:from-red-600 dark:to-yellow-600"
+						class="absolute inset-0 rotate-1 transform rounded-3xl bg-gradient-to-br from-red-400 via-yellow-400 to-yellow-500 transition-all duration-500 group-hover:scale-105 group-hover:rotate-3 dark:from-red-600 dark:via-yellow-600 dark:to-yellow-700"
 					></div>
-					<div class="relative rounded-3xl bg-white p-8 shadow-lg dark:bg-blue-900">
+					<div
+						class="relative rounded-3xl bg-white p-8 shadow-lg transition-all duration-300 group-hover:shadow-2xl dark:bg-blue-900"
+					>
 						<div class="mb-6 flex items-center">
-							<Users class="mr-4 h-10 w-10 text-yellow-600 dark:text-yellow-400" />
+							<Users
+								class="mr-4 h-10 w-10 text-yellow-600 transition-transform duration-300 group-hover:rotate-12 dark:text-yellow-400"
+							/>
 							<h3 class="text-2xl font-semibold text-blue-900 dark:text-blue-100">
 								Open Source & Community
 							</h3>
@@ -421,22 +478,22 @@
 						</p>
 						<ul class="flex list-none flex-wrap gap-2">
 							<li
-								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
+								class="rounded-full bg-gradient-to-r from-yellow-100 to-yellow-200 px-3 py-1 text-sm text-yellow-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-yellow-700 dark:to-yellow-800 dark:text-yellow-200"
 							>
 								WordPress
 							</li>
 							<li
-								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
+								class="rounded-full bg-gradient-to-r from-yellow-100 to-yellow-200 px-3 py-1 text-sm text-yellow-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-yellow-700 dark:to-yellow-800 dark:text-yellow-200"
 							>
 								Open Source
 							</li>
 							<li
-								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
+								class="rounded-full bg-gradient-to-r from-yellow-100 to-yellow-200 px-3 py-1 text-sm text-yellow-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-yellow-700 dark:to-yellow-800 dark:text-yellow-200"
 							>
 								Mentoring
 							</li>
 							<li
-								class="rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-800 dark:bg-yellow-800 dark:text-yellow-200"
+								class="rounded-full bg-gradient-to-r from-yellow-100 to-yellow-200 px-3 py-1 text-sm text-yellow-800 transition-all duration-300 hover:scale-110 hover:shadow-lg dark:from-yellow-700 dark:to-yellow-800 dark:text-yellow-200"
 							>
 								Code Review
 							</li>
@@ -447,13 +504,22 @@
 		</div>
 	</section>
 
-	<!-- Portfolio Section -->
-	<section id="portfolio" class="py-24">
+	<!-- Portfolio Section with vibrant cards -->
+	<section id="portfolio" class="relative py-24">
+		<!-- Cinematic separator -->
+		<div
+			class="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent"
+		></div>
+
 		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-20 text-center">
-				<h2 class="font-display mb-6 text-5xl font-bold text-blue-900 dark:text-blue-100">
-					Portfolio Highlights
-				</h2>
+				<div class="mb-6 flex items-center justify-center">
+					<h2
+						class="font-display bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-5xl font-bold text-transparent dark:from-red-400 dark:to-yellow-400"
+					>
+						Portfolio Highlights
+					</h2>
+				</div>
 				<p class="mx-auto max-w-2xl text-xl text-blue-700 dark:text-blue-200">
 					Key projects that showcase technical excellence and innovation
 				</p>
@@ -463,15 +529,15 @@
 				<!-- Gutenberg Editor -->
 				<a
 					href="/portfolio/gutenberg/"
-					class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+					class="group relative flex flex-col overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/30"
 				>
 					<div
-						class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+						class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 via-red-600 to-yellow-600 transition-all duration-300 group-hover:from-red-600 group-hover:to-yellow-700 dark:from-red-600 dark:via-red-700 dark:to-yellow-700"
 						style="view-transition-name: gutenberg-card"
 					>
 						<div class="text-center text-white">
 							<Palette
-								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12 group-hover:opacity-100"
 								style="view-transition-name: gutenberg-icon"
 							/>
 							<div class="text-lg font-semibold" style="view-transition-name: gutenberg-subtitle">
@@ -479,7 +545,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex flex-1 flex-col p-6">
+					<div class="flex flex-1 flex-col bg-white p-6 dark:bg-blue-900">
 						<h3
 							class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
 							style="view-transition-name: gutenberg-title"
@@ -492,10 +558,10 @@
 							worldwide.
 						</p>
 						<div
-							class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
+							class="flex items-center text-red-600 transition-colors group-hover:text-red-700 dark:text-red-400 dark:group-hover:text-red-300"
 						>
 							<span class="text-sm font-medium">Open Source Impact</span>
-							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
 						</div>
 					</div>
 				</a>
@@ -503,15 +569,15 @@
 				<!-- Healthcare Data Visualization -->
 				<a
 					href="/portfolio/cerner-media-wall/"
-					class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+					class="group relative flex flex-col overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
 				>
 					<div
-						class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+						class="flex h-48 items-center justify-center bg-gradient-to-br from-blue-500 via-blue-600 to-yellow-500 transition-all duration-300 group-hover:from-blue-600 group-hover:to-yellow-600 dark:from-blue-600 dark:via-blue-700 dark:to-yellow-600"
 						style="view-transition-name: media-wall-card"
 					>
 						<div class="text-center text-white">
 							<Database
-								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12 group-hover:opacity-100"
 								style="view-transition-name: media-wall-icon"
 							/>
 							<div class="text-lg font-semibold" style="view-transition-name: media-wall-subtitle">
@@ -519,7 +585,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex flex-1 flex-col p-6">
+					<div class="flex flex-1 flex-col bg-white p-6 dark:bg-blue-900">
 						<h3
 							class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
 							style="view-transition-name: media-wall-title"
@@ -531,10 +597,10 @@
 							unique data stories across 11 live data sources to inspire and inform.
 						</p>
 						<div
-							class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
+							class="flex items-center text-blue-600 transition-colors group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300"
 						>
 							<span class="text-sm font-medium">Enterprise Scale</span>
-							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
 						</div>
 					</div>
 				</a>
@@ -542,15 +608,15 @@
 				<!-- AR/VR Healthcare -->
 				<a
 					href="/portfolio/ar-vr-healthcare/"
-					class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+					class="group relative flex flex-col overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/30"
 				>
 					<div
-						class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+						class="flex h-48 items-center justify-center bg-gradient-to-br from-yellow-500 via-red-500 to-red-600 transition-all duration-300 group-hover:from-yellow-600 group-hover:to-red-700 dark:from-yellow-600 dark:via-red-600 dark:to-red-700"
 						style="view-transition-name: ar-vr-card"
 					>
 						<div class="text-center text-white">
 							<Eye
-								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12 group-hover:opacity-100"
 								style="view-transition-name: ar-vr-icon"
 							/>
 							<div class="text-lg font-semibold" style="view-transition-name: ar-vr-subtitle">
@@ -558,7 +624,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex flex-1 flex-col p-6">
+					<div class="flex flex-1 flex-col bg-white p-6 dark:bg-blue-900">
 						<h3
 							class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
 							style="view-transition-name: ar-vr-title"
@@ -571,10 +637,10 @@
 							settings.
 						</p>
 						<div
-							class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
+							class="flex items-center text-yellow-600 transition-colors group-hover:text-yellow-700 dark:text-yellow-400 dark:group-hover:text-yellow-300"
 						>
 							<span class="text-sm font-medium">Industry First</span>
-							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
 						</div>
 					</div>
 				</a>
@@ -582,15 +648,15 @@
 				<!-- 3D Dental Customization -->
 				<a
 					href="/portfolio/dental-configurator/"
-					class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-blue-900"
+					class="group relative flex flex-col overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/30"
 				>
 					<div
-						class="flex h-48 items-center justify-center rounded-t-2xl bg-gradient-to-br from-red-500 to-red-700 transition-all duration-300 dark:from-red-600 dark:to-red-800"
+						class="flex h-48 items-center justify-center bg-gradient-to-br from-red-500 via-yellow-500 to-blue-500 transition-all duration-300 group-hover:from-red-600 group-hover:to-blue-600 dark:from-red-600 dark:via-yellow-600 dark:to-blue-600"
 						style="view-transition-name: dental-card"
 					>
 						<div class="text-center text-white">
 							<Cpu
-								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+								class="mx-auto mb-4 h-16 w-16 opacity-80 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12 group-hover:opacity-100"
 								style="view-transition-name: dental-icon"
 							/>
 							<div class="text-lg font-semibold" style="view-transition-name: dental-subtitle">
@@ -598,7 +664,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex flex-1 flex-col p-6">
+					<div class="flex flex-1 flex-col bg-white p-6 dark:bg-blue-900">
 						<h3
 							class="mb-3 text-xl font-semibold text-blue-900 dark:text-blue-100"
 							style="view-transition-name: dental-title"
@@ -610,10 +676,10 @@
 							braces with instant visual feedback for the perfect smile.
 						</p>
 						<div
-							class="flex items-center text-blue-600 transition-colors group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300"
+							class="flex items-center text-red-600 transition-colors group-hover:text-red-700 dark:text-red-400 dark:group-hover:text-red-300"
 						>
 							<span class="text-sm font-medium">3D Innovation</span>
-							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+							<ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
 						</div>
 					</div>
 				</a>
@@ -622,9 +688,16 @@
 	</section>
 
 	<!-- Who I Work With -->
-	<section class="py-24">
+	<section class="relative py-24">
+		<!-- Cinematic separator -->
+		<div
+			class="absolute top-0 right-0 left-0 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent"
+		></div>
+
 		<div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-			<h2 class="font-display mb-8 text-5xl font-bold text-blue-900 dark:text-blue-100">
+			<h2
+				class="font-display mb-8 bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-5xl font-bold text-transparent dark:from-blue-100 dark:to-blue-300"
+			>
 				Professional Experience
 			</h2>
 			<p class="mx-auto mb-16 max-w-2xl text-xl text-blue-700 dark:text-blue-200">
@@ -632,11 +705,13 @@
 			</p>
 
 			<div class="grid gap-12 md:grid-cols-2">
-				<div class="relative">
+				<div class="group relative">
 					<div
-						class="absolute inset-0 rotate-2 transform rounded-2xl bg-blue-500 dark:bg-blue-600"
+						class="absolute inset-0 rotate-2 transform rounded-2xl bg-gradient-to-br from-blue-500 to-yellow-500 transition-all duration-500 group-hover:scale-105 group-hover:rotate-3 dark:from-blue-600 dark:to-yellow-600"
 					></div>
-					<div class="relative rounded-2xl bg-white p-8 shadow-lg dark:bg-blue-900">
+					<div
+						class="relative rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 group-hover:shadow-2xl dark:bg-blue-900"
+					>
 						<h3 class="mb-4 text-2xl font-semibold text-blue-900 dark:text-blue-100">
 							Open Source Impact
 						</h3>
@@ -648,11 +723,13 @@
 					</div>
 				</div>
 
-				<div class="relative">
+				<div class="group relative">
 					<div
-						class="absolute inset-0 -rotate-2 transform rounded-2xl bg-red-200 dark:bg-red-600"
+						class="absolute inset-0 -rotate-2 transform rounded-2xl bg-gradient-to-br from-red-500 to-blue-500 transition-all duration-500 group-hover:scale-105 group-hover:-rotate-3 dark:from-red-600 dark:to-blue-600"
 					></div>
-					<div class="relative rounded-2xl bg-white p-8 shadow-lg dark:bg-blue-900">
+					<div
+						class="relative rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 group-hover:shadow-2xl dark:bg-blue-900"
+					>
 						<h3 class="mb-4 text-2xl font-semibold text-blue-900 dark:text-blue-100">
 							Enterprise Innovation
 						</h3>
@@ -667,11 +744,21 @@
 		</div>
 	</section>
 
-	<!-- Contact Section -->
-	<section id="contact" class="py-24">
-		<div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+	<!-- Contact Section with vibrant form -->
+	<section id="contact" class="relative py-24">
+		<!-- Cinematic separator - alien horizon -->
+		<div class="absolute top-0 right-0 left-0 h-32 overflow-hidden">
+			<svg class="absolute top-0 h-32 w-full" viewBox="0 0 1200 100" preserveAspectRatio="none">
+				<path d="M0,80 Q300,20 600,60 T1200,40 L1200,0 L0,0 Z" class="fill-yellow-500 opacity-10" />
+				<path d="M0,60 Q400,10 800,50 T1200,20 L1200,0 L0,0 Z" class="fill-red-500 opacity-10" />
+			</svg>
+		</div>
+
+		<div class="relative z-10 mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
 			<div class="mb-12 text-center">
-				<h2 class="font-display mb-6 text-5xl font-bold text-blue-900 dark:text-blue-100">
+				<h2
+					class="font-display mb-6 bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-5xl font-bold text-transparent dark:from-red-400 dark:to-yellow-400"
+				>
 					Let's Connect
 				</h2>
 				<p class="text-xl text-blue-700 dark:text-blue-200">
@@ -680,11 +767,13 @@
 				</p>
 			</div>
 
-			<div class="relative">
+			<div class="group relative">
 				<div
-					class="absolute inset-0 rotate-1 transform rounded-2xl bg-gradient-to-r from-blue-400 to-yellow-400 dark:from-blue-600 dark:to-yellow-600"
+					class="absolute inset-0 rotate-1 transform rounded-2xl bg-gradient-to-br from-red-400 via-yellow-400 to-blue-400 transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 dark:from-red-600 dark:via-yellow-600 dark:to-blue-600"
 				></div>
-				<div class="relative rounded-2xl bg-white p-8 shadow-xl dark:bg-blue-900">
+				<div
+					class="relative rounded-2xl bg-white p-8 shadow-xl transition-all duration-300 group-hover:shadow-2xl dark:bg-blue-900"
+				>
 					<form
 						method="post"
 						action="https://forms.un-static.com/forms/9f08c765086e2a71f5c3bb696226ff2546c6382f"
@@ -703,7 +792,7 @@
 									name="name"
 									autocomplete="name"
 									required
-									class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
+									class="w-full rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-blue-900 transition-all duration-300 hover:border-blue-300 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:hover:border-blue-600"
 									placeholder="Your name"
 								/>
 							</div>
@@ -719,7 +808,7 @@
 									name="email"
 									required
 									autocomplete="email"
-									class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
+									class="w-full rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-blue-900 transition-all duration-300 hover:border-blue-300 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:hover:border-blue-600"
 									placeholder="your@email.com"
 								/>
 							</div>
@@ -736,7 +825,7 @@
 								id="company"
 								name="company"
 								autocomplete="organization"
-								class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
+								class="w-full rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-blue-900 transition-all duration-300 hover:border-blue-300 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:hover:border-blue-600"
 								placeholder="Your company (optional)"
 							/>
 						</div>
@@ -750,7 +839,7 @@
 							<select
 								id="subject"
 								name="subject"
-								class="w-full rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
+								class="w-full rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-blue-900 transition-all duration-300 hover:border-blue-300 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:hover:border-blue-600"
 							>
 								<option value="">What would you like to discuss?</option>
 								<option value="collaboration">Collaboration Opportunity</option>
@@ -772,14 +861,14 @@
 								name="message"
 								rows="5"
 								required
-								class="w-full resize-none rounded-lg border border-blue-200 bg-white px-4 py-3 text-blue-900 transition-colors focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:focus:ring-blue-400"
+								class="w-full resize-none rounded-lg border-2 border-blue-200 bg-white px-4 py-3 text-blue-900 transition-all duration-300 hover:border-blue-300 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 dark:border-blue-700 dark:bg-blue-800 dark:text-blue-100 dark:hover:border-blue-600"
 								placeholder="Tell me more about what you'd like to discuss..."
 							></textarea>
 						</div>
 
 						<button
 							type="submit"
-							class="w-full transform rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-blue-800 hover:shadow-xl dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700"
+							class="w-full transform rounded-lg bg-gradient-to-r from-red-500 to-red-600 px-6 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-red-600 hover:to-red-700 hover:shadow-2xl hover:shadow-red-500/25 dark:from-red-600 dark:to-red-700 dark:hover:from-red-700 dark:hover:to-red-800"
 						>
 							Send Message
 						</button>
@@ -791,7 +880,7 @@
 								>Powered by <a
 									rel="nofollow"
 									href="https://un-static.com"
-									class="transition-colors hover:text-blue-800 dark:hover:text-blue-300"
+									class="transition-colors hover:text-yellow-600 dark:hover:text-yellow-400"
 									>Un-static Forms</a
 								></small
 							>
@@ -821,7 +910,7 @@
 					href="https://github.com/ajlende"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
+					class="text-blue-300 transition-all duration-300 hover:scale-110 hover:text-yellow-400 dark:text-blue-200 dark:hover:text-yellow-400"
 				>
 					<Github class="h-6 w-6" />
 					<span class="sr-only">GitHub</span>
@@ -830,7 +919,7 @@
 					href="https://linkedin.com/in/ajlende"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
+					class="text-blue-300 transition-all duration-300 hover:scale-110 hover:text-yellow-400 dark:text-blue-200 dark:hover:text-yellow-400"
 				>
 					<Linkedin class="h-6 w-6" />
 					<span class="sr-only">LinkedIn</span>
@@ -839,7 +928,7 @@
 					href="https://wellfound.com/u/ajlende"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="text-blue-300 transition-colors hover:text-blue-50 dark:text-blue-200 dark:hover:text-blue-100"
+					class="text-blue-300 transition-all duration-300 hover:scale-110 hover:text-yellow-400 dark:text-blue-200 dark:hover:text-yellow-400"
 				>
 					<Briefcase class="h-6 w-6" />
 					<span class="sr-only">Wellfound</span>
@@ -857,12 +946,12 @@
 			<p>
 				<a
 					href="https://github.com/ajlende/ajlende.github.io/tree/develop"
-					class="transition-colors hover:text-blue-50 dark:hover:text-blue-100">Source code</a
+					class="transition-colors hover:text-yellow-400 dark:hover:text-yellow-400">Source code</a
 				>
 				is available under the
 				<a
 					href="http://opensource.org/licenses/mit-license.php"
-					class="transition-colors hover:text-blue-50 dark:hover:text-blue-100">MIT license</a
+					class="transition-colors hover:text-yellow-400 dark:hover:text-yellow-400">MIT license</a
 				>.
 			</p>
 		</div>
