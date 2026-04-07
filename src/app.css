@@ -5,17 +5,17 @@
 @theme {
 	--color-*: initial;
 
-	--color-stone-50: oklch(0.985 0.002 106.423);
-	--color-stone-100: oklch(0.97 0.003 106.724);
-	--color-stone-200: oklch(0.923 0.003 107.017);
-	--color-stone-300: oklch(0.869 0.005 167.317);
-	--color-stone-400: oklch(0.709 0.012 165.617);
-	--color-stone-500: oklch(0.66 0.018 197.071);
-	--color-stone-600: oklch(0.615 0.036 211.558);
-	--color-stone-700: oklch(0.569 0.055 219.298);
-	--color-stone-800: oklch(0.499 0.075 223.366);
-	--color-stone-900: oklch(0.319 0.064 231.043);
-	--color-stone-950: oklch(0.251 0.05 230.875);
+	--color-sky-50: oklch(0.97 0.003 106.724);
+	--color-sky-100: oklch(0.923 0.003 107.017);
+	--color-sky-200: oklch(0.869 0.005 167.317);
+	--color-sky-300: oklch(0.709 0.012 165.617);
+	--color-sky-400: oklch(0.615 0.036 211.558);
+	--color-sky-500: oklch(0.569 0.055 219.298);
+	--color-sky-600: oklch(0.499 0.075 223.366);
+	--color-sky-700: oklch(0.369 0.064 231.043);
+	--color-sky-800: oklch(0.251 0.05 230.875);
+	--color-sky-900: oklch(0.201 0.0566 236.62);
+	--color-sky-950: oklch(0.145 0.0431 239.83);
 
 	--color-red-50: oklch(0.97 0.09 19.632);
 	--color-red-100: oklch(0.95 0.11 19.632);
@@ -118,10 +118,10 @@
 }
 
 @theme inline {
-	--color-base: var(--color-stone-200);
-	--color-contrast: var(--color-stone-50);
+	--color-base: var(--color-sky-100);
+	--color-contrast: var(--color-sky-800);
 	--color-primary: var(--color-red-400);
 	--color-secondary: var(--color-yellow-400);
 	--color-tertiary: var(--color-cyan-400);
-	--color-accent: var(--color-stone-800);
+	--color-accent: var(--color-sky-800);
 }
