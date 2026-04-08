@@ -1,3 +1,6 @@
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/raleway';
+
 @theme {
 	--color-*: initial;
 
@@ -126,7 +129,12 @@
 
 	--font-*: initial;
 
-	--font-display: 'Raleway', 'Avenir Next Condensed', 'Avenir Next', 'Helvetica Neue', sans-serif;
-	--font-sans: 'Junction', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Segoe UI', sans-serif;
-	--font-mono: 'League Mono', 'SFMono-Regular', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+	--font-display:
+		'Raleway', 'Avenir', 'Montserrat', 'Corbel', 'URW Gothic', 'source-sans-pro', sans-serif;
+	--font-sans:
+		'Space Grotesk', 'Inter', 'Roboto', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', 'Arial',
+		sans-serif;
+	--font-mono:
+		'League Mono', 'Cascadia Code', 'Source Code Pro', 'Menlo', 'Consolas', 'DejaVu Sans Mono',
+		monospace;
 }
