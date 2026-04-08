@@ -134,12 +134,3 @@
 	--font-sans: 'Junction', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Segoe UI', sans-serif;
 	--font-mono: 'League Mono', 'SFMono-Regular', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
 }
-
-@theme inline {
-	--color-base: var(--color-sky-100);
-	--color-contrast: var(--color-sky-800);
-	--color-primary: var(--color-red-400);
-	--color-secondary: var(--color-yellow-400);
-	--color-tertiary: var(--color-cyan-400);
-	--color-accent: var(--color-sky-800);
-}
