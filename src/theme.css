@@ -249,6 +249,31 @@
 	--sidebar-ring: oklch(0.569 0.055 219.298);
 }
 
+html.theme-transition::view-transition-old(root),
+html.theme-transition::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+
+html.theme-transition::view-transition-old(root) {
+	z-index: 1;
+}
+
+html.theme-transition::view-transition-new(root) {
+	z-index: 2;
+	animation: theme-wipe-down 800ms cubic-bezier(0.32, 0, 0.67, 0) both;
+}
+
+@keyframes theme-wipe-down {
+	/* clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%) */
+	from {
+		clip-path: polygon(0 -10%, 100% -10%, 100% -10%, 50% 0, 0 -10%);
+	}
+	to {
+		clip-path: polygon(0 -10%, 100% -10%, 100% 100%, 50% 110%, 0 100%);
+	}
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;

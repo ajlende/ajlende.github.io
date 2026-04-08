@@ -1,9 +1,87 @@
 <script lang="ts">
-	import * as ButtonGroup from './index.js';
+	import Archive from 'remixicon-svelte/icons/archive-fill';
+	import ArrowLeft from 'remixicon-svelte/icons/arrow-left-line';
+	import CalendarPlus from 'remixicon-svelte/icons/calendar-schedule-fill';
+	import Clock from 'remixicon-svelte/icons/time-fill';
+	import ListFilter from 'remixicon-svelte/icons/filter-fill';
+	import MailCheck from 'remixicon-svelte/icons/mail-check-fill';
+	import MoreHorizontal from 'remixicon-svelte/icons/more-fill';
+	import Tag from 'remixicon-svelte/icons/price-tag-fill';
+	import Trash2 from 'remixicon-svelte/icons/delete-bin-fill';
 	import { Button } from '$lib/components/ui/button/index.js';
+	import * as ButtonGroup from '$lib/components/ui/button-group/index.js';
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js';
+
+	let label = $state('personal');
 </script>
 
 <ButtonGroup.Root>
-	<Button variant="outline" size="sm">Back</Button>
-	<Button variant="outline" size="sm">Next</Button>
+	<ButtonGroup.Root class="hidden sm:flex">
+		<Button variant="outline" size="icon-sm" aria-label="Go Back">
+			<ArrowLeft />
+		</Button>
+	</ButtonGroup.Root>
+	<ButtonGroup.Root>
+		<Button size="sm" variant="outline">Archive</Button>
+		<Button size="sm" variant="outline">Report</Button>
+	</ButtonGroup.Root>
+	<ButtonGroup.Root>
+		<Button size="sm" variant="outline">Snooze</Button>
+		<DropdownMenu.Root>
+			<DropdownMenu.Trigger>
+				{#snippet child({ props })}
+					<Button {...props} variant="outline" size="icon-sm" aria-label="More Options">
+						<MoreHorizontal />
+					</Button>
+				{/snippet}
+			</DropdownMenu.Trigger>
+			<DropdownMenu.Content align="end" class="w-52">
+				<DropdownMenu.Group>
+					<DropdownMenu.Item>
+						<MailCheck />
+						Mark as Read
+					</DropdownMenu.Item>
+					<DropdownMenu.Item>
+						<Archive />
+						Archive
+					</DropdownMenu.Item>
+				</DropdownMenu.Group>
+				<DropdownMenu.Separator />
+				<DropdownMenu.Group>
+					<DropdownMenu.Item>
+						<Clock />
+						Snooze
+					</DropdownMenu.Item>
+					<DropdownMenu.Item>
+						<CalendarPlus />
+						Add to Calendar
+					</DropdownMenu.Item>
+					<DropdownMenu.Item>
+						<ListFilter />
+						Add to List
+					</DropdownMenu.Item>
+					<DropdownMenu.Sub>
+						<DropdownMenu.SubTrigger>
+							<Tag />
+							Label As...
+						</DropdownMenu.SubTrigger>
+						<DropdownMenu.SubContent>
+							<DropdownMenu.RadioGroup bind:value={label}>
+								<DropdownMenu.RadioItem value="personal">Personal</DropdownMenu.RadioItem>
+								<DropdownMenu.RadioItem value="work">Work</DropdownMenu.RadioItem>
+								<DropdownMenu.RadioItem value="other">Other</DropdownMenu.RadioItem>
+							</DropdownMenu.RadioGroup>
+						</DropdownMenu.SubContent>
+					</DropdownMenu.Sub>
+				</DropdownMenu.Group>
+				<DropdownMenu.Separator />
+				<DropdownMenu.Group>
+					<DropdownMenu.Item class="text-destructive focus:text-destructive">
+						<Trash2 />
+						Trash
+					</DropdownMenu.Item>
+				</DropdownMenu.Group>
+			</DropdownMenu.Content>
+		</DropdownMenu.Root>
+	</ButtonGroup.Root>
 </ButtonGroup.Root>

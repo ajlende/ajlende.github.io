@@ -1,8 +1,20 @@
 <script lang="ts">
-	import * as Collapsible from './index.js';
+	import ChevronsUpDownIcon from 'remixicon-svelte/icons/expand-vertical-line';
+	import * as Collapsible from '$lib/components/ui/collapsible/index.js';
+	import { buttonVariants } from '$lib/components/ui/button/index.js';
 </script>
 
-<Collapsible.Root open>
-	<Collapsible.Trigger class="text-sm font-medium">Release details</Collapsible.Trigger>
-	<Collapsible.Content class="text-muted-foreground text-sm">Ready for review.</Collapsible.Content>
+<Collapsible.Root class="w-[350px] space-y-2">
+	<div class="flex items-center justify-between space-x-4 px-4">
+		<h4 class="text-sm font-semibold">@huntabyte starred 3 repositories</h4>
+		<Collapsible.Trigger class={buttonVariants({ variant: 'ghost', size: 'sm', class: 'w-9 p-0' })}>
+			<ChevronsUpDownIcon />
+			<span class="sr-only">Toggle</span>
+		</Collapsible.Trigger>
+	</div>
+	<div class="rounded-md border px-4 py-3 font-mono text-sm">@huntabyte/bits-ui</div>
+	<Collapsible.Content class="space-y-2">
+		<div class="rounded-md border px-4 py-3 font-mono text-sm">@melt-ui/melt-ui</div>
+		<div class="rounded-md border px-4 py-3 font-mono text-sm">@sveltejs/svelte</div>
+	</Collapsible.Content>
 </Collapsible.Root>

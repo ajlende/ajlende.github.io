@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { Root as AspectRatio } from './index.js';
+	import { AspectRatio } from '$lib/components/ui/aspect-ratio/index.js';
 </script>
 
-<AspectRatio
-	ratio={16 / 9}
-	class="bg-muted flex w-48 items-center justify-center rounded-md text-sm"
->
-	16:9
-</AspectRatio>
+<AspectRatio ratio={16 / 9} class="bg-muted rounded-lg">16:9</AspectRatio>
