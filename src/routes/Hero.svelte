@@ -60,8 +60,7 @@
 		</svg>
 	</div>
 
-	<div class="flex flex-col items-center justify-center gap-4 text-center">
-		<Logo class="fill-sky-50" width="10em" height="10em" />
+	<div class="text-sky-50">
 		{@render children()}
 	</div>
 </div>
