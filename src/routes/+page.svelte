@@ -58,6 +58,7 @@
 					I do my best work on small to mid-size product teams where product, design, and
 					engineering can talk directly and make thoughtful tradeoffs.
 				</p>
+				<Button href={resolve('/resume')} class="mt-8">View my resumé</Button>
 			</div>
 		</div>
 	</section>
