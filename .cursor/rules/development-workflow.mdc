@@ -1,0 +1,114 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Development Workflow Guide
+
+This project uses Bun as the package manager with specific scripts and tools for development.
+
+## Package Management
+
+- **Package Manager**: Bun (faster than npm/yarn)
+- **Lock File**: [bun.lock](mdc:bun.lock) - commit this file
+- **Installation**: `bun install`
+
+## Development Scripts
+
+Available scripts from [package.json](mdc:package.json):
+
+```zsh
+# Development server with hot reload
+bun run dev
+
+# Production build for deployment
+bun run build
+
+# Preview production build locally
+bun run preview
+
+# Type checking and validation
+bun run check
+bun run check:watch  # Watch mode
+
+# Code formatting and linting
+bun run format       # Format with Prettier
+bun run lint        # Check formatting and run ESLint
+```
+
+## Code Quality Tools
+
+### Prettier Configuration
+- [.prettierrc](mdc:.prettierrc) - Formatting rules
+- [.prettierignore](mdc:.prettierignore) - Files to exclude
+- Plugins: svelte, tailwindcss
+- Integrated with ESLint via `eslint-config-prettier`
+
+### ESLint Configuration
+- [eslint.config.js](mdc:eslint.config.js) - Linting rules
+- TypeScript ESLint integration
+- Svelte-specific linting rules
+- Prettier integration to avoid conflicts
+
+### TypeScript
+- Strict mode enabled in [tsconfig.json](mdc:tsconfig.json)
+- SvelteKit type checking with `svelte-check`
+- Watch mode available for continuous type checking
+
+## Build Process
+
+1. **Development**: `bun --bun run dev`
+   - Vite dev server with hot reload
+   - TypeScript compilation
+   - TailwindCSS processing
+   - MDSvex markdown processing
+
+2. **Production**: `bun --bun run build`
+   - Static site generation via SvelteKit adapter
+   - Output to `/build` directory for GitHub Pages
+   - Asset optimization and bundling
+
+## Git Workflow
+
+### Ignored Files
+See [.gitignore](mdc:.gitignore) for excluded files:
+- `node_modules/`
+- `.svelte-kit/`
+- Build artifacts
+- OS-specific files
+
+### Pre-commit Recommendations
+Run before committing:
+```bash
+bun run lint    # Check code quality
+bun run check   # Validate TypeScript
+bun run build   # Ensure build works
+```
+
+## Dependency Management
+
+### Key Dependencies
+- **Runtime**: Svelte, SvelteKit, MDSvex
+- **Components**: Melt UI
+- **Styling**: TailwindCSS with plugins
+- **Build**: Vite, TypeScript
+- **Quality**: ESLint, Prettier
+
+### Updating Dependencies
+```bash
+bun update           # Update all dependencies
+bun add package@latest  # Update specific package
+```
+
+## Local Development Setup
+
+1. Clone repository
+2. Install dependencies: `bun install`
+3. Start dev server: `bun --bun run dev`
+4. Open `http://localhost:5173`
+
+## Deployment
+
+The project deploys to GitHub Pages:
+- Build artifacts in `/build` directory
+- Static site generation via SvelteKit adapter
