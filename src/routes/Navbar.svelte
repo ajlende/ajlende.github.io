@@ -198,7 +198,7 @@
 			<label for="theme-trigger" class="sr-only">Theme</label>
 			<Select.Trigger
 				id="theme-trigger"
-				class="border-transparent shadow-none transition-colors focus:outline-none {isScrolled
+				class="justify-center border-transparent p-0 shadow-none transition-colors focus:outline-none [&>svg:last-child]:hidden {isScrolled
 					? 'text-sky-700 hover:text-sky-900 dark:text-sky-200 dark:hover:text-sky-50'
 					: 'text-sky-50 hover:text-sky-400'}"
 			>
@@ -211,7 +211,7 @@
 				{/if}
 			</Select.Trigger>
 
-			<Select.Content>
+			<Select.Content preventScroll={false} align="end">
 				<Select.Item value="system">System</Select.Item>
 				<Select.Item value="light">Light</Select.Item>
 				<Select.Item value="dark">Dark</Select.Item>
