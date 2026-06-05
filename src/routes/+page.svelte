@@ -35,6 +35,48 @@
 		name="twitter:description"
 		content="Principal software engineer and technical consultant focused on maintainable product software, visual systems, web applications, and engineering foundations."
 	/>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"@id": "https://ajlende.com/#alex-lende",
+			"name": "Alex Lende",
+			"url": "https://ajlende.com/",
+			"mainEntityOfPage": "https://ajlende.com/",
+			"jobTitle": "Principal Software Engineer & Technical Consultant",
+			"description": "Principal software engineer and technical consultant focused on maintainable product software, visual systems, web applications, and engineering foundations.",
+			"sameAs": [
+				"https://github.com/ajlende",
+				"https://profiles.wordpress.org/ajlende",
+				"https://linkedin.com/in/ajlende",
+				"https://wellfound.com/u/ajlende",
+				"https://lendedotblog.wordpress.com"
+			],
+			"subjectOf": {
+				"@type": "WebPage",
+				"name": "Alex Lende Resumé",
+				"url": "https://ajlende.com/resume/"
+			},
+			"knowsAbout": [
+				"Software engineering",
+				"Technical consulting",
+				"Product software architecture",
+				"Web applications",
+				"Visual and media-heavy products",
+				"Developer experience",
+				"WordPress",
+				"JavaScript",
+				"TypeScript",
+				"PHP",
+				"Python",
+				"React",
+				"Node.js",
+				"Three.js",
+				"WebGL",
+				"Accessibility"
+			]
+		}
+	</script>
 </svelte:head>
 
 <Navbar />
