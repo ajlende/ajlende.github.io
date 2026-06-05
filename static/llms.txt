@@ -1,0 +1,16 @@
+# Alex Lende
+
+Alex Lende is a principal software engineer and technical consultant. This site summarizes his work on maintainable product software, visual and media-heavy products, fully featured web applications, extensible product platforms, and engineering foundations.
+
+## Site pages
+
+- [Home](https://ajlende.com/): Overview of Alex's consulting focus, public proof links, working style, and contact section.
+- [Resume](https://ajlende.com/resume.md): Plain Markdown version of Alex's resume for parsing, retrieval, and summarization.
+
+## Public profiles
+
+- [GitHub](https://github.com/ajlende): Public source repositories and code history.
+- [WordPress.org profile](https://profiles.wordpress.org/ajlende): WordPress contribution profile.
+- [LinkedIn](https://linkedin.com/in/ajlende): Professional profile.
+- [Wellfound](https://wellfound.com/u/ajlende): Startup-focused professional profile.
+- [Personal blog](https://lendedotblog.wordpress.com): Occasional technical and travel writing.
