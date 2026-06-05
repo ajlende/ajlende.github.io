@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { Button } from '$lib/components/ui/button';
 	import Navbar from './Navbar.svelte';
 	import Hero from './Hero.svelte';
