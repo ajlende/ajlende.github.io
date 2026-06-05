@@ -8,6 +8,35 @@
 	import Logo from './Logo.svelte';
 </script>
 
+<svelte:head>
+	<title>Alex Lende | Principal Software Engineer & Technical Consultant</title>
+	<meta
+		name="description"
+		content="Alex Lende is a principal software engineer and technical consultant who builds maintainable product software, visual systems, web applications, and engineering foundations."
+	/>
+	<link rel="canonical" href="https://ajlende.com/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Alex Lende" />
+	<meta
+		property="og:title"
+		content="Alex Lende | Principal Software Engineer & Technical Consultant"
+	/>
+	<meta
+		property="og:description"
+		content="Principal software engineer and technical consultant focused on maintainable product software, visual systems, web applications, and engineering foundations."
+	/>
+	<meta property="og:url" content="https://ajlende.com/" />
+	<meta name="twitter:card" content="summary" />
+	<meta
+		name="twitter:title"
+		content="Alex Lende | Principal Software Engineer & Technical Consultant"
+	/>
+	<meta
+		name="twitter:description"
+		content="Principal software engineer and technical consultant focused on maintainable product software, visual systems, web applications, and engineering foundations."
+	/>
+</svelte:head>
+
 <Navbar />
 
 <Hero>

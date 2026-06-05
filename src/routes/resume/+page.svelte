@@ -128,6 +128,29 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Alex Lende Resumé | Software Engineering Experience</title>
+	<meta
+		name="description"
+		content="Alex Lende's resumé with software engineering experience at Meta, Automattic, Cerner/Oracle, and Workiva, plus skills in web platforms, graphics, and developer experience."
+	/>
+	<link rel="canonical" href="https://ajlende.com/resume/" />
+	<meta property="og:type" content="profile" />
+	<meta property="og:site_name" content="Alex Lende" />
+	<meta property="og:title" content="Alex Lende Resumé | Software Engineering Experience" />
+	<meta
+		property="og:description"
+		content="Software engineering resumé covering Alex Lende's experience at Meta, Automattic, Cerner/Oracle, and Workiva."
+	/>
+	<meta property="og:url" content="https://ajlende.com/resume/" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Alex Lende Resumé | Software Engineering Experience" />
+	<meta
+		name="twitter:description"
+		content="Software engineering resumé covering Alex Lende's experience at Meta, Automattic, Cerner/Oracle, and Workiva."
+	/>
+</svelte:head>
+
 <Navbar />
 
 <Hero>
