@@ -1,5 +1,6 @@
 <script lang="ts">
 	import FilePdf from 'remixicon-svelte/icons/file-pdf-2-fill';
+	import FileMarkdown from 'remixicon-svelte/icons/markdown-fill';
 	import { Button } from '$lib/components/ui/button';
 	import Navbar from '../Navbar.svelte';
 	import Hero from '../Hero.svelte';
@@ -169,7 +170,7 @@
 				href={asset('/resume.md')}
 				size="lg"
 				download={`Alex Lende - Resume ${new Date().toLocaleString('en-US', { month: 'short', year: 'numeric' })}.md`}
-				class="bg-sky-50 text-sky-950 hover:bg-sky-100"><FilePdf />Download as Markdown</Button
+				class="bg-sky-50 text-sky-950 hover:bg-sky-100"><FileMarkdown />Download as Markdown</Button
 			>
 		</div>
 	</div>
