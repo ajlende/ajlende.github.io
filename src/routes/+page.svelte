@@ -281,45 +281,6 @@
 
 	<div class="mx-auto max-w-4xl border-t border-sky-200 dark:border-sky-800"></div>
 
-	<section
-		id="orientation"
-		aria-labelledby="orientation-heading"
-		class="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8"
-	>
-		<div>
-			<p class="text-sm font-medium tracking-[0.16em] text-sky-700 uppercase dark:text-sky-300">
-				How to work with me
-			</p>
-			<h2
-				id="orientation-heading"
-				class="font-display mt-4 text-4xl font-medium text-sky-950 dark:text-sky-50"
-			>
-				Start with a real product or engineering problem.
-			</h2>
-			<div class="mt-6 space-y-5 text-lg leading-8 text-sky-800 dark:text-sky-100">
-				<p>
-					Before getting started with anything I like to start with one or two introductory
-					conversations. The best first conversation is about the problem in front of you: what you
-					are building, who uses it, what feels hard to change or decide, and where technical
-					direction is starting to matter.
-				</p>
-				<p>
-					Once I have an idea of the work you're looking for and sign on to help, I usually start
-					with a 12-18 week commitment which gives both sides a practical way to evaluate fit before
-					committing to a longer collaboration.
-				</p>
-				<p>
-					I use that time to work in the code, trace the relevant context, talk with the people
-					closest to the details, and help the team decide what should happen next. Discovery and
-					implementation happen together because working systems reveal tradeoffs that diagrams and
-					planning conversations often miss.
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<div class="mx-auto max-w-4xl border-t border-sky-200 dark:border-sky-800"></div>
-
 	<section aria-labelledby="thinking-heading" class="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
 		<p class="text-sm font-medium tracking-[0.16em] text-sky-700 uppercase dark:text-sky-300">
 			About me
