@@ -1,11 +1,58 @@
 <script lang="ts">
+	import { pushState, replaceState } from '$app/navigation';
 	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
 	import { Button } from '$lib/components/ui/button';
+	import PortfolioModal from '$lib/components/PortfolioModal.svelte';
+	import { portfolioBySlug, portfolioItems, type PortfolioItem } from '$lib/portfolio';
 	import Navbar from './Navbar.svelte';
 	import Hero from './Hero.svelte';
 	import Footer from './Footer.svelte';
 	import Contact from './Contact.svelte';
 	import Logo from './Logo.svelte';
+
+	let selectedProject = $state<PortfolioItem>();
+	let modalOpen = $state(false);
+	let modalPushedHistory = false;
+
+	const projectsIn = (category: string) =>
+		portfolioItems.filter((item) => item.category === category);
+
+	function syncProjectFromHash() {
+		const slug = window.location.hash.slice(1);
+		selectedProject = portfolioBySlug.get(slug);
+		modalOpen = Boolean(selectedProject);
+		if (!selectedProject) modalPushedHistory = false;
+	}
+
+	function openProject(item: PortfolioItem) {
+		selectedProject = item;
+		modalOpen = true;
+		modalPushedHistory = true;
+		// The base route is resolved; the project identifier only changes the hash.
+		// eslint-disable-next-line svelte/no-navigation-without-resolve
+		pushState(`${resolve('/')}#${item.slug}`, { portfolioModal: item.slug });
+	}
+
+	function closeProject() {
+		if (!modalOpen && !selectedProject) return;
+
+		modalOpen = false;
+		selectedProject = undefined;
+
+		if (modalPushedHistory) {
+			modalPushedHistory = false;
+			history.back();
+		} else if (window.location.hash) {
+			replaceState(resolve('/'), history.state);
+		}
+	}
+
+	onMount(() => {
+		syncProjectFromHash();
+		window.addEventListener('popstate', syncProjectFromHash);
+		return () => window.removeEventListener('popstate', syncProjectFromHash);
+	});
 </script>
 
 <svelte:head>
@@ -168,25 +215,19 @@
 						to be considered together.
 					</p>
 					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 underline underline-offset-4 marker:text-sky-500 dark:marker:text-sky-300"
+						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
 					>
-						<li>
-							<a href="https://aidemos.meta.com/segment-anything">
-								Meta's Segment Anything Model demo
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://learn.wordpress.org/lesson-plan/use-duotone-filters-to-change-color-effects/"
-							>
-								WordPress duotone SVG filters
-							</a>
-						</li>
-						<li>
-							<a href="https://www.davidparks.us/cerner-innovations-campus#4">
-								Oracle (Cerner) Innovations Campus Media Wall healthcare data visualizations
-							</a>
-						</li>
+						{#each projectsIn('Visual and media-heavy products') as item (item.slug)}
+							<li>
+								<button
+									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									type="button"
+									onclick={() => openProject(item)}
+								>
+									{item.title}
+								</button>
+							</li>
+						{/each}
 					</ul>
 				</div>
 			</article>
@@ -203,19 +244,19 @@
 						all shape whether the software stays performant and understandable as it grows.
 					</p>
 					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 underline underline-offset-4 marker:text-sky-500 dark:marker:text-sky-300"
+						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
 					>
-						<li>
-							<a href="https://github.com/WordPress/gutenberg/pull/21024"
-								>WordPress image editing tools</a
-							>
-						</li>
-						<li>
-							<a href="https://github.com/Automattic/block-experiments/pull/18"
-								>WordPress Starscape Block</a
-							>
-						</li>
-						<li><a href="https://kirsten-alex-wedding.fly.dev/">Personalized Wedding RSVP</a></li>
+						{#each projectsIn('Fully featured web applications') as item (item.slug)}
+							<li>
+								<button
+									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									type="button"
+									onclick={() => openProject(item)}
+								>
+									{item.title}
+								</button>
+							</li>
+						{/each}
 					</ul>
 				</div>
 			</article>
@@ -235,13 +276,19 @@
 						configuration contracts decide whether the platform can keep evolving.
 					</p>
 					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 underline underline-offset-4 marker:text-sky-500 dark:marker:text-sky-300"
+						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
 					>
-						<li>
-							<a href="https://make.wordpress.org/core/2024/06/19/theme-json-version-3/"
-								>WordPress theme.json backwards compatibility</a
-							>
-						</li>
+						{#each projectsIn('Extensible product platforms') as item (item.slug)}
+							<li>
+								<button
+									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									type="button"
+									onclick={() => openProject(item)}
+								>
+									{item.title}
+								</button>
+							</li>
+						{/each}
 					</ul>
 				</div>
 			</article>
@@ -261,18 +308,19 @@
 						turn into repeated bugs and cautious patching around problems nobody fully understands.
 					</p>
 					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 underline underline-offset-4 marker:text-sky-500 dark:marker:text-sky-300"
+						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
 					>
-						<li>
-							<a href="https://patents.google.com/patent/US10565739B2/"
-								>Icon accessibility tooling patent</a
-							>
-						</li>
-						<li>
-							<a href="https://developer.wordpress.org/news/2024/07/json-schema-in-wordpress/"
-								>JSON Schema for WordPress config files</a
-							>
-						</li>
+						{#each projectsIn('Product engineering foundations') as item (item.slug)}
+							<li>
+								<button
+									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									type="button"
+									onclick={() => openProject(item)}
+								>
+									{item.title}
+								</button>
+							</li>
+						{/each}
 					</ul>
 				</div>
 			</article>
@@ -379,5 +427,7 @@
 		<Contact />
 	</section>
 </main>
+
+<PortfolioModal item={selectedProject} bind:open={modalOpen} onClose={closeProject} />
 
 <Footer />
