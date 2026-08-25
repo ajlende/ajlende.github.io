@@ -48,7 +48,7 @@ export const portfolioItems: PortfolioItem[] = [
 		links: [
 			{
 				label: 'Technical walkthrough',
-				href: 'https://ajlende.blog/2023/01/20/duotone-filters-in-wordpress/'
+				href: 'https://lendedotblog.wordpress.com/2023/01/20/duotone-filters-in-wordpress/'
 			},
 			{
 				label: 'Gutenberg proposal',
