@@ -78,10 +78,6 @@ export const portfolioItems: PortfolioItem[] = [
 				href: 'https://engineering.cerner.com/blog/one-year-calling-innovations-home/'
 			},
 			{
-				label: 'Media wall presentation',
-				href: 'https://ajlende.com/elm-webgl-presentation/slides/00-Title.md'
-			},
-			{
 				label: 'Adaptive soundtrack patent',
 				href: 'https://patents.google.com/patent/US20200409994A1/en'
 			}
