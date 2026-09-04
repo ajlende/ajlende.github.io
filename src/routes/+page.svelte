@@ -214,13 +214,11 @@
 						product architecture all affect the same user experience, so the technical choices have
 						to be considered together.
 					</p>
-					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
-					>
+					<ul class="mt-4 flex flex-wrap gap-2 leading-5">
 						{#each projectsIn('Visual and media-heavy products') as item (item.slug)}
-							<li>
+							<li class="flex">
 								<button
-									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									class="cursor-pointer rounded-full border border-sky-300 px-3 py-1 text-left text-sm font-medium text-sky-800 transition-colors hover:border-sky-500 hover:bg-sky-100 hover:text-sky-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-sky-700 dark:text-sky-100 dark:hover:border-sky-400 dark:hover:bg-sky-900 dark:hover:text-white"
 									type="button"
 									onclick={() => openProject(item)}
 								>
@@ -243,13 +241,11 @@
 						Workflows, state, permissions, data flow, product constraints, and interaction details
 						all shape whether the software stays performant and understandable as it grows.
 					</p>
-					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
-					>
+					<ul class="mt-4 flex flex-wrap gap-2 leading-5">
 						{#each projectsIn('Fully featured web applications') as item (item.slug)}
-							<li>
+							<li class="flex">
 								<button
-									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									class="cursor-pointer rounded-full border border-sky-300 px-3 py-1 text-left text-sm font-medium text-sky-800 transition-colors hover:border-sky-500 hover:bg-sky-100 hover:text-sky-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-sky-700 dark:text-sky-100 dark:hover:border-sky-400 dark:hover:bg-sky-900 dark:hover:text-white"
 									type="button"
 									onclick={() => openProject(item)}
 								>
@@ -275,13 +271,11 @@
 						Backwards compatibility, developer tooling, documentation, versioning, and clear
 						configuration contracts decide whether the platform can keep evolving.
 					</p>
-					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
-					>
+					<ul class="mt-4 flex flex-wrap gap-2 leading-5">
 						{#each projectsIn('Extensible product platforms') as item (item.slug)}
-							<li>
+							<li class="flex">
 								<button
-									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									class="cursor-pointer rounded-full border border-sky-300 px-3 py-1 text-left text-sm font-medium text-sky-800 transition-colors hover:border-sky-500 hover:bg-sky-100 hover:text-sky-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-sky-700 dark:text-sky-100 dark:hover:border-sky-400 dark:hover:bg-sky-900 dark:hover:text-white"
 									type="button"
 									onclick={() => openProject(item)}
 								>
@@ -307,13 +301,11 @@
 						Small gaps in validation, release process, documentation, or development workflow can
 						turn into repeated bugs and cautious patching around problems nobody fully understands.
 					</p>
-					<ul
-						class="mt-2 ml-4 list-disc space-y-2 leading-5 marker:text-sky-500 dark:marker:text-sky-300"
-					>
+					<ul class="mt-4 flex flex-wrap gap-2 leading-5">
 						{#each projectsIn('Product engineering foundations') as item (item.slug)}
-							<li>
+							<li class="flex">
 								<button
-									class="cursor-pointer text-left underline underline-offset-4 hover:text-sky-950 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500 dark:hover:text-white"
+									class="cursor-pointer rounded-full border border-sky-300 px-3 py-1 text-left text-sm font-medium text-sky-800 transition-colors hover:border-sky-500 hover:bg-sky-100 hover:text-sky-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-sky-700 dark:text-sky-100 dark:hover:border-sky-400 dark:hover:bg-sky-900 dark:hover:text-white"
 									type="button"
 									onclick={() => openProject(item)}
 								>
